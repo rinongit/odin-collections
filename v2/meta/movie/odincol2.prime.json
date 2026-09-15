@@ -3,7 +3,7 @@
     "id": "odincol2.prime",
     "type": "movie",
     "name": "Prime Video",
-    "description": "Prime Video recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
+    "description": "Prime Video recent and popular movies available in US. Provider membership from JustWatch; title, earliest known release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
     "posterShape": "landscape",
@@ -21,15 +21,27 @@
         "released": "2026-01-01"
       },
       {
+        "id": "tt40450836",
+        "title": "Eddie B: If These Classroom Walls Could Talk",
+        "thumbnail": "https://images.justwatch.com/poster/346024742/s332/img",
+        "released": "2026-01-01"
+      },
+      {
         "id": "tt39846570",
         "title": "Operation Psionics: The Psychic War for UFOs",
         "thumbnail": "https://images.justwatch.com/poster/345642869/s332/img",
         "released": "2026-01-01"
       },
       {
-        "id": "tt40450836",
-        "title": "Eddie B: If These Classroom Walls Could Talk",
-        "thumbnail": "https://images.justwatch.com/poster/346024742/s332/img",
+        "id": "tt40124163",
+        "title": "Jen Kober: Uber Famous",
+        "thumbnail": "https://images.justwatch.com/poster/353436952/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39845973",
+        "title": "Nephilim: Giants Who Ruled the Earth",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oN41WSwdU9VobMdFUxGVhWtOc0S.jpg",
         "released": "2026-01-01"
       },
       {
@@ -39,46 +51,10 @@
         "released": "2025-11-25"
       },
       {
-        "id": "tt36822418",
-        "title": "Governor",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/Anukm4NH6MM025vUQ9ykpWQXnFn.jpg",
-        "released": "2026-06-12"
-      },
-      {
-        "id": "tt40124163",
-        "title": "Jen Kober: Uber Famous",
-        "thumbnail": "https://images.justwatch.com/poster/353436952/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt36206126",
-        "title": "Lazarus: The Awakening",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ruNGo42Z0mguTz5CqxHU7csvVQw.jpg",
-        "released": "2026-02-20"
-      },
-      {
-        "id": "tt39455347",
-        "title": "TT for Life",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/gLE9VkAtsbpYvY1OkSt0AGU9x5M.jpg",
-        "released": "2026-02-25"
-      },
-      {
-        "id": "tt33501905",
-        "title": "Death by Fruitcake",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/lH0yB3UzO3wliurSk2XWOXPvzLA.jpg",
-        "released": "2025-05-09"
-      },
-      {
         "id": "tt40915016",
         "title": "Babita Singh Reporting",
         "thumbnail": "https://image.tmdb.org/t/p/w500/owuFDxJOG1nv3J2wMf5f5jQjqHn.jpg",
         "released": "2026-08-28"
-      },
-      {
-        "id": "tt39845973",
-        "title": "Nephilim: Giants Who Ruled the Earth",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oN41WSwdU9VobMdFUxGVhWtOc0S.jpg",
-        "released": "2026-01-01"
       },
       {
         "id": "tt37455571",
@@ -87,16 +63,10 @@
         "released": "2026-03-06"
       },
       {
-        "id": "tt26628839",
-        "title": "The American Coyote",
-        "thumbnail": "https://images.justwatch.com/poster/341214338/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt15160410",
-        "title": "Lure",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zwGIXXauPHkGCEgDc13raAsG4Uk.jpg",
-        "released": "2026-02-02"
+        "id": "tt33501905",
+        "title": "Death by Fruitcake",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/lH0yB3UzO3wliurSk2XWOXPvzLA.jpg",
+        "released": "2025-05-09"
       },
       {
         "id": "tt36415829",
@@ -105,16 +75,10 @@
         "released": "2026-03-14"
       },
       {
-        "id": "tt43728611",
-        "title": "Final Orbit",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/t788CMPKujqQkXxgWc6WqDEb6Pi.jpg",
-        "released": "2026-07-31"
-      },
-      {
-        "id": "tt37679066",
-        "title": "Dinosaur Hunt",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jKRarj7h6jcYOXdtr6RKiK03w5Y.jpg",
-        "released": "2026-03-01"
+        "id": "tt42811432",
+        "title": "Psychic Agent: The Gate Program",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eNnKSrVjs9Tdb1HrX1EfQftJWka.jpg",
+        "released": "2026-06-05"
       },
       {
         "id": "tt37797014",
@@ -123,28 +87,64 @@
         "released": "2026-01-29"
       },
       {
-        "id": "tt42811432",
-        "title": "Psychic Agent: The Gate Program",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/eNnKSrVjs9Tdb1HrX1EfQftJWka.jpg",
-        "released": "2026-06-05"
+        "id": "tt37679066",
+        "title": "Dinosaur Hunt",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jKRarj7h6jcYOXdtr6RKiK03w5Y.jpg",
+        "released": "2026-03-01"
       },
       {
-        "id": "tt33303521",
-        "title": "The Gates",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dWMiHlKz0OsbVXEEZR3hYyWHcdq.jpg",
-        "released": "2026-03-13"
+        "id": "tt26628839",
+        "title": "The American Coyote",
+        "thumbnail": "https://images.justwatch.com/poster/341214338/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt13594688",
-        "title": "Bad Men Must Bleed",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/cMJCAyK0m8gVGEzuwrlPqOPNc5r.jpg",
-        "released": "2026-03-12"
+        "id": "tt36822418",
+        "title": "Governor",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Anukm4NH6MM025vUQ9ykpWQXnFn.jpg",
+        "released": "2026-06-12"
+      },
+      {
+        "id": "tt39455347",
+        "title": "TT for Life",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/gLE9VkAtsbpYvY1OkSt0AGU9x5M.jpg",
+        "released": "2026-02-25"
+      },
+      {
+        "id": "tt43728611",
+        "title": "Final Orbit",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/t788CMPKujqQkXxgWc6WqDEb6Pi.jpg",
+        "released": "2026-07-31"
+      },
+      {
+        "id": "tt36206126",
+        "title": "Lazarus: The Awakening",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ruNGo42Z0mguTz5CqxHU7csvVQw.jpg",
+        "released": "2026-02-20"
+      },
+      {
+        "id": "tt15160410",
+        "title": "Lure",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zwGIXXauPHkGCEgDc13raAsG4Uk.jpg",
+        "released": "2026-02-02"
       },
       {
         "id": "tt38553246",
         "title": "Anaconda: Blood Coil",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lJAjChZd0fRrfCXrBnTRQdjZmnC.jpg",
         "released": "2026-01-09"
+      },
+      {
+        "id": "tt13594688",
+        "title": "Bad Men Must Bleed",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/cMJCAyK0m8gVGEzuwrlPqOPNc5r.jpg",
+        "released": "2025-10-07"
+      },
+      {
+        "id": "tt33303521",
+        "title": "The Gates",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dWMiHlKz0OsbVXEEZR3hYyWHcdq.jpg",
+        "released": "2026-03-13"
       },
       {
         "id": "tt38631437",
@@ -174,7 +174,7 @@
         "id": "tt6374142",
         "title": "Misdirection",
         "thumbnail": "https://image.tmdb.org/t/p/w500/z7padnoIDHbmxPdqEHryhqlaVqc.jpg",
-        "released": "2026-02-10"
+        "released": "2026-01-13"
       },
       {
         "id": "tt43651031",
@@ -189,28 +189,10 @@
         "released": "2026-08-28"
       },
       {
-        "id": "tt27180027",
-        "title": "Cursed Waters",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/cuyWDZyKWxcl7pF3HEfDtOACm5N.jpg",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt40232255",
-        "title": "Meal Ticket",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4E4WA3bfbq4mgDGrFJMNit9U1gz.jpg",
-        "released": "2026-03-19"
-      },
-      {
-        "id": "tt27722524",
-        "title": "Addition",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vGhd37yFzGBX7NLmKxv8LPvRo9c.jpg",
-        "released": "2026-01-29"
-      },
-      {
-        "id": "tt26735622",
-        "title": "Balls Up",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/xwvJ3WzdJ1OCuDoY8LAxBUlQyig.jpg",
-        "released": "2026-04-15"
+        "id": "tt40448536",
+        "title": "Vibeland Chronicles",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wPOjoiO9ZrsYociKXLxrvQfILlK.jpg",
+        "released": "2026-01-02"
       },
       {
         "id": "tt33499541",
@@ -225,10 +207,22 @@
         "released": "2026-03-13"
       },
       {
-        "id": "tt40448536",
-        "title": "Vibeland Chronicles",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/wPOjoiO9ZrsYociKXLxrvQfILlK.jpg",
-        "released": "2026-01-02"
+        "id": "tt27180027",
+        "title": "Cursed Waters",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/cuyWDZyKWxcl7pF3HEfDtOACm5N.jpg",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt27722524",
+        "title": "Addition",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vGhd37yFzGBX7NLmKxv8LPvRo9c.jpg",
+        "released": "2024-09-08"
+      },
+      {
+        "id": "tt40232255",
+        "title": "Meal Ticket",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/4E4WA3bfbq4mgDGrFJMNit9U1gz.jpg",
+        "released": "2026-03-19"
       },
       {
         "id": "tt36958312",
@@ -237,34 +231,28 @@
         "released": "2026-07-29"
       },
       {
+        "id": "tt26735622",
+        "title": "Balls Up",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xwvJ3WzdJ1OCuDoY8LAxBUlQyig.jpg",
+        "released": "2026-04-15"
+      },
+      {
         "id": "tt7798632",
         "title": "Hamlet",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7cBh6fWchOJY961A8F1rT98HDdA.jpg",
-        "released": "2026-02-06"
+        "released": "2025-08-30"
       },
       {
         "id": "tt12042730",
         "title": "Project Hail Mary",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yihdXomYb5kTeSivtFndMy5iDmf.jpg",
-        "released": "2026-03-15"
+        "released": "2026-03-09"
       },
       {
         "id": "tt37989803",
         "title": "Vengeance",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg",
-        "released": "2026-02-26"
-      },
-      {
-        "id": "tt39126728",
-        "title": "Rules of Love",
-        "thumbnail": "https://images.justwatch.com/poster/346572710/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt39846618",
-        "title": "Time Travel Man: Al Bielek and the Philadelphia Experiment",
-        "thumbnail": "https://images.justwatch.com/poster/347964799/s332/img",
-        "released": "2026-01-01"
+        "released": "2026-02-24"
       },
       {
         "id": "tt43736192",
@@ -279,16 +267,16 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt40795889",
-        "title": "Accidental Truth: Next - Beyond UFO Disclosure",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/wMIKzfk6kb5QLB4eBbN2eW6sgow.jpg",
-        "released": "2026-06-01"
+        "id": "tt39846618",
+        "title": "Time Travel Man: Al Bielek and the Philadelphia Experiment",
+        "thumbnail": "https://images.justwatch.com/poster/347964799/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt40825487",
-        "title": "Peter and the Goblin Arrow",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/hxuHGgVaz8VDutVo1S04Zdz09k9.jpg",
-        "released": "2026-08-25"
+        "id": "tt39126728",
+        "title": "Rules of Love",
+        "thumbnail": "https://images.justwatch.com/poster/346572710/s332/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt39830449",
@@ -297,16 +285,40 @@
         "released": "2026-04-28"
       },
       {
+        "id": "tt32645982",
+        "title": "Surrender To It",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qvMbxe09iXyKhEv1dRDQVBb4PMH.jpg",
+        "released": "2026-02-09"
+      },
+      {
+        "id": "tt40795889",
+        "title": "Accidental Truth: Next - Beyond UFO Disclosure",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wMIKzfk6kb5QLB4eBbN2eW6sgow.jpg",
+        "released": "2026-06-01"
+      },
+      {
         "id": "tt28109112",
         "title": "Bigfoot I Love You",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eTMSS2K3qGRLiwJoveBqRUiNQJG.jpg",
         "released": "2026-03-02"
       },
       {
-        "id": "tt32645982",
-        "title": "Surrender To It",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/qvMbxe09iXyKhEv1dRDQVBb4PMH.jpg",
-        "released": "2026-02-09"
+        "id": "tt31131384",
+        "title": "I Live Here Now",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dWgaHEgorSUPHLUKLhvavkEDuLK.jpg",
+        "released": "2025-07-24"
+      },
+      {
+        "id": "tt39366711",
+        "title": "Gaijin",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vmXMwR67UfXVyXv8hE4DThi5CXo.jpg",
+        "released": "2026-04-03"
+      },
+      {
+        "id": "tt31349857",
+        "title": "Dolphin Summer",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fXqVQ3gfADVaBAIlL8MBdHcWv20.jpg",
+        "released": "2025-07-15"
       },
       {
         "id": "tt32065777",
@@ -315,34 +327,28 @@
         "released": "2026-07-02"
       },
       {
-        "id": "tt29781508",
-        "title": "Ketchup on Waffles",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/iGBabyAfUusRZ8pFd6TxrqQul4Q.jpg",
-        "released": "2024-08-24"
-      },
-      {
-        "id": "tt31131384",
-        "title": "I Live Here Now",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dWgaHEgorSUPHLUKLhvavkEDuLK.jpg",
-        "released": "2026-03-20"
-      },
-      {
-        "id": "tt15210538",
-        "title": "Dug Dug",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/iMCg4KJXsfrOl5zUya5z3xYc4Qj.jpg",
-        "released": "2026-05-08"
-      },
-      {
-        "id": "tt29824649",
-        "title": "Skate to Hell",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9zYFqmxCklduprBNkAKvTBtH7TQ.jpg",
-        "released": "2026-01-15"
+        "id": "tt40825487",
+        "title": "Peter and the Goblin Arrow",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/hxuHGgVaz8VDutVo1S04Zdz09k9.jpg",
+        "released": "2026-08-25"
       },
       {
         "id": "tt18566780",
         "title": "JACK AND AVA",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ptKumBOxG5O58DW2RLL9qB6CLox.jpg",
         "released": "2026-01-23"
+      },
+      {
+        "id": "tt15210538",
+        "title": "Dug Dug",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iMCg4KJXsfrOl5zUya5z3xYc4Qj.jpg",
+        "released": "2021-09-09"
+      },
+      {
+        "id": "tt29824649",
+        "title": "Skate to Hell",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9zYFqmxCklduprBNkAKvTBtH7TQ.jpg",
+        "released": "2026-01-15"
       },
       {
         "id": "tt33044487",
@@ -357,16 +363,10 @@
         "released": "2026-04-14"
       },
       {
-        "id": "tt31349857",
-        "title": "Dolphin Summer",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fXqVQ3gfADVaBAIlL8MBdHcWv20.jpg",
-        "released": "2026-01-08"
-      },
-      {
-        "id": "tt39366711",
-        "title": "Gaijin",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vmXMwR67UfXVyXv8hE4DThi5CXo.jpg",
-        "released": "2026-04-03"
+        "id": "tt29781508",
+        "title": "Ketchup on Waffles",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iGBabyAfUusRZ8pFd6TxrqQul4Q.jpg",
+        "released": "2024-08-24"
       },
       {
         "id": "tt41371213",
@@ -399,21 +399,15 @@
         "released": "2026-04-03"
       },
       {
-        "id": "tt39229153",
-        "title": "United Kingdom in",
-        "thumbnail": "https://images.justwatch.com/poster/346882768/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt34435532",
-        "title": "Mermaid",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/qHpurzepx8ERBtAiGq7bSXpMnDD.jpg",
-        "released": "2026-04-08"
-      },
-      {
         "id": "tt29355352",
         "title": "Duplicity",
         "thumbnail": "https://images.justwatch.com/poster/341219720/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39229153",
+        "title": "United Kingdom in",
+        "thumbnail": "https://images.justwatch.com/poster/346882768/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -429,10 +423,16 @@
         "released": "2026-01-01"
       },
       {
+        "id": "tt34435532",
+        "title": "Mermaid",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qHpurzepx8ERBtAiGq7bSXpMnDD.jpg",
+        "released": "2025-05-08"
+      },
+      {
         "id": "tt33365660",
         "title": "By Design",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vsxdWuHSR69euI3O3qjlJyudNUg.jpg",
-        "released": "2026-02-13"
+        "released": "2025-01-23"
       },
       {
         "id": "tt8665458",
@@ -441,10 +441,10 @@
         "released": "2026-02-12"
       },
       {
-        "id": "tt37540328",
-        "title": "Back to the 90s",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tCOvMa7bXHiRlOuhQvUOeSF0kPn.jpg",
-        "released": "2026-08-18"
+        "id": "tt39314786",
+        "title": "The Butcher's Blade",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8S3Tt4gQudJUsK9jKu5Gy1mDfvb.jpg",
+        "released": "2026-01-08"
       },
       {
         "id": "tt41944345",
@@ -453,22 +453,22 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt32338122",
-        "title": "Pitfall",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/xlkd8rmU3DMFKqCGOchAH1avrfM.jpg",
-        "released": "2025-05-29"
-      },
-      {
         "id": "tt36958376",
         "title": "Your Fault: London",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nLxu237EJAisFCYKK48hN9Plobx.jpg",
         "released": "2026-06-17"
       },
       {
-        "id": "tt39314786",
-        "title": "The Butcher's Blade",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8S3Tt4gQudJUsK9jKu5Gy1mDfvb.jpg",
-        "released": "2026-01-08"
+        "id": "tt32338122",
+        "title": "Pitfall",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xlkd8rmU3DMFKqCGOchAH1avrfM.jpg",
+        "released": "2025-05-29"
+      },
+      {
+        "id": "tt37540328",
+        "title": "Back to the 90s",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tCOvMa7bXHiRlOuhQvUOeSF0kPn.jpg",
+        "released": "2026-08-18"
       },
       {
         "id": "tt15464188",
@@ -510,7 +510,7 @@
         "id": "tt30807329",
         "title": "Beneath the Light",
         "thumbnail": "https://image.tmdb.org/t/p/w500/asqClWSo9J9h9q9u5aEFxoKj454.jpg",
-        "released": "2026-01-01"
+        "released": "2025-09-06"
       },
       {
         "id": "tt15366276",
@@ -531,22 +531,28 @@
         "released": "2026-04-21"
       },
       {
+        "id": "tt39708015",
+        "title": "Gaayapadda Simham",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dx40U1uLHwBpdbVxIMC57jyIAaf.jpg",
+        "released": "2026-05-01"
+      },
+      {
         "id": "tt29194740",
         "title": "My Dead Summer",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6Id8hwqmNBEI3Q5rmcMoGd1NTi8.jpg",
         "released": "2026-03-03"
       },
       {
-        "id": "tt18950916",
-        "title": "House of Ka",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/nsBCtLZhc9eH56sFoRwgFckRosw.jpg",
-        "released": "2026-01-27"
-      },
-      {
         "id": "tt18375626",
         "title": "NFT: Cursed Images",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7H7Aqun1GTiMAtlE6Z2DnwxUbo2.jpg",
         "released": "2026-03-06"
+      },
+      {
+        "id": "tt39183645",
+        "title": "Eunji Kim: Just A Lady",
+        "thumbnail": "https://images.justwatch.com/poster/344200808/s332/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt43351237",
@@ -561,58 +567,16 @@
         "released": "2026-01-09"
       },
       {
-        "id": "tt36956284",
-        "title": "Still Sexy",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/yag6pzO68eMauPNam5SSFkZNg6b.jpg",
-        "released": "2026-06-12"
-      },
-      {
-        "id": "tt37256772",
-        "title": "Expedition: Greenland",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/i6VIJCRYOuFosVdCbdXrN7EktjJ.jpg",
-        "released": "2025-09-06"
-      },
-      {
         "id": "tt43656025",
         "title": "Nish Kumar: Nish, Don't Kill My Vibe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/oEA8FlTyJ2h4W5INPZjkLpVDE3s.jpg",
         "released": "2026-03-18"
       },
       {
-        "id": "tt39703118",
-        "title": "Her Own Child",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/rUYMW5Kq2xCw2TDIChjwNBMWxs8.jpg",
-        "released": "2026-04-17"
-      },
-      {
-        "id": "tt39325805",
-        "title": "Tragic Villain",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4E5KyeaI62XNNl4ZxgRGYq1q7Pb.jpg",
-        "released": "2026-04-08"
-      },
-      {
-        "id": "tt39183645",
-        "title": "Eunji Kim: Just A Lady",
-        "thumbnail": "https://images.justwatch.com/poster/344200808/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt36652079",
-        "title": "A Royal Romance in Ibiza",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/nU8ufZuIDkqG7gebp458bFjbcDY.jpg",
-        "released": "2026-04-13"
-      },
-      {
-        "id": "tt29638896",
-        "title": "Naari Naari Naduma Murari",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jFBu7tS0mlEZwYTkjJcKH48bV4m.jpg",
-        "released": "2026-01-14"
-      },
-      {
-        "id": "tt39708015",
-        "title": "Gaayapadda Simham",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dx40U1uLHwBpdbVxIMC57jyIAaf.jpg",
-        "released": "2026-05-01"
+        "id": "tt39195804",
+        "title": "Vishnu Vinyasam",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5ACLnlafSgtE8mlylhnWLLHfoZJ.jpg",
+        "released": "2026-02-27"
       },
       {
         "id": "tt32808016",
@@ -621,16 +585,22 @@
         "released": "2025-01-11"
       },
       {
+        "id": "tt29638896",
+        "title": "Naari Naari Naduma Murari",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jFBu7tS0mlEZwYTkjJcKH48bV4m.jpg",
+        "released": "2026-01-14"
+      },
+      {
+        "id": "tt36652079",
+        "title": "A Royal Romance in Ibiza",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/nU8ufZuIDkqG7gebp458bFjbcDY.jpg",
+        "released": "2026-04-13"
+      },
+      {
         "id": "tt28452092",
         "title": "Relentless",
         "thumbnail": "https://image.tmdb.org/t/p/w500/30CJyWxLd7axNOdpuF9L0yAfKa9.jpg",
-        "released": "2026-01-09"
-      },
-      {
-        "id": "tt39195804",
-        "title": "Vishnu Vinyasam",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/5ACLnlafSgtE8mlylhnWLLHfoZJ.jpg",
-        "released": "2026-02-27"
+        "released": "2025-10-11"
       },
       {
         "id": "tt23685396",
@@ -645,10 +615,22 @@
         "released": "2026-01-01"
       },
       {
+        "id": "tt18950916",
+        "title": "House of Ka",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/nsBCtLZhc9eH56sFoRwgFckRosw.jpg",
+        "released": "2026-01-27"
+      },
+      {
         "id": "tt37538649",
         "title": "A Balcony in Limoges",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5JJdxmbzDAjpbncPyk3oh0T2GAT.jpg",
-        "released": "2026-04-29"
+        "released": "2025-08-12"
+      },
+      {
+        "id": "tt31157145",
+        "title": "Standout: The Ben Kjar Story",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/iVUFFOWq48zUeh0rmCYdtJkiM0P.jpg",
+        "released": "2025-02-23"
       },
       {
         "id": "tt32394518",
@@ -663,22 +645,10 @@
         "released": "2026-04-04"
       },
       {
-        "id": "tt31157145",
-        "title": "Standout: The Ben Kjar Story",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/iVUFFOWq48zUeh0rmCYdtJkiM0P.jpg",
-        "released": "2026-01-23"
-      },
-      {
-        "id": "tt31852038",
-        "title": "Cheekatilo",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pO86EjZb7QyGYk5RW4Xm4UWe5Uv.jpg",
-        "released": "2026-01-23"
-      },
-      {
-        "id": "tt18546840",
-        "title": "Broken Land",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/V2yneoQag5UYPuVdOKDHObQIpS.jpg",
-        "released": "2024-10-25"
+        "id": "tt7006602",
+        "title": "Gone to Ground",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eBruXJsTSvjzAJZC2V1pUkCLfWP.jpg",
+        "released": "2026-01-01"
       },
       {
         "id": "tt43714762",
@@ -693,10 +663,16 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt7006602",
-        "title": "Gone to Ground",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/eBruXJsTSvjzAJZC2V1pUkCLfWP.jpg",
-        "released": "2026-01-01"
+        "id": "tt31852038",
+        "title": "Cheekatilo",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pO86EjZb7QyGYk5RW4Xm4UWe5Uv.jpg",
+        "released": "2026-01-23"
+      },
+      {
+        "id": "tt18546840",
+        "title": "Broken Land",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/V2yneoQag5UYPuVdOKDHObQIpS.jpg",
+        "released": "2024-10-25"
       },
       {
         "id": "tt31707271",
@@ -711,22 +687,22 @@
         "released": "2023-05-03"
       },
       {
-        "id": "tt34967012",
-        "title": "Didn't Die",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/z5l7KZOvvqv7V0tos394F7G6aJE.jpg",
-        "released": "2026-03-06"
-      },
-      {
         "id": "tt42016131",
         "title": "Costa Concordia: Minute by Minute",
         "thumbnail": "https://image.tmdb.org/t/p/w500/f9nbQtTZGGY7NnTE4UyodJExDAC.jpg",
         "released": "2026-04-22"
       },
       {
-        "id": "tt34564059",
-        "title": "The Runner",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
-        "released": "2026-09-03"
+        "id": "tt34967012",
+        "title": "Didn't Die",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/z5l7KZOvvqv7V0tos394F7G6aJE.jpg",
+        "released": "2025-01-28"
+      },
+      {
+        "id": "tt37654096",
+        "title": "The Last Sunrise",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3PWJqDfygN0YNNjWsDUOXclCp3h.jpg",
+        "released": "2026-08-26"
       },
       {
         "id": "tt1742179",
@@ -741,10 +717,10 @@
         "released": "2022-07-08"
       },
       {
-        "id": "tt37654096",
-        "title": "The Last Sunrise",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/3PWJqDfygN0YNNjWsDUOXclCp3h.jpg",
-        "released": "2026-08-26"
+        "id": "tt34564059",
+        "title": "The Runner",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+        "released": "2026-09-02"
       },
       {
         "id": "tt14113634",
@@ -787,12 +763,6 @@
         "title": "Cursed Hearse",
         "thumbnail": "https://image.tmdb.org/t/p/w500/aPEJjaROb3YtDxtd9ZIQbS7OHDp.jpg",
         "released": "2026-03-10"
-      },
-      {
-        "id": "tt23002208",
-        "title": "The Daemon",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mGPq36WlMxKf3YfZrh6Bymx4rOP.jpg",
-        "released": "2024-08-23"
       },
       {
         "id": "tt42636911",
@@ -936,7 +906,7 @@
         "id": "tt20355310",
         "title": "Moss & Freud",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eRZYAWgXbcuQ7NAGjJjp4Mw8urw.jpg",
-        "released": "2026-05-29"
+        "released": "2025-10-10"
       },
       {
         "id": "tt28979010",
@@ -957,12 +927,6 @@
         "released": "2026-09-07"
       },
       {
-        "id": "tt34379307",
-        "title": "Is God Is",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/rCYQGHdoz7qwYsb6wXETJfUfDLX.jpg",
-        "released": "2026-05-14"
-      },
-      {
         "id": "tt43876243",
         "title": "Lucy's Biggest Guest Stars",
         "thumbnail": "https://images.justwatch.com/poster/348043868/s332/img",
@@ -973,12 +937,6 @@
         "title": "Tom Clancy's Jack Ryan: Ghost War",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8ehYxUh5MWE41AeE9gkHE8DKzvB.jpg",
         "released": "2026-05-20"
-      },
-      {
-        "id": "tt36364104",
-        "title": "Minnie’s Midnight Massacre",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/eV9vdeMqmxOTxz2ELICoHhkbHn6.jpg",
-        "released": "2026-02-17"
       },
       {
         "id": "tt38235625",
@@ -1017,6 +975,24 @@
         "released": "2026-02-13"
       },
       {
+        "id": "tt34379307",
+        "title": "Is God Is",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/rCYQGHdoz7qwYsb6wXETJfUfDLX.jpg",
+        "released": "2026-04-27"
+      },
+      {
+        "id": "tt23002208",
+        "title": "The Daemon",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mGPq36WlMxKf3YfZrh6Bymx4rOP.jpg",
+        "released": "2024-08-23"
+      },
+      {
+        "id": "tt36364104",
+        "title": "Minnie’s Midnight Massacre",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eV9vdeMqmxOTxz2ELICoHhkbHn6.jpg",
+        "released": "2026-02-17"
+      },
+      {
         "id": "tt39229853",
         "title": "Envelop",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rGym9k9kWlVw7Wqn5CWb93J3GaY.jpg",
@@ -1029,46 +1005,16 @@
         "released": "2026-04-17"
       },
       {
-        "id": "tt32358025",
-        "title": "Beast Race",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mwmfEqWXZG6HmAUuN5SjO8s7UNV.jpg",
-        "released": "2026-03-17"
-      },
-      {
-        "id": "tt35996799",
-        "title": "Content",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8AqWhctzuOdNMrXtlk4kj4bXaqq.jpg",
-        "released": "2025-09-01"
-      },
-      {
-        "id": "tt15716368",
-        "title": "Bad Voodoo",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8z9CkHQaPy4eaoVwFubQF0iqgBt.jpg",
-        "released": "2026-02-10"
-      },
-      {
-        "id": "tt14984912",
-        "title": "The Aryan Papers",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/30fQ2nYMyv5TjyEm3j9JwgTa3ZW.jpg",
-        "released": "2026-01-26"
-      },
-      {
-        "id": "tt38907371",
-        "title": "Oh..! Sukumari",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/x6b5cHpR8KuCg5OHEXmvkgVXKtN.jpg",
-        "released": "2026-07-17"
-      },
-      {
         "id": "tt43599350",
         "title": "A Married Lie",
         "thumbnail": "https://images.justwatch.com/poster/348310300/s332/img",
         "released": "2026-01-01"
       },
       {
-        "id": "tt39676092",
-        "title": "Jackie Monahan: The Main Problem",
-        "thumbnail": "https://images.justwatch.com/poster/341578122/s332/img",
-        "released": "2026-01-01"
+        "id": "tt38907371",
+        "title": "Oh..! Sukumari",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/x6b5cHpR8KuCg5OHEXmvkgVXKtN.jpg",
+        "released": "2026-07-17"
       },
       {
         "id": "tt38770081",
@@ -1089,10 +1035,28 @@
         "released": "2026-03-08"
       },
       {
+        "id": "tt15716368",
+        "title": "Bad Voodoo",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8z9CkHQaPy4eaoVwFubQF0iqgBt.jpg",
+        "released": "2026-02-10"
+      },
+      {
         "id": "tt37989044",
         "title": "Snake Manor",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ytHU4fbS45PZfiZFnZXJrinTk6u.jpg",
         "released": "2026-01-08"
+      },
+      {
+        "id": "tt39676092",
+        "title": "Jackie Monahan: The Main Problem",
+        "thumbnail": "https://images.justwatch.com/poster/341578122/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt35996799",
+        "title": "Content",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8AqWhctzuOdNMrXtlk4kj4bXaqq.jpg",
+        "released": "2025-09-01"
       },
       {
         "id": "tt32858056",
@@ -1116,7 +1080,7 @@
         "id": "tt32881442",
         "title": "Monkey’s Magic Merry Go Round",
         "thumbnail": "https://image.tmdb.org/t/p/w500/g1v1ogfa8PCvcYJ1JSmrqbcHMAP.jpg",
-        "released": "2026-05-14"
+        "released": "2024-11-15"
       },
       {
         "id": "tt17331248",
@@ -1128,7 +1092,7 @@
         "id": "tt24057286",
         "title": "One of the Good Ones",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zuAzDGV3mSRpW0sZaZkexL2phx1.jpg",
-        "released": "2026-03-08"
+        "released": "2026-03-06"
       },
       {
         "id": "tt12286564",
@@ -1182,7 +1146,7 @@
         "id": "tt25868520",
         "title": "Rise of the Conqueror",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9cRE0DsM6CNIiY9Ah3cd8oc3n1Y.jpg",
-        "released": "2026-04-09"
+        "released": "2026-04-02"
       },
       {
         "id": "tt28806833",
@@ -1194,13 +1158,13 @@
         "id": "tt0427340",
         "title": "Masters of the Universe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg",
-        "released": "2026-06-03"
+        "released": "2026-05-18"
       },
       {
         "id": "tt32565993",
         "title": "The Sheep Detectives",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iKy5460GdsoknM8ppmGlJbKxAKa.jpg",
-        "released": "2026-04-30"
+        "released": "2026-04-19"
       },
       {
         "id": "tt26234108",
@@ -1212,19 +1176,13 @@
         "id": "tt33028778",
         "title": "Primate",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rKleYiEj4pFqxedTRWfujLooi84.jpg",
-        "released": "2026-01-01"
+        "released": "2025-09-18"
       },
       {
-        "id": "tt36598704",
-        "title": "Off the Air",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/415KFSjmAQwBitNSTrML0mPAyeE.jpg",
-        "released": "2026-04-30"
-      },
-      {
-        "id": "tt35660730",
-        "title": "God of This Age",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jjH6DeslooJVHEZNp1QmeObKSYU.jpg",
-        "released": "2026-08-03"
+        "id": "tt32358025",
+        "title": "Beast Race",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mwmfEqWXZG6HmAUuN5SjO8s7UNV.jpg",
+        "released": "2026-03-17"
       },
       {
         "id": "tt35338387",
@@ -1239,64 +1197,16 @@
         "released": "2026-06-08"
       },
       {
-        "id": "tt42373992",
-        "title": "Kyle Larson vs. The Double",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/2ovfdMuA9Dwz3K8NOTcbrdOWMO2.jpg",
-        "released": "2026-05-21"
+        "id": "tt36598704",
+        "title": "Off the Air",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/415KFSjmAQwBitNSTrML0mPAyeE.jpg",
+        "released": "2026-04-30"
       },
       {
-        "id": "tt34382183",
-        "title": "Rabisu: Curse of the Demon",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oxhLnTOva0MqwHpS9QG9kkTh4DB.jpg",
-        "released": "2026-01-14"
-      },
-      {
-        "id": "tt28477323",
-        "title": "The Elephant in the Room",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/oEWCmXH266Sc2wNsdiVIPBFEJJ4.jpg",
-        "released": "2025-01-26"
-      },
-      {
-        "id": "tt37679060",
-        "title": "Dragon Fury 3",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/bnw14Xc9t5wXTHsWpQz6MjMVUgd.jpg",
-        "released": "2026-03-04"
-      },
-      {
-        "id": "tt32820494",
-        "title": "A Paralyzing Redemption",
-        "thumbnail": "https://images.justwatch.com/poster/346787878/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt28350435",
-        "title": "He Loves Me Not",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/nLGZpK2ShMnwGFBmHRoc1DXV49r.jpg",
-        "released": "2026-08-20"
-      },
-      {
-        "id": "tt21092406",
-        "title": "The Distant Jump",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/evavSQyBoaFidbbyOTOONkFY8SD.jpg",
-        "released": "2026-02-07"
-      },
-      {
-        "id": "tt31689648",
-        "title": "Dirty Hands",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/Ab4BIhwZQU2BWeT32QIcsZG2OGZ.jpg",
-        "released": "2026-04-24"
-      },
-      {
-        "id": "tt39676106",
-        "title": "Doogie Horner: The Bee's Knees",
-        "thumbnail": "https://images.justwatch.com/poster/341578183/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt33029849",
-        "title": "Blessed: Live, Laugh,Run!",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zaMgsbXT66MkAulxuINyXwdqZz8.jpg",
-        "released": "2026-01-14"
+        "id": "tt35660730",
+        "title": "God of This Age",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jjH6DeslooJVHEZNp1QmeObKSYU.jpg",
+        "released": "2026-08-03"
       },
       {
         "id": "tt27272753",
@@ -1308,7 +1218,37 @@
         "id": "tt38589710",
         "title": "Bride of Frankenstein Awakens",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3OhXjilaXq0Sae6Poi6ctJojvOL.jpg",
-        "released": "2026-02-25"
+        "released": "2026-02-22"
+      },
+      {
+        "id": "tt37679060",
+        "title": "Dragon Fury 3",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bnw14Xc9t5wXTHsWpQz6MjMVUgd.jpg",
+        "released": "2026-03-04"
+      },
+      {
+        "id": "tt28350435",
+        "title": "He Loves Me Not",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/nLGZpK2ShMnwGFBmHRoc1DXV49r.jpg",
+        "released": "2024-04-27"
+      },
+      {
+        "id": "tt39676106",
+        "title": "Doogie Horner: The Bee's Knees",
+        "thumbnail": "https://images.justwatch.com/poster/341578183/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt21092406",
+        "title": "The Distant Jump",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/evavSQyBoaFidbbyOTOONkFY8SD.jpg",
+        "released": "2026-02-07"
+      },
+      {
+        "id": "tt42373992",
+        "title": "Kyle Larson vs. The Double",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2ovfdMuA9Dwz3K8NOTcbrdOWMO2.jpg",
+        "released": "2026-05-21"
       },
       {
         "id": "tt40570079",
@@ -1317,10 +1257,40 @@
         "released": "2026-05-22"
       },
       {
+        "id": "tt28477323",
+        "title": "The Elephant in the Room",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oEWCmXH266Sc2wNsdiVIPBFEJJ4.jpg",
+        "released": "2025-01-26"
+      },
+      {
+        "id": "tt32820494",
+        "title": "A Paralyzing Redemption",
+        "thumbnail": "https://images.justwatch.com/poster/346787878/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33029849",
+        "title": "Blessed: Live, Laugh,Run!",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zaMgsbXT66MkAulxuINyXwdqZz8.jpg",
+        "released": "2026-01-14"
+      },
+      {
         "id": "tt33029387",
         "title": "Red Riding",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wDsbatgGDW4gw9ViA9Bc654MP9s.jpg",
-        "released": "2026-03-13"
+        "released": "2026-03-07"
+      },
+      {
+        "id": "tt34382183",
+        "title": "Rabisu: Curse of the Demon",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/oxhLnTOva0MqwHpS9QG9kkTh4DB.jpg",
+        "released": "2026-01-14"
+      },
+      {
+        "id": "tt31689648",
+        "title": "Dirty Hands",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/Ab4BIhwZQU2BWeT32QIcsZG2OGZ.jpg",
+        "released": "2026-04-24"
       },
       {
         "id": "tt39365508",
@@ -1335,12 +1305,6 @@
         "released": "2026-02-06"
       },
       {
-        "id": "tt36484294",
-        "title": "Self Custody",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jpi76bDchxfsU2vD25HoEJfvQ0w.jpg",
-        "released": "2026-03-03"
-      },
-      {
         "id": "tt38519832",
         "title": "God & Beer",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hg5bjGbxVcMYsjc20EPBd1cNlLI.jpg",
@@ -1351,6 +1315,12 @@
         "title": "Ashes",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fAg6PR6jOGRf7MunIJMUQOgsFr8.jpg",
         "released": "2026-04-07"
+      },
+      {
+        "id": "tt36484294",
+        "title": "Self Custody",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jpi76bDchxfsU2vD25HoEJfvQ0w.jpg",
+        "released": "2026-03-03"
       },
       {
         "id": "tt43706316",
@@ -1374,19 +1344,7 @@
         "id": "tt21158854",
         "title": "Slasher",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vuJbekPe5rxkq8rCmsGEfgSzyH2.jpg",
-        "released": "2023-05-12"
-      },
-      {
-        "id": "tt39386166",
-        "title": "Its Presence Between Us",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/f1sxYpzsLLMnX1p5mpUKbPRBXt2.jpg",
-        "released": "2026-01-24"
-      },
-      {
-        "id": "tt43729941",
-        "title": "Norton Creek Massacre",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vFsaewVtJHfmfsn7J4LxyKiMz3P.jpg",
-        "released": "2026-01-01"
+        "released": "2022-06-25"
       },
       {
         "id": "tt43701879",
@@ -1401,10 +1359,28 @@
         "released": "2026-01-31"
       },
       {
+        "id": "tt38525868",
+        "title": "Single Before Christmas",
+        "thumbnail": "https://images.justwatch.com/poster/340348593/s332/img",
+        "released": "2026-01-01"
+      },
+      {
         "id": "tt32880540",
         "title": "Agent Zeta",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1cKLG9KMoCjsgFB8Nw1EuglteVi.jpg",
         "released": "2026-03-20"
+      },
+      {
+        "id": "tt39386166",
+        "title": "Its Presence Between Us",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/f1sxYpzsLLMnX1p5mpUKbPRBXt2.jpg",
+        "released": "2026-01-24"
+      },
+      {
+        "id": "tt43729941",
+        "title": "Norton Creek Massacre",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vFsaewVtJHfmfsn7J4LxyKiMz3P.jpg",
+        "released": "2026-01-01"
       },
       {
         "id": "tt38047580",
@@ -1413,22 +1389,10 @@
         "released": "2026-03-16"
       },
       {
-        "id": "tt38525868",
-        "title": "Single Before Christmas",
-        "thumbnail": "https://images.justwatch.com/poster/340348593/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt32810474",
         "title": "Refuge",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kCZa7fDEqvWbaCzji0PcoD52JdU.jpg",
         "released": "2026-03-27"
-      },
-      {
-        "id": "tt36955347",
-        "title": "Sharlotte's Web",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/lq5IemMoytvKjDRuB014q9nUPla.jpg",
-        "released": "2026-03-11"
       },
       {
         "id": "tt31867154",
@@ -1437,57 +1401,15 @@
         "released": "2026-01-25"
       },
       {
-        "id": "tt39048730",
-        "title": "Shelly Belly: Don't You Judge Me",
-        "thumbnail": "https://images.justwatch.com/poster/346665635/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt20425286",
-        "title": "The Ground Beneath Our Feet",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vBEY6UDuLyy1X1fDK1vHsJuvfcp.jpg",
-        "released": "2024-06-01"
-      },
-      {
-        "id": "tt37363420",
-        "title": "I Don't Love You Anymore",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vhjWC24lprVmoEO6wRFCYquQcW4.jpg",
-        "released": "2026-02-20"
-      },
-      {
         "id": "tt42203456",
         "title": "Love Oh Love",
         "thumbnail": "https://image.tmdb.org/t/p/w500/37svY2bwI83NSHuR6KSQeBhjgOt.jpg",
         "released": "2026-07-10"
       },
       {
-        "id": "tt15014930",
-        "title": "My Own Normal",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4OBQ3HiReYHBX18FUbX8ruso4DK.jpg",
-        "released": "2024-05-07"
-      },
-      {
-        "id": "tt22187488",
-        "title": "Intrusive Thoughts",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/yVrjBP0sSyn6FmuvFzr94zEa0X3.jpg",
-        "released": "2026-01-13"
-      },
-      {
-        "id": "tt40123420",
-        "title": "Francisco Ramos: Still Learning",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8sZh1ySIJ0RPONBjML3kCUd83on.jpg",
-        "released": "2026-06-09"
-      },
-      {
-        "id": "tt36201830",
-        "title": "System",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ddSTqsxOoXs77xnKpP7XBPqiero.jpg",
-        "released": "2026-05-22"
-      },
-      {
-        "id": "tt40450857",
-        "title": "Marito Antonio Lopez: LatinXXX",
-        "thumbnail": "https://images.justwatch.com/poster/342807670/s332/img",
+        "id": "tt39048730",
+        "title": "Shelly Belly: Don't You Judge Me",
+        "thumbnail": "https://images.justwatch.com/poster/346665635/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -1497,22 +1419,28 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt31888337",
-        "title": "Pickleball Pete",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sB61RzPSbRMfcvQmGbP4TsQFAgJ.jpg",
-        "released": "2026-05-22"
-      },
-      {
         "id": "tt30796568",
         "title": "This Tempting Madness",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eycVPsYXsLMRXgAPGqJTzKvnlzX.jpg",
-        "released": "2026-06-12"
+        "released": "2025-11-27"
       },
       {
-        "id": "tt40573937",
-        "title": "Supercars - Road to Glory",
-        "thumbnail": "https://images.justwatch.com/poster/341850703/s332/img",
+        "id": "tt40450857",
+        "title": "Marito Antonio Lopez: LatinXXX",
+        "thumbnail": "https://images.justwatch.com/poster/342807670/s332/img",
         "released": "2026-01-01"
+      },
+      {
+        "id": "tt40123420",
+        "title": "Francisco Ramos: Still Learning",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8sZh1ySIJ0RPONBjML3kCUd83on.jpg",
+        "released": "2026-06-09"
+      },
+      {
+        "id": "tt35148005",
+        "title": "Achilles Returns",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/1K6o5Tdno278HYHmsxDQtjgxw5m.jpg",
+        "released": "2026-05-25"
       },
       {
         "id": "tt43620749",
@@ -1521,10 +1449,52 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt35148005",
-        "title": "Achilles Returns",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/1K6o5Tdno278HYHmsxDQtjgxw5m.jpg",
-        "released": "2026-05-25"
+        "id": "tt22187488",
+        "title": "Intrusive Thoughts",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/yVrjBP0sSyn6FmuvFzr94zEa0X3.jpg",
+        "released": "2026-01-13"
+      },
+      {
+        "id": "tt20425286",
+        "title": "The Ground Beneath Our Feet",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vBEY6UDuLyy1X1fDK1vHsJuvfcp.jpg",
+        "released": "2024-06-01"
+      },
+      {
+        "id": "tt36955347",
+        "title": "Sharlotte's Web",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/lq5IemMoytvKjDRuB014q9nUPla.jpg",
+        "released": "2026-03-11"
+      },
+      {
+        "id": "tt31888337",
+        "title": "Pickleball Pete",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sB61RzPSbRMfcvQmGbP4TsQFAgJ.jpg",
+        "released": "2026-05-22"
+      },
+      {
+        "id": "tt40573937",
+        "title": "Supercars - Road to Glory",
+        "thumbnail": "https://images.justwatch.com/poster/341850703/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36201830",
+        "title": "System",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ddSTqsxOoXs77xnKpP7XBPqiero.jpg",
+        "released": "2026-05-22"
+      },
+      {
+        "id": "tt15014930",
+        "title": "My Own Normal",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/4OBQ3HiReYHBX18FUbX8ruso4DK.jpg",
+        "released": "2024-05-07"
+      },
+      {
+        "id": "tt37363420",
+        "title": "I Don't Love You Anymore",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vhjWC24lprVmoEO6wRFCYquQcW4.jpg",
+        "released": "2026-02-20"
       },
       {
         "id": "tt32316819",
@@ -1545,9 +1515,9 @@
         "released": "2026-04-07"
       },
       {
-        "id": "tt29431844",
-        "title": "All for One",
-        "thumbnail": "https://images.justwatch.com/poster/347349357/s332/img",
+        "id": "tt30692905",
+        "title": "Christmas at the Interlaken",
+        "thumbnail": "https://images.justwatch.com/poster/347196450/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -1557,15 +1527,9 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt30692905",
-        "title": "Christmas at the Interlaken",
-        "thumbnail": "https://images.justwatch.com/poster/347196450/s332/img",
-        "released": "2026-01-01"
-      },
-      {
-        "id": "tt42053314",
-        "title": "Hot & Fluffy Bits Vol 1",
-        "thumbnail": "https://live.metahub.space/poster/medium/tt42053314/img",
+        "id": "tt29431844",
+        "title": "All for One",
+        "thumbnail": "https://images.justwatch.com/poster/347349357/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -1573,6 +1537,12 @@
         "title": "Off Rip",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jpdmwrmmeBHKu1VlULiyOTBr8tM.jpg",
         "released": "2025-04-05"
+      },
+      {
+        "id": "tt42053314",
+        "title": "Hot & Fluffy Bits Vol 1",
+        "thumbnail": "https://live.metahub.space/poster/medium/tt42053314/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt32244353",
@@ -1599,12 +1569,6 @@
         "released": "2026-01-02"
       },
       {
-        "id": "tt36331860",
-        "title": "Love Me Love Me",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jfwHKRHRE2X4NTexdzblaioHH51.jpg",
-        "released": "2026-02-12"
-      },
-      {
         "id": "tt30460421",
         "title": "Love Insurance Kompany",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pOWlTPQtU7sBHaNyQtQS4pwLGuf.jpg",
@@ -1617,16 +1581,22 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt32780056",
-        "title": "Aliens Are Coming!! On Monday!!!",
-        "thumbnail": "https://images.justwatch.com/poster/354631988/s332/img",
-        "released": "2026-01-01"
+        "id": "tt36331860",
+        "title": "Love Me Love Me",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jfwHKRHRE2X4NTexdzblaioHH51.jpg",
+        "released": "2026-02-12"
       },
       {
         "id": "tt32305936",
         "title": "Tears to a Glass Eye",
         "thumbnail": "https://image.tmdb.org/t/p/w500/sPxfBXeNNQbiHNvkPzo3wF8Vybx.jpg",
         "released": "2025-05-11"
+      },
+      {
+        "id": "tt32780056",
+        "title": "Aliens Are Coming!! On Monday!!!",
+        "thumbnail": "https://images.justwatch.com/poster/354631988/s332/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt31050594",
@@ -1647,40 +1617,22 @@
         "released": "2023-04-27"
       },
       {
-        "id": "tt31204751",
-        "title": "Wait List: A Love-ish Story",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sC8N8byLcxlAjnAHze3DRntgp6K.jpg",
-        "released": "2025-11-18"
-      },
-      {
-        "id": "tt43696908",
-        "title": "The Hunted",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/g1SmwQiIPsbcJjqiI3vnB76DCDv.jpg",
-        "released": "2026-07-20"
-      },
-      {
-        "id": "tt30842022",
-        "title": "The Dreadful",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/nhhJkYau8nQMFgauvOudDjwj9vA.jpg",
-        "released": "2026-02-20"
-      },
-      {
         "id": "tt39981454",
         "title": "The Last of the Big-Time Promoters",
         "thumbnail": "https://images.justwatch.com/poster/342177754/s332/img",
         "released": "2026-01-01"
       },
       {
-        "id": "tt39845184",
-        "title": "Escape from Area 51: The Hidden Scientific Evolution",
-        "thumbnail": "https://images.justwatch.com/poster/346575911/s332/img",
-        "released": "2026-01-01"
+        "id": "tt38359671",
+        "title": "The Game of Life",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/8pV6zTeNAfVfAMNmJ7kjctgJyZn.jpg",
+        "released": "2026-02-02"
       },
       {
-        "id": "tt27505337",
-        "title": "Salt of the Earth",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/s4nsjOyDrVIoKkuAerYiU1VF2Rh.jpg",
-        "released": "2026-01-09"
+        "id": "tt30842022",
+        "title": "The Dreadful",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/nhhJkYau8nQMFgauvOudDjwj9vA.jpg",
+        "released": "2026-02-20"
       },
       {
         "id": "tt39122419",
@@ -1695,22 +1647,22 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt27993462",
-        "title": "Really Happy Someday",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/jrZREpXNoTxxNQD6noxwxL2U57X.jpg",
-        "released": "2026-03-27"
+        "id": "tt27505337",
+        "title": "Salt of the Earth",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/s4nsjOyDrVIoKkuAerYiU1VF2Rh.jpg",
+        "released": "2026-01-09"
       },
       {
-        "id": "tt38984885",
-        "title": "Betty's Revenge",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/bEKBq4wYItRS24TIwmFDCLift4Z.jpg",
-        "released": "2026-02-17"
+        "id": "tt40914934",
+        "title": "Baingan",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/kbD6hETrUjhPYskAWBI7JJN0VR0.jpg",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt38359671",
-        "title": "The Game of Life",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/8pV6zTeNAfVfAMNmJ7kjctgJyZn.jpg",
-        "released": "2026-02-02"
+        "id": "tt34724163",
+        "title": "Annihilator Unleashed",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ve58p2OiWvTd8fO8AEIMmSI38jE.jpg",
+        "released": "2026-01-06"
       },
       {
         "id": "tt38286527",
@@ -1722,19 +1674,13 @@
         "id": "tt9661164",
         "title": "No Ordinary Heist",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eA2uQxSMqyljAtt920084tDrw6G.jpg",
-        "released": "2026-03-27"
+        "released": "2026-02-22"
       },
       {
         "id": "tt23150446",
         "title": "This Bloody Country",
         "thumbnail": "https://image.tmdb.org/t/p/w500/oxANxGkgaXJalWizBHJLLSnZasE.jpg",
-        "released": "2026-04-29"
-      },
-      {
-        "id": "tt34724163",
-        "title": "Annihilator Unleashed",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ve58p2OiWvTd8fO8AEIMmSI38jE.jpg",
-        "released": "2026-01-06"
+        "released": "2025-10-17"
       },
       {
         "id": "tt39313636",
@@ -1749,10 +1695,34 @@
         "released": "2026-04-17"
       },
       {
-        "id": "tt40914934",
-        "title": "Baingan",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/kbD6hETrUjhPYskAWBI7JJN0VR0.jpg",
+        "id": "tt43696908",
+        "title": "The Hunted",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/g1SmwQiIPsbcJjqiI3vnB76DCDv.jpg",
+        "released": "2026-07-20"
+      },
+      {
+        "id": "tt31204751",
+        "title": "Wait List: A Love-ish Story",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sC8N8byLcxlAjnAHze3DRntgp6K.jpg",
+        "released": "2025-11-18"
+      },
+      {
+        "id": "tt39845184",
+        "title": "Escape from Area 51: The Hidden Scientific Evolution",
+        "thumbnail": "https://images.justwatch.com/poster/346575911/s332/img",
         "released": "2026-01-01"
+      },
+      {
+        "id": "tt27993462",
+        "title": "Really Happy Someday",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/jrZREpXNoTxxNQD6noxwxL2U57X.jpg",
+        "released": "2024-09-08"
+      },
+      {
+        "id": "tt38984885",
+        "title": "Betty's Revenge",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/bEKBq4wYItRS24TIwmFDCLift4Z.jpg",
+        "released": "2026-02-17"
       },
       {
         "id": "tt30413898",
@@ -1764,7 +1734,7 @@
         "id": "tt33998099",
         "title": "Bunnylovr",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rZc2c85zUkUXWzBogPyQb2YxIi6.jpg",
-        "released": "2026-04-10"
+        "released": "2025-01-25"
       },
       {
         "id": "tt39262221",
@@ -1779,16 +1749,16 @@
         "released": "2026-07-10"
       },
       {
-        "id": "tt11609626",
-        "title": "The Calling Witch",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/q8o2NzIH4ze28NAVs1eRkejAJIk.jpg",
-        "released": "2026-01-20"
-      },
-      {
         "id": "tt11859058",
         "title": "Walking Against the Rain",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3pbFEmPjUj3w6LCO7zPWxWJ08lF.jpg",
         "released": "2022-08-27"
+      },
+      {
+        "id": "tt11609626",
+        "title": "The Calling Witch",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/q8o2NzIH4ze28NAVs1eRkejAJIk.jpg",
+        "released": "2026-01-20"
       },
       {
         "id": "tt12209830",
@@ -1809,6 +1779,36 @@
         "released": "2023-06-27"
       },
       {
+        "id": "tt38567123",
+        "title": "Coach Matt and the Outdoor 'Cats",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/teTkN3lugLwJDDzDjrYizUvtpgg.jpg",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36113721",
+        "title": "Southern Scares",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fxb0FoBH6e5NJwdVKiwjMAQzvcy.jpg",
+        "released": "2026-01-10"
+      },
+      {
+        "id": "tt37531905",
+        "title": "The Strength of Love",
+        "thumbnail": "https://images.justwatch.com/poster/347198189/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt32430579",
+        "title": "Crime 101",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
+        "released": "2026-01-28"
+      },
+      {
+        "id": "tt43724770",
+        "title": "Threshold",
+        "thumbnail": "https://images.justwatch.com/poster/347819928/s332/img",
+        "released": "2026-01-01"
+      },
+      {
         "id": "tt0080319",
         "title": "Nine to Five",
         "thumbnail": "https://images.justwatch.com/poster/247946480/s332/img",
@@ -1818,19 +1818,19 @@
         "id": "tt27543578",
         "title": "Good Fortune",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rywxUbd4zvHiRP7nOHeDzuQSLIZ.jpg",
-        "released": "2025-10-14"
+        "released": "2025-09-06"
       },
       {
         "id": "tt0816692",
         "title": "Interstellar",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
-        "released": "2014-11-05"
+        "released": "2014-10-26"
       },
       {
         "id": "tt22207786",
         "title": "Red Rooms",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uBJvbf0g9rcsYElcwZCMYU0Vrj8.jpg",
-        "released": "2023-08-11"
+        "released": "2023-07-04"
       },
       {
         "id": "tt0105481",
@@ -1842,13 +1842,13 @@
         "id": "tt0101540",
         "title": "Cape Fear",
         "thumbnail": "https://image.tmdb.org/t/p/w500/meJZAAuVcjic2ipvbOPz5UlE4P9.jpg",
-        "released": "1991-11-13"
+        "released": "1991-10-06"
       },
       {
         "id": "tt26581740",
         "title": "Weapons",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cpf7vsRZ0MYRQcnLWteD5jK9ymT.jpg",
-        "released": "2025-08-04"
+        "released": "2025-07-31"
       },
       {
         "id": "tt0084787",
@@ -1860,31 +1860,25 @@
         "id": "tt14107334",
         "title": "The Running Man",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dKL78O9zxczVgjtNcQ9UkbYLzqX.jpg",
-        "released": "2025-11-11"
+        "released": "2025-11-03"
       },
       {
         "id": "tt30144839",
         "title": "One Battle After Another",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg",
-        "released": "2025-09-23"
-      },
-      {
-        "id": "tt32430579",
-        "title": "Crime 101",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
-        "released": "2026-02-11"
+        "released": "2025-09-08"
       },
       {
         "id": "tt3659388",
         "title": "The Martian",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fASz8A0yFE3QB6LgGoOfwvFSseV.jpg",
-        "released": "2015-09-30"
+        "released": "2015-09-11"
       },
       {
         "id": "tt29781139",
         "title": "Lesbian Space Princess",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bmf6spk0WZ10lz4eAK95P1zRB4F.jpg",
-        "released": "2025-09-11"
+        "released": "2025-02-16"
       },
       {
         "id": "tt0096256",
@@ -1896,19 +1890,19 @@
         "id": "tt0102926",
         "title": "The Silence of the Lambs",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
-        "released": "1991-02-14"
+        "released": "1991-01-30"
       },
       {
         "id": "tt2866360",
         "title": "Coherence",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ezUtb9m5DeLwL2gxi4gktzNCvQv.jpg",
-        "released": "2014-04-06"
+        "released": "2013-09-19"
       },
       {
         "id": "tt0100935",
         "title": "Wild at Heart",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uLUFI5sJIfWrBUWB2Y1dEuyvvVy.jpg",
-        "released": "1990-08-17"
+        "released": "1990-05-19"
       },
       {
         "id": "tt4698684",
@@ -1920,31 +1914,31 @@
         "id": "tt0114814",
         "title": "The Usual Suspects",
         "thumbnail": "https://image.tmdb.org/t/p/w500/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
-        "released": "1995-07-19"
+        "released": "1995-01-25"
       },
       {
         "id": "tt3402138",
         "title": "The Naked Gun",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rwla9vqzrKVVKVKiOuROTIXGsxj.jpg",
-        "released": "2025-07-30"
+        "released": "2025-07-22"
       },
       {
         "id": "tt4627382",
         "title": "Roofman",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wXDFtcnYtevleGzCmAD2ReQnJ4l.jpg",
-        "released": "2025-10-06"
+        "released": "2025-09-06"
       },
       {
         "id": "tt0369339",
         "title": "Collateral",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nV5316WUsVij8sVXLCF1g7TFitg.jpg",
-        "released": "2004-08-04"
+        "released": "2004-08-02"
       },
       {
         "id": "tt1019452",
         "title": "A Serious Man",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5gGxDS8WmrebPlMHexVS8EVehiP.jpg",
-        "released": "2009-10-02"
+        "released": "2009-09-12"
       },
       {
         "id": "tt0090583",
@@ -1962,13 +1956,13 @@
         "id": "tt0443701",
         "title": "The X-Files: I Want to Believe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3zQMhutUMJP6lK49x7i2YfsOHL9.jpg",
-        "released": "2008-07-24"
+        "released": "2008-07-23"
       },
       {
         "id": "tt1020530",
         "title": "Eden Lake",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tOg6ElTe1mJwaCFN0172U4oso22.jpg",
-        "released": "2008-09-12"
+        "released": "2008-08-12"
       },
       {
         "id": "tt4195092",
@@ -1998,13 +1992,13 @@
         "id": "tt0119488",
         "title": "L.A. Confidential",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg",
-        "released": "1997-09-19"
+        "released": "1997-05-14"
       },
       {
         "id": "tt0765443",
         "title": "Eastern Promises",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nLwv1pxRCRZucQaqs6oPkq7HH3K.jpg",
-        "released": "2007-09-14"
+        "released": "2007-09-08"
       },
       {
         "id": "tt0104070",
@@ -2022,85 +2016,85 @@
         "id": "tt9603208",
         "title": "Mission: Impossible - The Final Reckoning",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iKPsC9EFUafRP9SrUznI61getVP.jpg",
-        "released": "2025-05-17"
+        "released": "2025-05-06"
       },
       {
         "id": "tt0110912",
         "title": "Pulp Fiction",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
-        "released": "1994-09-10"
+        "released": "1994-05-21"
       },
       {
         "id": "tt5950044",
         "title": "Superman",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ldyfo0BKmz5rWtJJKCvwaNS4cJT.jpg",
-        "released": "2025-07-09"
+        "released": "2025-06-19"
       },
       {
         "id": "tt7130698",
         "title": "Warriors of the Wasteland",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gfLdd7DC1zVSDdcb2TgZumTjJLK.jpg",
-        "released": "2024-11-28"
+        "released": "2024-11-26"
       },
       {
         "id": "tt1120985",
         "title": "Blue Valentine",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dc8BdKnDY5Iy28KzUGtHIXuqqFK.jpg",
-        "released": "2010-12-26"
+        "released": "2010-01-24"
       },
       {
         "id": "tt0120902",
         "title": "The X-Files",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yLIw6shz2WC3W3iI0jROsF4B2ha.jpg",
-        "released": "1998-06-19"
+        "released": "1998-06-11"
       },
       {
         "id": "tt9572534",
         "title": "Golden Arm",
         "thumbnail": "https://image.tmdb.org/t/p/w500/w4vwJK62cWhVFq6SZKHIcdHrh5T.jpg",
-        "released": "2021-04-30"
+        "released": "2020-10-22"
       },
       {
         "id": "tt0307901",
         "title": "25th Hour",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uW7tTRElr2tRhmAVESzvHy4ByXg.jpg",
-        "released": "2002-12-19"
+        "released": "2002-12-16"
       },
       {
         "id": "tt0113568",
         "title": "Ghost in the Shell",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9gC88zYUBARRSThcG93MvW14sqx.jpg",
-        "released": "1995-11-18"
+        "released": "1995-09-23"
       },
       {
         "id": "tt0374900",
         "title": "Napoleon Dynamite",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6Iv6Uwa2SBLN0dSGM00rdrwN4MJ.jpg",
-        "released": "2004-06-11"
+        "released": "2004-01-17"
       },
       {
         "id": "tt1478338",
         "title": "Bridesmaids",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gJtA7hYsBMQ7EM3sPBMUdBfU7a0.jpg",
-        "released": "2011-05-13"
+        "released": "2011-03-13"
       },
       {
         "id": "tt0765010",
         "title": "Brothers",
         "thumbnail": "https://image.tmdb.org/t/p/w500/skHqceAFYee0JZuYd9MVk2IQggi.jpg",
-        "released": "2009-12-02"
+        "released": "2009-11-22"
       },
       {
         "id": "tt12818328",
         "title": "Hundreds of Beavers",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jBg64OA2QEWL0zaOFMoAGipeGjJ.jpg",
-        "released": "2024-01-26"
+        "released": "2022-09-29"
       },
       {
         "id": "tt4016934",
         "title": "The Handmaiden",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dLlH4aNHdnmf62umnInL8xPlPzw.jpg",
-        "released": "2016-06-01"
+        "released": "2016-05-14"
       },
       {
         "id": "tt0093177",
@@ -2118,13 +2112,13 @@
         "id": "tt29623480",
         "title": "The Wild Robot",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
-        "released": "2024-09-12"
+        "released": "2024-09-08"
       },
       {
         "id": "tt8368406",
         "title": "Vivarium",
         "thumbnail": "https://image.tmdb.org/t/p/w500/myf3qzpeN0JbuFRPwSpJcz7rmAT.jpg",
-        "released": "2019-09-07"
+        "released": "2019-05-18"
       },
       {
         "id": "tt0204946",
@@ -2136,7 +2130,7 @@
         "id": "tt0790724",
         "title": "Jack Reacher",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uQBbjrLVsUibWxNDGA4Czzo8lwz.jpg",
-        "released": "2012-12-20"
+        "released": "2012-12-10"
       },
       {
         "id": "tt0246578",
@@ -2160,7 +2154,7 @@
         "id": "tt0144084",
         "title": "American Psycho",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg",
-        "released": "2000-04-13"
+        "released": "2000-01-21"
       },
       {
         "id": "tt0074285",
@@ -2172,19 +2166,19 @@
         "id": "tt0899043",
         "title": "The Amateur",
         "thumbnail": "https://image.tmdb.org/t/p/w500/SNEoUInCa5fAgwuEBMIMBGvkkh.jpg",
-        "released": "2025-04-09"
+        "released": "2025-03-31"
       },
       {
         "id": "tt0106308",
         "title": "Army of Darkness",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xsgTuAtR2zSH8Umg3jWZcZjlDpe.jpg",
-        "released": "1992-10-31"
+        "released": "1992-10-09"
       },
       {
         "id": "tt0071853",
         "title": "Monty Python and the Holy Grail",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7nTkHjETdGMYK1phHwDbPsrzbYl.jpg",
-        "released": "1975-04-03"
+        "released": "1975-03-14"
       },
       {
         "id": "tt29268110",
@@ -2202,7 +2196,7 @@
         "id": "tt4827558",
         "title": "High Life",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wElOvH7H6sLElsTOLu1MY6oWRUx.jpg",
-        "released": "2018-09-26"
+        "released": "2018-09-09"
       },
       {
         "id": "tt0091474",
@@ -2226,7 +2220,7 @@
         "id": "tt2359024",
         "title": "Blue Ruin",
         "thumbnail": "https://image.tmdb.org/t/p/w500/q0itEsso2drJXqH9kfdidxIT5dF.jpg",
-        "released": "2014-04-25"
+        "released": "2013-05-17"
       },
       {
         "id": "tt0119229",
@@ -2238,19 +2232,19 @@
         "id": "tt16426418",
         "title": "Challengers",
         "thumbnail": "https://image.tmdb.org/t/p/w500/H6vke7zGiuLsz4v4RPeReb9rsv.jpg",
-        "released": "2024-04-18"
+        "released": "2024-03-26"
       },
       {
         "id": "tt3986820",
         "title": "The Endless",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uVHPBTLb6Sj1Eso9HzyBAOMRheM.jpg",
-        "released": "2017-11-05"
+        "released": "2017-04-21"
       },
       {
         "id": "tt4034228",
         "title": "Manchester by the Sea",
         "thumbnail": "https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg",
-        "released": "2016-11-17"
+        "released": "2016-01-23"
       },
       {
         "id": "tt0155267",
@@ -2262,19 +2256,19 @@
         "id": "tt1187064",
         "title": "Triangle",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cRlMrbc4Iof7vN0ZqHwJnMBYBLi.jpg",
-        "released": "2009-10-16"
+        "released": "2009-08-27"
       },
       {
         "id": "tt7068946",
         "title": "The Accountant²",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lUvfTcOZiK0sdcX0WNLPbMyKjGm.jpg",
-        "released": "2025-04-23"
+        "released": "2025-03-08"
       },
       {
         "id": "tt0119643",
         "title": "Meet Joe Black",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fDPAjvfPMomkKF7cMRmL5Anak61.jpg",
-        "released": "1998-11-12"
+        "released": "1998-11-02"
       },
       {
         "id": "tt0095953",
@@ -2292,7 +2286,7 @@
         "id": "tt32149847",
         "title": "Drop",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hSQPSW8aLjsMBfwqGjgJ6HozTkp.jpg",
-        "released": "2025-04-07"
+        "released": "2025-03-09"
       },
       {
         "id": "tt15782690",
@@ -2334,43 +2328,43 @@
         "id": "tt31795447",
         "title": "Ick",
         "thumbnail": "https://image.tmdb.org/t/p/w500/AtfV5Rl0YHtibZWuwC9ilHcHugU.jpg",
-        "released": "2025-07-27"
+        "released": "2024-09-07"
       },
       {
         "id": "tt8368368",
         "title": "The Apprentice",
         "thumbnail": "https://image.tmdb.org/t/p/w500/549Hdul2BgPnZMhqFxp6npp2opr.jpg",
-        "released": "2024-10-09"
+        "released": "2024-05-20"
       },
       {
         "id": "tt1670345",
         "title": "Now You See Me",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tWsNYbrqy1p1w6K9zRk0mSchztT.jpg",
-        "released": "2013-05-29"
+        "released": "2013-05-21"
       },
       {
         "id": "tt1152758",
         "title": "Dear Zachary: A Letter to a Son About His Father",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yYVHGe7U55Ojx11y5A82phPpCHv.jpg",
-        "released": "2008-10-31"
+        "released": "2008-01-19"
       },
       {
         "id": "tt0106519",
         "title": "Carlito's Way",
         "thumbnail": "https://image.tmdb.org/t/p/w500/g6D7mjQtndu768cusGmoEQY9fTB.jpg",
-        "released": "1993-11-10"
+        "released": "1993-11-07"
       },
       {
         "id": "tt1560747",
         "title": "The Master",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rUSjbyvYWN9H4az8xt0tDtU7I6v.jpg",
-        "released": "2012-09-14"
+        "released": "2012-09-01"
       },
       {
         "id": "tt30840798",
         "title": "The Phoenician Scheme",
         "thumbnail": "https://image.tmdb.org/t/p/w500/u2jxeYLXTYfu0bqJmnLGIgZswib.jpg",
-        "released": "2025-05-23"
+        "released": "2025-05-18"
       },
       {
         "id": "tt0104691",
@@ -2382,19 +2376,19 @@
         "id": "tt0082085",
         "title": "Blow Out",
         "thumbnail": "https://image.tmdb.org/t/p/w500/uFzMscVLDrTaYd6KXOXlr6dly7w.jpg",
-        "released": "1981-07-24"
+        "released": "1981-07-07"
       },
       {
         "id": "tt1675192",
         "title": "Take Shelter",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9YDnwmjGYkw1r9EKys33Wf95DAZ.jpg",
-        "released": "2011-09-30"
+        "released": "2011-01-24"
       },
       {
         "id": "tt33088452",
         "title": "Regretting You",
         "thumbnail": "https://image.tmdb.org/t/p/w500/z4gVnxTaks3anTycwKjDmvQSuWt.jpg",
-        "released": "2025-10-22"
+        "released": "2025-10-12"
       },
       {
         "id": "tt4682810",
@@ -2412,7 +2406,7 @@
         "id": "tt0264616",
         "title": "Frailty",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jid7dyfHa6ApZSTweC3T3nllWjh.jpg",
-        "released": "2002-04-12"
+        "released": "2001-11-17"
       },
       {
         "id": "tt11271800",
@@ -2436,25 +2430,25 @@
         "id": "tt15575552",
         "title": "Frank Miller: American Genius",
         "thumbnail": "https://image.tmdb.org/t/p/w500/l1gIk9MuetnajeHIKzX0IfXlsWc.jpg",
-        "released": "2024-06-10"
+        "released": "2021-10-22"
       },
       {
         "id": "tt18559464",
         "title": "My Old Ass",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yUs4Sw9AyTg2sA1qWBkNpD2mGSj.jpg",
-        "released": "2024-09-13"
+        "released": "2024-01-20"
       },
       {
         "id": "tt0099939",
         "title": "King of New York",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1MyH4MJAJZJbb6wDVeOc2bTECtK.jpg",
-        "released": "1990-07-18"
+        "released": "1990-05-19"
       },
       {
         "id": "tt0105236",
         "title": "Reservoir Dogs",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg",
-        "released": "1992-09-02"
+        "released": "1992-01-21"
       },
       {
         "id": "tt3755362",
@@ -2484,13 +2478,13 @@
         "id": "tt2106476",
         "title": "The Hunt",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jkixsXzRh28q3PCqFoWcf7unghT.jpg",
-        "released": "2012-10-25"
+        "released": "2012-05-20"
       },
       {
         "id": "tt0070334",
         "title": "The Long Goodbye",
         "thumbnail": "https://image.tmdb.org/t/p/w500/16Gu0Vg7tBdoRxg1NJDwlTKx1hG.jpg",
-        "released": "1973-03-08"
+        "released": "1973-03-07"
       },
       {
         "id": "tt0295700",
@@ -2502,7 +2496,7 @@
         "id": "tt1250777",
         "title": "Kick-Ass",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iHMbrTHJwocsNvo5murCBw0CwTo.jpg",
-        "released": "2010-03-26"
+        "released": "2010-03-12"
       },
       {
         "id": "tt0472043",
@@ -2514,13 +2508,13 @@
         "id": "tt0430357",
         "title": "Miami Vice",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iJPSls4taB09EUKtLj6FjFSprb3.jpg",
-        "released": "2006-07-27"
+        "released": "2006-07-20"
       },
       {
         "id": "tt2005151",
         "title": "War Dogs",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mDcPRjZC1bb6LavFU3gwsWdVfCM.jpg",
-        "released": "2016-08-18"
+        "released": "2016-08-03"
       },
       {
         "id": "tt0263757",
@@ -2532,13 +2526,13 @@
         "id": "tt0363163",
         "title": "Downfall",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cP1ElGjBhbZAAqmueXjHDKlSwiP.jpg",
-        "released": "2004-09-16"
+        "released": "2004-09-08"
       },
       {
         "id": "tt0093870",
         "title": "RoboCop",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hHtOgGb3NihlyRATHlKPaFApbrd.jpg",
-        "released": "1987-07-17"
+        "released": "1987-07-02"
       },
       {
         "id": "tt2854394",
@@ -2550,7 +2544,7 @@
         "id": "tt0110950",
         "title": "Reality Bites",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qGDhodtpkpxkrFqokenGNJlzt6w.jpg",
-        "released": "1994-02-18"
+        "released": "1994-01-28"
       },
       {
         "id": "tt33363428",
@@ -2562,19 +2556,19 @@
         "id": "tt10329560",
         "title": "H Is for Hawk",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eg301AEGyYX4gtc0A8DEXQ0VMhK.jpg",
-        "released": "2025-11-26"
+        "released": "2025-08-29"
       },
       {
         "id": "tt26753003",
         "title": "Trap",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jwoaKYVqPgYemFpaANL941EF94R.jpg",
-        "released": "2024-07-31"
+        "released": "2024-07-19"
       },
       {
         "id": "tt0468492",
         "title": "The Host",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dEDLY3KeghKFzks5nTDWdigVikr.jpg",
-        "released": "2006-07-27"
+        "released": "2006-05-21"
       },
       {
         "id": "tt0100318",
@@ -2586,31 +2580,31 @@
         "id": "tt18816518",
         "title": "Sick of Myself",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ynePU5z7JFn2Gf82RmfZgV84H8X.jpg",
-        "released": "2022-09-09"
+        "released": "2022-05-22"
       },
       {
         "id": "tt21045208",
         "title": "Tow",
         "thumbnail": "https://image.tmdb.org/t/p/w500/k5c2RDpTEXgS0oEblFlxe0uJbcS.jpg",
-        "released": "2026-03-20"
+        "released": "2025-06-07"
       },
       {
         "id": "tt2406566",
         "title": "Atomic Blonde",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kV9R5h0Yct1kR8Hf8sJ1nX0Vz4x.jpg",
-        "released": "2017-07-26"
+        "released": "2017-03-12"
       },
       {
         "id": "tt8864596",
         "title": "Transformers One",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg",
-        "released": "2024-09-11"
+        "released": "2024-07-24"
       },
       {
         "id": "tt1483013",
         "title": "Oblivion",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bYLM3GpNUZnoFElPXp1zlhDPdtv.jpg",
-        "released": "2013-04-10"
+        "released": "2013-03-26"
       },
       {
         "id": "tt1706620",
@@ -2622,7 +2616,7 @@
         "id": "tt2883512",
         "title": "Chef",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hyp8EXDmO4dSC8V6Q5jU7gD1kcg.jpg",
-        "released": "2014-05-08"
+        "released": "2014-03-07"
       },
       {
         "id": "tt0103924",
@@ -2640,19 +2634,19 @@
         "id": "tt5723272",
         "title": "In the Fade",
         "thumbnail": "https://image.tmdb.org/t/p/w500/AdH8xoP2wAFZDMWiSoCGoLa0DUr.jpg",
-        "released": "2017-11-23"
+        "released": "2017-05-26"
       },
       {
         "id": "tt1464335",
         "title": "Uncharted",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rJHC1RUORuUhtfNb4Npclx0xnOf.jpg",
-        "released": "2022-02-10"
+        "released": "2022-02-09"
       },
       {
         "id": "tt28332337",
         "title": "Eephus",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zDdzvIVGkAUfUMi7mJykgEu5ynu.jpg",
-        "released": "2025-01-01"
+        "released": "2024-05-19"
       },
       {
         "id": "tt1047490",
@@ -2664,7 +2658,7 @@
         "id": "tt0052561",
         "title": "Anatomy of a Murder",
         "thumbnail": "https://image.tmdb.org/t/p/w500/b2G1QSAwtBv9luhEwErIgSRaU92.jpg",
-        "released": "1959-07-01"
+        "released": "1959-06-29"
       },
       {
         "id": "tt0454841",
@@ -2676,7 +2670,7 @@
         "id": "tt8781414",
         "title": "Freaks",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kc2cvuqESIiRX5QoZOoMTBq18kQ.jpg",
-        "released": "2019-09-12"
+        "released": "2018-09-08"
       },
       {
         "id": "tt1939659",
@@ -2712,25 +2706,25 @@
         "id": "tt0183649",
         "title": "Phone Booth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/r6lIwPKVDa6Q76qH2TbIBqPhXL3.jpg",
-        "released": "2003-01-06"
+        "released": "2002-09-10"
       },
       {
         "id": "tt0253474",
         "title": "The Pianist",
         "thumbnail": "https://image.tmdb.org/t/p/w500/2hFvxCCWrTmCYwfy7yum0GKRi3Y.jpg",
-        "released": "2002-09-17"
+        "released": "2002-05-24"
       },
       {
         "id": "tt0057115",
         "title": "The Great Escape",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gBH4H8UMFxl139HaLz6lRuvsel8.jpg",
-        "released": "1963-07-03"
+        "released": "1963-06-20"
       },
       {
         "id": "tt0292963",
         "title": "Before the Devil Knows You're Dead",
         "thumbnail": "https://image.tmdb.org/t/p/w500/h4QXi4Ysuc3zICiK9jHxjCAK9Oh.jpg",
-        "released": "2007-09-26"
+        "released": "2007-09-07"
       },
       {
         "id": "tt0206314",
@@ -2742,13 +2736,13 @@
         "id": "tt1637688",
         "title": "In Time",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg",
-        "released": "2011-10-27"
+        "released": "2011-10-20"
       },
       {
         "id": "tt9218128",
         "title": "Gladiator II",
         "thumbnail": "https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
-        "released": "2024-11-13"
+        "released": "2024-10-18"
       },
       {
         "id": "tt5598292",
@@ -2760,13 +2754,13 @@
         "id": "tt4160708",
         "title": "Don't Breathe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dSxHyPZ2nipSfvdft4IhQKjk5eZ.jpg",
-        "released": "2016-06-08"
+        "released": "2016-03-12"
       },
       {
         "id": "tt29423057",
         "title": "The Morrigan",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ahnhXyjd26ducr4V05hDAzLPyB5.jpg",
-        "released": "2026-04-09"
+        "released": "2025-07-10"
       },
       {
         "id": "tt1735485",
@@ -2778,19 +2772,13 @@
         "id": "tt4178092",
         "title": "The Gift",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kH3qLP8pn68Xq5XwvmPkCyaAU7W.jpg",
-        "released": "2015-07-31"
+        "released": "2015-07-30"
       },
       {
         "id": "tt4687392",
         "title": "Man in Red Bandana",
         "thumbnail": "https://image.tmdb.org/t/p/w500/aa7vrNOu71bY5oURcq4U5sW8VIF.jpg",
-        "released": "2017-09-08"
-      },
-      {
-        "id": "tt15097206",
-        "title": "Murder in the Cove",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zU4pfQ0jWS8GVmuAJ9ozE2dlT1t.jpg",
-        "released": "2020-10-17"
+        "released": "2017-09-06"
       },
       {
         "id": "tt1242432",
@@ -2802,25 +2790,25 @@
         "id": "tt0106226",
         "title": "The Age of Innocence",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5Tuyt26v7qNR8Cl3m7ZRx36rduf.jpg",
-        "released": "1993-09-10"
+        "released": "1993-08-31"
       },
       {
         "id": "tt0068309",
         "title": "Boxcar Bertha",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gF5VslUB2xpWbboc735VVnO7DXh.jpg",
-        "released": "1972-06-14"
+        "released": "1972-06-13"
       },
       {
         "id": "tt4995790",
         "title": "The Square",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pefcv5VNspSK4Dt8doei5bJmmln.jpg",
-        "released": "2017-08-25"
+        "released": "2017-05-20"
       },
       {
         "id": "tt1980929",
         "title": "Begin Again",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qx4HXHXt528hS4rwePZbZo20xqZ.jpg",
-        "released": "2014-06-27"
+        "released": "2013-09-07"
       },
       {
         "id": "tt0120913",
@@ -2859,16 +2847,22 @@
         "released": "2014-04-18"
       },
       {
+        "id": "tt15097206",
+        "title": "Murder in the Cove",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zU4pfQ0jWS8GVmuAJ9ozE2dlT1t.jpg",
+        "released": "2020-10-17"
+      },
+      {
         "id": "tt0082340",
         "title": "Escape from New York",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vH9llaphjAssRGi0k7e75tD40Ce.jpg",
-        "released": "1981-05-23"
+        "released": "1981-04-01"
       },
       {
         "id": "tt5085522",
         "title": "Hostile",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xnvFRg5TxGYIMKQJjA41lv0RNcg.jpg",
-        "released": "2018-03-08"
+        "released": "2017-07-04"
       },
       {
         "id": "tt0110997",
@@ -2880,7 +2874,7 @@
         "id": "tt14549466",
         "title": "Crimes of the Future",
         "thumbnail": "https://image.tmdb.org/t/p/w500/RAFYMC0NgK9In9aGY6k6wsIL8w.jpg",
-        "released": "2022-05-25"
+        "released": "2022-05-23"
       },
       {
         "id": "tt0150176",
@@ -2910,7 +2904,7 @@
         "id": "tt12627606",
         "title": "Midas Man",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4nAfF0Szcb72eRn9WwRFsdvZu5q.jpg",
-        "released": "2024-08-23"
+        "released": "2024-05-30"
       },
       {
         "id": "tt1731141",
@@ -2928,13 +2922,13 @@
         "id": "tt0071360",
         "title": "The Conversation",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dHqVBwcv1SGymOpUueRoKzcmdes.jpg",
-        "released": "1974-04-12"
+        "released": "1974-04-07"
       },
       {
         "id": "tt8359848",
         "title": "Climax",
         "thumbnail": "https://image.tmdb.org/t/p/w500/47IXH2iEWwX0F7vIyGXaKQ0psBG.jpg",
-        "released": "2018-09-19"
+        "released": "2018-05-13"
       },
       {
         "id": "tt0107529",
@@ -2970,7 +2964,7 @@
         "id": "tt1212428",
         "title": "The Lost City of Z",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8SxHVNk6tqXYwygmDzz1YuJEm2J.jpg",
-        "released": "2017-03-15"
+        "released": "2016-10-15"
       },
       {
         "id": "tt0056197",
@@ -2988,7 +2982,7 @@
         "id": "tt0120176",
         "title": "The Spanish Prisoner",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cwkWlWfFrvH6WW6ovX5gfGHo7ks.jpg",
-        "released": "1997-12-03"
+        "released": "1997-09-08"
       },
       {
         "id": "tt0112740",
@@ -3018,19 +3012,19 @@
         "id": "tt17351924",
         "title": "Saltburn",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zGTfMwG112BC66mpaveVxoWPOaB.jpg",
-        "released": "2023-11-16"
+        "released": "2023-08-31"
       },
       {
         "id": "tt0493402",
         "title": "Boarding Gate",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wPUwneHOwxWTOdIVQPjamHpr8Dm.jpg",
-        "released": "2007-08-22"
+        "released": "2007-05-18"
       },
       {
         "id": "tt7510222",
         "title": "Despicable Me 4",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wWba3TaojhK7NdycRhoQpsG0FaH.jpg",
-        "released": "2024-06-20"
+        "released": "2024-06-16"
       },
       {
         "id": "tt0914797",
@@ -3042,7 +3036,7 @@
         "id": "tt27802490",
         "title": "Exhuma",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6dasJ58GGFcC62H9KuukAryltUp.jpg",
-        "released": "2024-02-22"
+        "released": "2024-02-16"
       },
       {
         "id": "tt0196216",
@@ -3072,7 +3066,7 @@
         "id": "tt11271038",
         "title": "Licorice Pizza",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ivXtvzfliGvoJ1DhSHIGyYBToWe.jpg",
-        "released": "2021-11-26"
+        "released": "2021-11-20"
       },
       {
         "id": "tt31281659",
@@ -3102,19 +3096,19 @@
         "id": "tt0072251",
         "title": "The Taking of Pelham One Two Three",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vNhywp9w1DVG6BytxKp4kjtaaGC.jpg",
-        "released": "1974-10-02"
+        "released": "1974-09-01"
       },
       {
         "id": "tt1878870",
         "title": "The Edge of Seventeen",
         "thumbnail": "https://image.tmdb.org/t/p/w500/15FykQKiM0aYpC1MuybR43xl8eF.jpg",
-        "released": "2016-11-18"
+        "released": "2016-09-16"
       },
       {
         "id": "tt9448932",
         "title": "Love Sarah",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cbbLSIo2MdBkL2ubdd47mQaJWcf.jpg",
-        "released": "2020-07-02"
+        "released": "2020-02-29"
       },
       {
         "id": "tt13433802",
@@ -3138,7 +3132,7 @@
         "id": "tt2844798",
         "title": "White God",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jT9IjPwA5aIYlgvC55VxJOLc0sI.jpg",
-        "released": "2014-06-12"
+        "released": "2014-05-17"
       },
       {
         "id": "tt2364841",
@@ -3150,7 +3144,7 @@
         "id": "tt2545118",
         "title": "Blackfish",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kCk4mDFE96Mn1AYfEcbxkIiw7ND.jpg",
-        "released": "2013-06-07"
+        "released": "2013-01-19"
       },
       {
         "id": "tt13654780",
@@ -3162,7 +3156,7 @@
         "id": "tt1935179",
         "title": "Mud",
         "thumbnail": "https://image.tmdb.org/t/p/w500/o2jT5jQdKh1HAF0fMKuGwBOwOYB.jpg",
-        "released": "2013-04-26"
+        "released": "2012-05-26"
       },
       {
         "id": "tt0464196",
@@ -3174,25 +3168,25 @@
         "id": "tt3393786",
         "title": "Jack Reacher: Never Go Back",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cOg3UT2NYWHZxp41vpxAnVCOC4M.jpg",
-        "released": "2016-10-19"
+        "released": "2016-10-12"
       },
       {
         "id": "tt1966604",
         "title": "The Imposter",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bhdGcqZqPju3KEaT9J6lMxRO0TI.jpg",
-        "released": "2012-07-13"
+        "released": "2012-01-23"
       },
       {
         "id": "tt13365876",
         "title": "Pinball: The Man Who Saved the Game",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gjGphbx4ZDwAYYWImpY427KGw7B.jpg",
-        "released": "2023-03-17"
+        "released": "2022-10-08"
       },
       {
         "id": "tt2053463",
         "title": "Side Effects",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dk10bwGyj8aRdOTl3EkgATEefh2.jpg",
-        "released": "2013-02-07"
+        "released": "2013-01-31"
       },
       {
         "id": "tt0756683",
@@ -3210,7 +3204,7 @@
         "id": "tt0443453",
         "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7g9kBHMN2KTr5KUf8aen187Mdn.jpg",
-        "released": "2006-11-01"
+        "released": "2006-08-04"
       },
       {
         "id": "tt0280665",
@@ -3222,7 +3216,7 @@
         "id": "tt1996310",
         "title": "Lore",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1yWoAyREEPDfyVnOgHUVfLVitmZ.jpg",
-        "released": "2012-09-20"
+        "released": "2012-06-09"
       },
       {
         "id": "tt13027078",
@@ -3234,7 +3228,7 @@
         "id": "tt16419074",
         "title": "Air",
         "thumbnail": "https://image.tmdb.org/t/p/w500/76AKQPdH3M8cvsFR9K8JsOzVlY5.jpg",
-        "released": "2023-04-05"
+        "released": "2023-03-18"
       },
       {
         "id": "tt1132620",
@@ -3258,7 +3252,7 @@
         "id": "tt2017038",
         "title": "All Is Lost",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9cVA4oX2xHgiglv6hemxwAaofsq.jpg",
-        "released": "2013-08-23"
+        "released": "2013-05-22"
       },
       {
         "id": "tt0314630",
@@ -3276,7 +3270,7 @@
         "id": "tt0145681",
         "title": "The Bone Collector",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7atMCqRaDpAOnGsteTRm17zmvN3.jpg",
-        "released": "1999-11-04"
+        "released": "1999-08-29"
       },
       {
         "id": "tt0338526",
@@ -3300,13 +3294,13 @@
         "id": "tt0350028",
         "title": "Raising Helen",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ubZin4oGXYp6hCn3WU6nrBre62y.jpg",
-        "released": "2004-05-27"
+        "released": "2004-04-30"
       },
       {
         "id": "tt14260836",
         "title": "Better Man",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fbGCmMp0HlYnAPv28GOENPShezM.jpg",
-        "released": "2024-12-06"
+        "released": "2024-08-30"
       },
       {
         "id": "tt11614912",
@@ -3318,7 +3312,7 @@
         "id": "tt27307826",
         "title": "Cold Wallet",
         "thumbnail": "https://image.tmdb.org/t/p/w500/m6ZGxUu0JyV7Cyj9xDR8capgrzb.jpg",
-        "released": "2025-02-28"
+        "released": "2024-03-08"
       },
       {
         "id": "tt9506480",
@@ -3330,13 +3324,13 @@
         "id": "tt1614989",
         "title": "Headhunters",
         "thumbnail": "https://image.tmdb.org/t/p/w500/k5DQqsb9T8djkTAOdwNCBBBHrtK.jpg",
-        "released": "2011-08-26"
+        "released": "2011-08-04"
       },
       {
         "id": "tt2105044",
         "title": "V/H/S",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xVGfCaTwVdZt3lFqtOVhTDqmG58.jpg",
-        "released": "2012-07-28"
+        "released": "2012-01-22"
       },
       {
         "id": "tt0089393",
@@ -3354,13 +3348,13 @@
         "id": "tt0079714",
         "title": "Phantasm",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eR0uJ0Wje1lYJ4aHEpkcjgIM8d7.jpg",
-        "released": "1979-03-28"
+        "released": "1979-01-15"
       },
       {
         "id": "tt12024308",
         "title": "Wildflower",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jsNulf9CgHSSRSCgdhNsLynUTvm.jpg",
-        "released": "2023-03-17"
+        "released": "2022-09-12"
       },
       {
         "id": "tt13543898",
@@ -3378,7 +3372,7 @@
         "id": "tt8897874",
         "title": "First Date",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nHSYrkFxuBAJh3bq9UuRYuTu7r.jpg",
-        "released": "2021-07-02"
+        "released": "2021-01-31"
       },
       {
         "id": "tt10310074",
@@ -3390,13 +3384,13 @@
         "id": "tt1436045",
         "title": "13 Assassins",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yUsVsiVXUwClk4vSCx80vrdO6MV.jpg",
-        "released": "2010-09-25"
+        "released": "2010-09-09"
       },
       {
         "id": "tt5859238",
         "title": "Lucky",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fy2K8jqCV9rNC8fHx9muPJTNaqs.jpg",
-        "released": "2017-09-29"
+        "released": "2017-03-11"
       },
       {
         "id": "tt0103077",
@@ -3405,22 +3399,16 @@
         "released": "1991-04-05"
       },
       {
-        "id": "tt4656672",
-        "title": "9 Hours",
-        "thumbnail": "https://images.justwatch.com/poster/142136439/s332/img",
-        "released": "2014-01-01"
-      },
-      {
         "id": "tt36591419",
         "title": "Man Finds Tape",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1WMaJEwwsw8ALCo1mRGjjTV5e8T.jpg",
-        "released": "2025-12-05"
+        "released": "2025-06-08"
       },
       {
         "id": "tt3616916",
         "title": "The Wave",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nUra0UF9MLlTRZH9LCA8xYvhd6D.jpg",
-        "released": "2015-08-28"
+        "released": "2015-08-16"
       },
       {
         "id": "tt2312718",
@@ -3438,13 +3426,13 @@
         "id": "tt3286052",
         "title": "The Blackcoat's Daughter",
         "thumbnail": "https://image.tmdb.org/t/p/w500/jO2aHAiWgQSlpAIPGZikiMDdMXx.jpg",
-        "released": "2017-03-31"
+        "released": "2015-09-12"
       },
       {
         "id": "tt8358220",
         "title": "After Midnight",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mo3fqfe28u7EaNm8aaUaJt84rIE.jpg",
-        "released": "2019-11-05"
+        "released": "2019-04-24"
       },
       {
         "id": "tt3283094",
@@ -3480,13 +3468,13 @@
         "id": "tt11001074",
         "title": "Rust",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tbJ3RkA2s6X5qrBzrYHYTxvDBui.jpg",
-        "released": "2024-11-20"
+        "released": "2024-11-16"
       },
       {
         "id": "tt0093565",
         "title": "Moonstruck",
         "thumbnail": "https://image.tmdb.org/t/p/w500/2mnVWpvsHEHHnfvLn1NXYVvBGl5.jpg",
-        "released": "1987-12-16"
+        "released": "1987-12-01"
       },
       {
         "id": "tt0101821",
@@ -3516,7 +3504,7 @@
         "id": "tt1306980",
         "title": "50/50",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8f9tM9JVB4ETBhxlQcXIjLckArl.jpg",
-        "released": "2011-09-30"
+        "released": "2011-09-12"
       },
       {
         "id": "tt0137494",
@@ -3534,7 +3522,7 @@
         "id": "tt11389872",
         "title": "Kingdom of the Planet of the Apes",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
-        "released": "2024-05-08"
+        "released": "2024-05-02"
       },
       {
         "id": "tt12824390",
@@ -3546,7 +3534,7 @@
         "id": "tt0170691",
         "title": "Tigerland",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pnFdCvxxL44sPLkKEIJCUaIZa7M.jpg",
-        "released": "2000-10-06"
+        "released": "2000-09-13"
       },
       {
         "id": "tt1179034",
@@ -3576,7 +3564,7 @@
         "id": "tt0067116",
         "title": "The French Connection",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pH4saPwMjhnVGwmSH6RkMaHrt3s.jpg",
-        "released": "1971-10-09"
+        "released": "1971-10-07"
       },
       {
         "id": "tt0026029",
@@ -3588,7 +3576,7 @@
         "id": "tt1549572",
         "title": "Another Earth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qvGJK3lFzpifAdyIupMNdWNX0qr.jpg",
-        "released": "2011-07-22"
+        "released": "2011-01-24"
       },
       {
         "id": "tt19820906",
@@ -3600,13 +3588,13 @@
         "id": "tt15268244",
         "title": "Joy Ride",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lTZ3r9NBdbrR6NA90v3hFYqd6TC.jpg",
-        "released": "2023-06-22"
+        "released": "2023-03-17"
       },
       {
         "id": "tt5672290",
         "title": "The First Omen",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tnsDyNNkOxYUyjD8CNJoAla6YvY.jpg",
-        "released": "2024-04-03"
+        "released": "2024-03-26"
       },
       {
         "id": "tt1314655",
@@ -3624,7 +3612,7 @@
         "id": "tt22475426",
         "title": "What We Hide",
         "thumbnail": "https://image.tmdb.org/t/p/w500/cQDHU06FsBqNv0r3n3Il3q8jPxY.jpg",
-        "released": "2025-08-08"
+        "released": "2025-02-08"
       },
       {
         "id": "tt9442842",
@@ -3642,7 +3630,7 @@
         "id": "tt1971325",
         "title": "Automata",
         "thumbnail": "https://image.tmdb.org/t/p/w500/h7SEtIWOfLsuCWhQgflev7ppRPq.jpg",
-        "released": "2014-10-09"
+        "released": "2014-09-26"
       },
       {
         "id": "tt0081698",
@@ -3654,7 +3642,7 @@
         "id": "tt6083648",
         "title": "Looking Glass",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6zSzaUmoUCwII2pGTqX1jaX8F0p.jpg",
-        "released": "2018-02-16"
+        "released": "2018-01-02"
       },
       {
         "id": "tt0116287",
@@ -3672,7 +3660,7 @@
         "id": "tt0097493",
         "title": "Heathers",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rtzcrwgsuESV2adSDhIuLyQoZmp.jpg",
-        "released": "1989-03-31"
+        "released": "1988-10-24"
       },
       {
         "id": "tt0361309",
@@ -3684,7 +3672,7 @@
         "id": "tt1034415",
         "title": "Suspiria",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bRpKFPb8CWKRQxVo9NzOuPPlO3Q.jpg",
-        "released": "2018-10-26"
+        "released": "2018-09-01"
       },
       {
         "id": "tt0113376",
@@ -3702,7 +3690,7 @@
         "id": "tt5446858",
         "title": "Zero Days",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xwQVkRJGCH59jGNPR78Aw8wzyZg.jpg",
-        "released": "2016-07-08"
+        "released": "2016-02-17"
       },
       {
         "id": "tt0117333",
@@ -3720,13 +3708,13 @@
         "id": "tt10353588",
         "title": "The Absence of Eden",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vbkxza3vqw1KG010Q8b009quJxK.jpg",
-        "released": "2024-04-12"
+        "released": "2023-06-30"
       },
       {
         "id": "tt0055184",
         "title": "The Misfits",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rkIkyPhT5oetT463HxpdIuct30l.jpg",
-        "released": "1961-02-01"
+        "released": "1961-01-31"
       },
       {
         "id": "tt0078966",
@@ -3738,7 +3726,7 @@
         "id": "tt0443543",
         "title": "The Illusionist",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1O9jUvqkHaGBMVRyOJz1AlkmALW.jpg",
-        "released": "2006-08-18"
+        "released": "2006-01-22"
       },
       {
         "id": "tt30833365",
@@ -3756,7 +3744,7 @@
         "id": "tt21426456",
         "title": "Molli and Max in the Future",
         "thumbnail": "https://image.tmdb.org/t/p/w500/us42Z0MPRlJvMZ9nsfoAdCwPyvv.jpg",
-        "released": "2024-02-09"
+        "released": "2023-03-11"
       },
       {
         "id": "tt0090142",
@@ -3774,7 +3762,7 @@
         "id": "tt18259086",
         "title": "Sonic the Hedgehog 3",
         "thumbnail": "https://image.tmdb.org/t/p/w500/d8Ryb8AunYAuycVKDp5HpdWPKgC.jpg",
-        "released": "2024-12-19"
+        "released": "2024-12-10"
       },
       {
         "id": "tt0119313",
@@ -3804,19 +3792,19 @@
         "id": "tt20674132",
         "title": "Birdeater",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dCyLLAINVblprot2cn5OZf0G0PA.jpg",
-        "released": "2024-07-18"
+        "released": "2023-06-11"
       },
       {
         "id": "tt9016974",
         "title": "Synchronic",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wgm4gdJwb7iSYX0uBsRAZmHQmPm.jpg",
-        "released": "2020-10-23"
+        "released": "2019-09-07"
       },
       {
         "id": "tt1226837",
         "title": "Beautiful Boy",
         "thumbnail": "https://image.tmdb.org/t/p/w500/u2Gfv0mz3xePsgyCPHovrnFL1sB.jpg",
-        "released": "2018-10-12"
+        "released": "2018-09-07"
       },
       {
         "id": "tt0144117",
@@ -3828,13 +3816,13 @@
         "id": "tt0115571",
         "title": "The Arrival",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4H3VwvIQC1dsMFb2DEGZpbS0JiI.jpg",
-        "released": "1996-05-31"
+        "released": "1996-03-05"
       },
       {
         "id": "tt1615160",
         "title": "The Foreigner",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rwM4hzrmc5HiWfQD9ls9DL4QgGl.jpg",
-        "released": "2017-09-28"
+        "released": "2017-09-24"
       },
       {
         "id": "tt1234548",
@@ -3846,7 +3834,7 @@
         "id": "tt0097889",
         "title": "Miracle Mile",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9qRCVO9L3s3CsPnoUO9c3iZm6aB.jpg",
-        "released": "1989-05-19"
+        "released": "1988-09-02"
       },
       {
         "id": "tt0066206",
@@ -3858,13 +3846,13 @@
         "id": "tt5171016",
         "title": "Mr. Burton",
         "thumbnail": "https://image.tmdb.org/t/p/w500/muqpAjCaMSmswtITLfubqxz4bks.jpg",
-        "released": "2025-04-04"
+        "released": "2025-03-03"
       },
       {
         "id": "tt0138704",
         "title": "Pi",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fJA22FjlAW8rzrOw9Mwanl6oTc9.jpg",
-        "released": "1998-07-10"
+        "released": "1998-01-19"
       },
       {
         "id": "tt4255304",
@@ -3894,7 +3882,7 @@
         "id": "tt0120660",
         "title": "Enemy of the State",
         "thumbnail": "https://image.tmdb.org/t/p/w500/x9pXrMKLsBGGOFyyZ0Gwt9YpVub.jpg",
-        "released": "1998-11-20"
+        "released": "1998-11-16"
       },
       {
         "id": "tt2387433",
@@ -3912,7 +3900,7 @@
         "id": "tt9812474",
         "title": "Lamb",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gP9yviboTGWGolqUZKIB1UkF1C2.jpg",
-        "released": "2021-08-12"
+        "released": "2021-07-13"
       },
       {
         "id": "tt3467412",
@@ -3936,13 +3924,13 @@
         "id": "tt5108870",
         "title": "Morbius",
         "thumbnail": "https://image.tmdb.org/t/p/w500/Av8Z2jZhEm1FLkFzMThzz9hndJF.jpg",
-        "released": "2022-03-30"
+        "released": "2022-03-23"
       },
       {
         "id": "tt0112454",
         "title": "Bandwagon",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fZnp9WxdEoBP4B3culcamhg7VT6.jpg",
-        "released": "1997-09-12"
+        "released": "1996-01-24"
       },
       {
         "id": "tt26689505",
@@ -3972,13 +3960,13 @@
         "id": "tt18298588",
         "title": "Monolith",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zKpLzzX1va6gkMJiI9p3DudqChe.jpg",
-        "released": "2023-10-26"
+        "released": "2022-10-27"
       },
       {
         "id": "tt9362930",
         "title": "Blue Beetle",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
-        "released": "2023-08-16"
+        "released": "2023-07-19"
       },
       {
         "id": "tt0073631",
@@ -3990,7 +3978,7 @@
         "id": "tt5653514",
         "title": "Bad Day for the Cut",
         "thumbnail": "https://image.tmdb.org/t/p/w500/53Jh8cMCfDOI87XnPBCIiTCwN6U.jpg",
-        "released": "2017-10-20"
+        "released": "2017-01-22"
       },
       {
         "id": "tt0086859",
@@ -4026,7 +4014,7 @@
         "id": "tt0114906",
         "title": "Welcome to the Dollhouse",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fsMMOVto87pvUQyozOF9CaT9aMR.jpg",
-        "released": "1996-03-22"
+        "released": "1995-09-10"
       },
       {
         "id": "tt7109844",
@@ -4038,13 +4026,13 @@
         "id": "tt0032145",
         "title": "Wuthering Heights",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pwHdSzXwlUFAcYGcFutKcPcX2OW.jpg",
-        "released": "1939-04-07"
+        "released": "1939-03-24"
       },
       {
         "id": "tt34621966",
         "title": "Megadoc",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yjiqwnvgst3ntm25L5heBHjqny9.jpg",
-        "released": "2025-09-19"
+        "released": "2025-08-28"
       },
       {
         "id": "tt0800175",
@@ -4068,7 +4056,7 @@
         "id": "tt0039190",
         "title": "The Bishop's Wife",
         "thumbnail": "https://image.tmdb.org/t/p/w500/2sMpffmvoJlW7WBcvyHTPR9DEsj.jpg",
-        "released": "1947-12-25"
+        "released": "1947-11-25"
       },
       {
         "id": "tt8593824",
@@ -4080,13 +4068,13 @@
         "id": "tt29713815",
         "title": "Pose",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qhyyyWrHUbl6QG4udAJj17CBa5.jpg",
-        "released": "2026-02-25"
+        "released": "2025-11-12"
       },
       {
         "id": "tt11165716",
         "title": "North Hollywood",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rLVxpEkiSs8OnOqg8QmLT7Bs09e.jpg",
-        "released": "2021-03-26"
+        "released": "2020-02-13"
       },
       {
         "id": "tt0105217",
@@ -4134,7 +4122,7 @@
         "id": "tt5635086",
         "title": "God's Own Country",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hKJz8Moim43P1f1kGrM9Gh0c0rf.jpg",
-        "released": "2017-08-31"
+        "released": "2017-01-23"
       },
       {
         "id": "tt29538453",
@@ -4182,7 +4170,7 @@
         "id": "tt0045793",
         "title": "From Here to Eternity",
         "thumbnail": "https://image.tmdb.org/t/p/w500/sP3T6hTkTMCksUXb0wzzOgbXIfk.jpg",
-        "released": "1953-08-28"
+        "released": "1953-08-05"
       },
       {
         "id": "tt0887143",
@@ -4194,25 +4182,25 @@
         "id": "tt0105488",
         "title": "Strictly Ballroom",
         "thumbnail": "https://image.tmdb.org/t/p/w500/f6vs4DQGuNpLuA5Z7k69uuKpbVG.jpg",
-        "released": "1992-08-20"
+        "released": "1992-05-10"
       },
       {
         "id": "tt0066026",
         "title": "M*A*S*H",
         "thumbnail": "https://image.tmdb.org/t/p/w500/on8Q9LhtHYNhmITjUMpgOUkIG8o.jpg",
-        "released": "1970-02-18"
+        "released": "1970-01-25"
       },
       {
         "id": "tt0095016",
         "title": "Die Hard",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
-        "released": "1988-07-15"
+        "released": "1988-07-12"
       },
       {
         "id": "tt0780607",
         "title": "The Signal",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qRs8osQJZLItwQER2bzuuK9A0sp.jpg",
-        "released": "2007-07-13"
+        "released": "2007-01-22"
       },
       {
         "id": "tt0076150",
@@ -4230,7 +4218,7 @@
         "id": "tt0109838",
         "title": "Freaked",
         "thumbnail": "https://image.tmdb.org/t/p/w500/enQ9FBLo4bd7AHX78geP6qRSl9U.jpg",
-        "released": "1993-10-01"
+        "released": "1993-04-24"
       },
       {
         "id": "tt10832274",
@@ -4242,7 +4230,7 @@
         "id": "tt0420223",
         "title": "Stranger Than Fiction",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nCzcepubwShvZ4vbCsygQNgF2Z1.jpg",
-        "released": "2006-11-10"
+        "released": "2006-09-09"
       },
       {
         "id": "tt27705545",
@@ -4284,25 +4272,25 @@
         "id": "tt22530226",
         "title": "A Useful Ghost",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ysCOASLn8SaiFYWZYqNLTdO97NQ.jpg",
-        "released": "2025-08-27"
+        "released": "2025-05-17"
       },
       {
         "id": "tt22004186",
         "title": "A Little Prayer",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7kP3bPM1xUhA4zl4ri4DhYoDRDM.jpg",
-        "released": "2025-08-29"
+        "released": "2023-01-24"
       },
       {
         "id": "tt0105459",
         "title": "Split Second",
         "thumbnail": "https://image.tmdb.org/t/p/w500/c111nTTNsArsUqJx662hPrFymyz.jpg",
-        "released": "1992-05-01"
+        "released": "1992-04-23"
       },
       {
         "id": "tt0265208",
         "title": "The Girl Next Door",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5mVyFHSY2rSsNgD4NfEwV82HigU.jpg",
-        "released": "2004-04-09"
+        "released": "2004-02-18"
       },
       {
         "id": "tt1731701",
@@ -4320,7 +4308,7 @@
         "id": "tt11317142",
         "title": "Shiva Baby",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4sdqVsT6SHqtbCYZS7bhVoEftlL.jpg",
-        "released": "2021-03-26"
+        "released": "2020-03-15"
       },
       {
         "id": "tt0425637",
@@ -4344,13 +4332,13 @@
         "id": "tt3824458",
         "title": "Tangerine",
         "thumbnail": "https://image.tmdb.org/t/p/w500/EKLR5c61XQzBTeMokFrmS3kdt8.jpg",
-        "released": "2015-07-10"
+        "released": "2015-01-23"
       },
       {
         "id": "tt1242460",
         "title": "We Need to Talk About Kevin",
         "thumbnail": "https://image.tmdb.org/t/p/w500/AtdYbs1SqYwFOLyi2v6ldVTawbn.jpg",
-        "released": "2011-09-28"
+        "released": "2011-05-12"
       },
       {
         "id": "tt1821701",
@@ -4368,7 +4356,7 @@
         "id": "tt15558178",
         "title": "Chestnut",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6syFEUJQhXXw0BPHNwDKUgTReby.jpg",
-        "released": "2024-06-21"
+        "released": "2023-06-15"
       },
       {
         "id": "tt8447852",
@@ -4434,13 +4422,13 @@
         "id": "tt1568343",
         "title": "The Humbling",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8x8NUmtcuNqlIH1JDAoxUjoDX7P.jpg",
-        "released": "2014-12-31"
+        "released": "2014-08-30"
       },
       {
         "id": "tt6081670",
         "title": "Possum",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5QOFKSpE7KacBriU95fxG6hmmvr.jpg",
-        "released": "2018-10-26"
+        "released": "2018-06-25"
       },
       {
         "id": "tt12262116",
@@ -4464,7 +4452,7 @@
         "id": "tt14445366",
         "title": "The Island Between Tides",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zGuDCinwsoeiyMVVKges85pR1ps.jpg",
-        "released": "2025-03-07"
+        "released": "2024-03-07"
       },
       {
         "id": "tt0102555",
@@ -4488,13 +4476,13 @@
         "id": "tt1355631",
         "title": "The Infiltrator",
         "thumbnail": "https://image.tmdb.org/t/p/w500/758F57DxVRLe38S1Je4O1Bjx2u6.jpg",
-        "released": "2016-07-13"
+        "released": "2016-07-06"
       },
       {
         "id": "tt0061722",
         "title": "The Graduate",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8XaDpF0COV1MLsDirJMnxmYc1Wp.jpg",
-        "released": "1967-12-21"
+        "released": "1967-12-20"
       },
       {
         "id": "tt21156390",
@@ -4506,7 +4494,19 @@
         "id": "tt0251736",
         "title": "House of 1000 Corpses",
         "thumbnail": "https://image.tmdb.org/t/p/w500/29c2qgXmSREosLBevOILEuMWzQC.jpg",
-        "released": "2003-04-11"
+        "released": "2003-03-13"
+      },
+      {
+        "id": "tt11859012",
+        "title": "The Girl Who Got Away",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eCzmo6Lt8YUdq62QzurbgHe4gLS.jpg",
+        "released": "2021-08-20"
+      },
+      {
+        "id": "tt14569236",
+        "title": "Trigger Happy",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/5YDdMeKhKCC3ojLM9WLioLZEDDx.jpg",
+        "released": "2025-01-14"
       }
     ]
   }

@@ -3,7 +3,7 @@
     "id": "odincol3.crunchyroll",
     "type": "movie",
     "name": "Crunchyroll",
-    "description": "Crunchyroll recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
+    "description": "Crunchyroll recent and popular movies available in US. Provider membership from JustWatch; title, earliest known release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/CrunchyrollC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/CrunchyrollC.png",
     "posterShape": "landscape",
@@ -24,13 +24,13 @@
         "id": "tt30472557",
         "title": "Chainsaw Man - The Movie: Reze Arc",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pHyxb2RV5wLlboAwm9ZJ9qTVEDw.jpg",
-        "released": "2025-09-19"
+        "released": "2025-09-15"
       },
       {
         "id": "tt36592985",
         "title": "Miss Kobayashi's Dragon Maid: A lonely dragon wants to be loved",
         "thumbnail": "https://image.tmdb.org/t/p/w500/3JFCxQpsBppFADWQ3WcykwH14YG.jpg",
-        "released": "2025-06-27"
+        "released": "2025-06-14"
       },
       {
         "id": "tt32820897",
@@ -42,7 +42,7 @@
         "id": "tt15286358",
         "title": "Kurayukaba",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yeRMk0lXMqO2nraQrkF1t9EfY7Y.jpg",
-        "released": "2024-04-12"
+        "released": "2023-07-20"
       },
       {
         "id": "tt32809227",
@@ -51,16 +51,16 @@
         "released": "2024-11-08"
       },
       {
-        "id": "tt31257225",
-        "title": "given the Movie: Hiiragi Mix",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/k9vSQIv0rp05YCyOAnUi2cceiqR.jpg",
-        "released": "2024-01-27"
-      },
-      {
         "id": "tt36022728",
         "title": "Touken Ranbu Kai: Douden Chikashi Haberau Monora",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xjJKYslNUsCNk2dTbakPzp7hkkW.jpg",
         "released": "2024-08-16"
+      },
+      {
+        "id": "tt31257225",
+        "title": "given the Movie: Hiiragi Mix",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/k9vSQIv0rp05YCyOAnUi2cceiqR.jpg",
+        "released": "2024-01-27"
       },
       {
         "id": "tt14603848",
@@ -78,7 +78,7 @@
         "id": "tt30317151",
         "title": "Fureru",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5UHcz5eEP9CDCR4rlyNW4HxFdzM.jpg",
-        "released": "2024-10-04"
+        "released": "2024-09-16"
       },
       {
         "id": "tt38017234",
@@ -96,7 +96,7 @@
         "id": "tt29666664",
         "title": "Bloody Escape: Bats Out of Hell",
         "thumbnail": "https://image.tmdb.org/t/p/w500/lWKtVX5oEgcLbMYMaWiyes6c4IB.jpg",
-        "released": "2024-01-05"
+        "released": "2023-12-04"
       },
       {
         "id": "tt31142500",
@@ -138,7 +138,7 @@
         "id": "tt15447084",
         "title": "My Next Life as a Villainess: All Routes Lead to Doom! The Movie",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nBirCFcv4T0WMLo5pXRAplH9PDP.jpg",
-        "released": "2023-12-08"
+        "released": "2023-11-19"
       },
       {
         "id": "tt16418362",
@@ -150,7 +150,7 @@
         "id": "tt28055106",
         "title": "Kaina of the Great Snow Sea: Star Sage",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tknSJyInVeBZhaIUHlzPpqA45Ej.jpg",
-        "released": "2023-10-13"
+        "released": "2023-06-16"
       },
       {
         "id": "tt26684398",
@@ -168,12 +168,12 @@
         "id": "tt28607487",
         "title": "The Concierge",
         "thumbnail": "https://image.tmdb.org/t/p/w500/2cjjcsljYjqk5W4V7qpiQ0dmsxe.jpg",
-        "released": "2023-10-20"
+        "released": "2023-06-12"
       },
       {
-        "id": "tt14294724",
-        "title": "BanG Dream! Poppin'Dream!",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/7v50mbGYMQ7HmJjJOXoZ3llCjUk.jpg",
+        "id": "tt14614892",
+        "title": "Dragon Ball Super: Super Hero",
+        "thumbnail": "https://images.justwatch.com/poster/302269681/s332/img",
         "released": "2022-01-01"
       },
       {
@@ -189,9 +189,9 @@
         "released": "2022-10-07"
       },
       {
-        "id": "tt14614892",
-        "title": "Dragon Ball Super: Super Hero",
-        "thumbnail": "https://images.justwatch.com/poster/302269681/s332/img",
+        "id": "tt14294724",
+        "title": "BanG Dream! Poppin'Dream!",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/7v50mbGYMQ7HmJjJOXoZ3llCjUk.jpg",
         "released": "2022-01-01"
       },
       {
@@ -204,19 +204,13 @@
         "id": "tt14228078",
         "title": "The Girl from the Other Side",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6tSAF374WDBBcvFM7Qe6i205gSw.jpg",
-        "released": "2023-05-16"
+        "released": "2022-03-10"
       },
       {
         "id": "tt16428256",
         "title": "Suzume",
         "thumbnail": "https://images.justwatch.com/poster/312563600/s332/img",
         "released": "2022-01-01"
-      },
-      {
-        "id": "tt15721650",
-        "title": "The Quintessential Quintuplets Movie",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg",
-        "released": "2022-05-20"
       },
       {
         "id": "tt15428330",
@@ -229,6 +223,12 @@
         "title": "Free! the Final Stroke the Second Volume",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pc7jJx56VhljG6qk3ihQWWkCWSu.jpg",
         "released": "2022-04-22"
+      },
+      {
+        "id": "tt15721650",
+        "title": "The Quintessential Quintuplets Movie",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sg7klpt1xwK1IJirBI9EHaqQwJ5.jpg",
+        "released": "2022-05-20"
       },
       {
         "id": "tt15467380",
@@ -264,7 +264,7 @@
         "id": "tt16183464",
         "title": "One Piece Film Red",
         "thumbnail": "https://image.tmdb.org/t/p/w500/8ibfhe4P7rhmn3lrPhOZzIJHA2B.jpg",
-        "released": "2022-08-06"
+        "released": "2022-07-22"
       },
       {
         "id": "tt17079046",
@@ -282,7 +282,7 @@
         "id": "tt13048312",
         "title": "Farewell, My Dear Cramer: First Touch",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nHlosFtFIR3aeMhxLURvEEsdvIN.jpg",
-        "released": "2021-06-11"
+        "released": "2021-06-10"
       },
       {
         "id": "tt11923304",
@@ -294,7 +294,7 @@
         "id": "tt13064272",
         "title": "Sing a Bit of Harmony",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fKUsPOcpFQpdZYsmro4bVAonp93.jpg",
-        "released": "2021-10-29"
+        "released": "2021-10-02"
       },
       {
         "id": "tt13345570",
@@ -312,19 +312,19 @@
         "id": "tt13424422",
         "title": "Sword Art Online the Movie - Progressive - Aria of a Starless Night",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yD9RhgIVydQNBK7OLEbCWYcWMUd.jpg",
-        "released": "2021-10-30"
-      },
-      {
-        "id": "tt14331144",
-        "title": "Jujutsu Kaisen 0",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg",
-        "released": "2021-12-24"
+        "released": "2021-09-15"
       },
       {
         "id": "tt14147078",
         "title": "BanG Dream! Episode of Roselia II: Song I am.",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rgIxuQ7KjpegOAEhtAEVa7JO0Qc.jpg",
         "released": "2021-06-25"
+      },
+      {
+        "id": "tt14331144",
+        "title": "Jujutsu Kaisen 0",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg",
+        "released": "2021-12-24"
       },
       {
         "id": "tt14531302",
@@ -384,19 +384,7 @@
         "id": "tt12879624",
         "title": "Josee, the Tiger and the Fish",
         "thumbnail": "https://image.tmdb.org/t/p/w500/z1D8xi9x4uEhyFruo7uEHXUMD4K.jpg",
-        "released": "2020-12-25"
-      },
-      {
-        "id": "tt12439268",
-        "title": "BEM: BECOME HUMAN",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/sERr77NWXFrVXbvtfbgsjnccZnF.jpg",
-        "released": "2020-10-02"
-      },
-      {
-        "id": "tt11193002",
-        "title": "The Stranger by the Shore",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/4m74lboTcvrmnCM506t4y4c3klc.jpg",
-        "released": "2020-09-11"
+        "released": "2020-10-30"
       },
       {
         "id": "tt13139218",
@@ -409,6 +397,18 @@
         "title": "Goblin Slayer: Goblin's Crown",
         "thumbnail": "https://image.tmdb.org/t/p/w500/A7SH888eBwbJDU3m48Vk2FK6ahW.jpg",
         "released": "2020-02-01"
+      },
+      {
+        "id": "tt12439268",
+        "title": "BEM: BECOME HUMAN",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/sERr77NWXFrVXbvtfbgsjnccZnF.jpg",
+        "released": "2020-10-02"
+      },
+      {
+        "id": "tt11193002",
+        "title": "The Stranger by the Shore",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/4m74lboTcvrmnCM506t4y4c3klc.jpg",
+        "released": "2020-09-11"
       },
       {
         "id": "tt10563920",
@@ -429,6 +429,12 @@
         "released": "2019-10-25"
       },
       {
+        "id": "tt10443844",
+        "title": "Psycho-Pass: Sinners of the System - Case.1 Crime and Punishment",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qnG8ZcmQoncPB58RZwy3wofxm5y.jpg",
+        "released": "2019-01-25"
+      },
+      {
         "id": "tt10734928",
         "title": "The Legend of Hei",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nWdES36hGwADWWBGzvgT1Z3Xn86.jpg",
@@ -441,16 +447,10 @@
         "released": "2019-08-30"
       },
       {
-        "id": "tt10443844",
-        "title": "Psycho-Pass: Sinners of the System - Case.1 Crime and Punishment",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/qnG8ZcmQoncPB58RZwy3wofxm5y.jpg",
-        "released": "2019-01-25"
-      },
-      {
         "id": "tt8816016",
         "title": "BlackFox",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7ypOmAQ3TowBa4iBILBboOEQqYh.jpg",
-        "released": "2019-10-05"
+        "released": "2019-10-04"
       },
       {
         "id": "tt9255718",
@@ -483,34 +483,34 @@
         "released": "2019-02-15"
       },
       {
-        "id": "tt6344664",
-        "title": "Code Geass: Lelouch of the Re;surrection",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ghD2HJyAk6EYVHrzBhddNDJ73Go.jpg",
-        "released": "2019-02-09"
-      },
-      {
         "id": "tt9826484",
         "title": "Trinity Seven: Heaven's Library & Crimson Lord",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nlgrBVlXCXf72rYPxKOnzH0eZ59.jpg",
         "released": "2019-03-29"
       },
       {
-        "id": "tt10622220",
-        "title": "Human Lost",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/2ucqzh23UieFrgnDQVtPj1GrRGq.jpg",
-        "released": "2019-10-22"
-      },
-      {
-        "id": "tt8161914",
-        "title": "City Hunter: Shinjuku Private Eyes",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/7urbWvWNsWuBAxJ34sccIevPP2E.jpg",
-        "released": "2019-02-08"
+        "id": "tt6344664",
+        "title": "Code Geass: Lelouch of the Re;surrection",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ghD2HJyAk6EYVHrzBhddNDJ73Go.jpg",
+        "released": "2019-02-09"
       },
       {
         "id": "tt10551160",
         "title": "Brave Father Online - Our Story of Final Fantasy XIV",
         "thumbnail": "https://image.tmdb.org/t/p/w500/nqZSnYjRFJEwEnzlVMKd1popGAK.jpg",
         "released": "2019-06-21"
+      },
+      {
+        "id": "tt10622220",
+        "title": "Human Lost",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/2ucqzh23UieFrgnDQVtPj1GrRGq.jpg",
+        "released": "2019-06-14"
+      },
+      {
+        "id": "tt8161914",
+        "title": "City Hunter: Shinjuku Private Eyes",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/7urbWvWNsWuBAxJ34sccIevPP2E.jpg",
+        "released": "2019-02-08"
       },
       {
         "id": "tt11078522",
@@ -522,7 +522,7 @@
         "id": "tt8286670",
         "title": "Calamity of a Zombie Girl",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zTjjbYnvNlGsJ6dexAxYwnpKpQE.jpg",
-        "released": "2018-07-04"
+        "released": "2018-07-03"
       },
       {
         "id": "tt9598270",
@@ -546,7 +546,7 @@
         "id": "tt7745068",
         "title": "My Hero Academia: Two Heroes",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hC4nTxdhXqFWzgqynGvvXVMiMNp.jpg",
-        "released": "2018-08-03"
+        "released": "2018-07-05"
       },
       {
         "id": "tt9881872",
@@ -573,16 +573,16 @@
         "released": "2018-01-01"
       },
       {
-        "id": "tt6634910",
-        "title": "Overlord: The Dark Hero",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/joAUUvoVxRkk0AHny7lhoN9yk5r.jpg",
-        "released": "2017-03-11"
-      },
-      {
         "id": "tt6344696",
         "title": "Trinity Seven: Eternity Library & Alchemic Girl",
         "thumbnail": "https://image.tmdb.org/t/p/w500/f2KEIR1u6ehaYMDaeZ3PMjC4tyj.jpg",
         "released": "2017-02-25"
+      },
+      {
+        "id": "tt6634910",
+        "title": "Overlord: The Dark Hero",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/joAUUvoVxRkk0AHny7lhoN9yk5r.jpg",
+        "released": "2017-03-11"
       },
       {
         "id": "tt5468016",
@@ -615,16 +615,16 @@
         "released": "2017-10-14"
       },
       {
-        "id": "tt6548966",
-        "title": "Fairy Tail: Dragon Cry",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/9SJFMVWiuJV55yLbPpWhHZ9MgHn.jpg",
-        "released": "2017-05-06"
-      },
-      {
         "id": "tt7480958",
         "title": "Eureka Seven Hi-Evolution 1",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ivfU7kNHkdX7VPSoeVljbkQ2xvm.jpg",
         "released": "2017-09-16"
+      },
+      {
+        "id": "tt6548966",
+        "title": "Fairy Tail: Dragon Cry",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/9SJFMVWiuJV55yLbPpWhHZ9MgHn.jpg",
+        "released": "2017-05-06"
       },
       {
         "id": "tt6728390",
@@ -678,7 +678,7 @@
         "id": "tt5468018",
         "title": "Digimon Adventure tri. Part 5: Coexistence",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mrRMYAzYfRZCeFJl92b4ZCCkRUU.jpg",
-        "released": "2017-09-30"
+        "released": "2017-09-16"
       },
       {
         "id": "tt6634906",
@@ -756,7 +756,7 @@
         "id": "tt4769824",
         "title": "In This Corner of the World",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9Z4H4M2F8OQTB04YC1Opds8MFBb.jpg",
-        "released": "2016-11-12"
+        "released": "2016-10-28"
       },
       {
         "id": "tt5251328",
@@ -771,16 +771,16 @@
         "released": "2016-09-03"
       },
       {
-        "id": "tt4272866",
-        "title": "The Boy and the Beast",
-        "thumbnail": "https://images.justwatch.com/poster/164503730/s332/img",
-        "released": "2015-01-01"
-      },
-      {
         "id": "tt4337072",
         "title": "Ghost in the Shell: The New Movie",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eLd31emY3jann7JV0AkSPJ06Xep.jpg",
         "released": "2015-06-20"
+      },
+      {
+        "id": "tt4272866",
+        "title": "The Boy and the Beast",
+        "thumbnail": "https://images.justwatch.com/poster/164503730/s332/img",
+        "released": "2015-01-01"
       },
       {
         "id": "tt3819668",
@@ -930,7 +930,7 @@
         "id": "tt2140141",
         "title": "Mass Effect: Paragon Lost",
         "thumbnail": "https://image.tmdb.org/t/p/w500/flfp6eKmSdwCcJEP9mlhh9UMmGi.jpg",
-        "released": "2012-12-28"
+        "released": "2012-12-06"
       },
       {
         "id": "tt2375379",
@@ -966,7 +966,7 @@
         "id": "tt1703049",
         "title": "Trigun: Badlands Rumble",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7JYK0FBs2nX6ikqeT6rDzEZRM.jpg",
-        "released": "2010-04-24"
+        "released": "2010-04-02"
       },
       {
         "id": "tt1703938",
@@ -975,22 +975,22 @@
         "released": "2010-07-28"
       },
       {
-        "id": "tt1690483",
-        "title": "King of Thorn",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/wH9SSbsNWKLtZjA4LBQ7P2GwbLZ.jpg",
-        "released": "2010-05-01"
-      },
-      {
         "id": "tt1726286",
         "title": "Mobile Suit Gundam 00 The Movie: -A Wakening of the Trailblazer-",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pGfKtbinKYzsfwVVTF628nQtVL8.jpg",
         "released": "2010-09-18"
       },
       {
+        "id": "tt1690483",
+        "title": "King of Thorn",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/wH9SSbsNWKLtZjA4LBQ7P2GwbLZ.jpg",
+        "released": "2010-05-01"
+      },
+      {
         "id": "tt1485763",
         "title": "One Piece Film: Strong World",
         "thumbnail": "https://image.tmdb.org/t/p/w500/z9S39hH4IOX9Hmtn3zho3Wdqem8.jpg",
-        "released": "2010-02-11"
+        "released": "2009-12-12"
       },
       {
         "id": "tt1642193",
@@ -1008,7 +1008,7 @@
         "id": "tt1265998",
         "title": "Afro Samurai: Resurrection",
         "thumbnail": "https://image.tmdb.org/t/p/w500/6snrLj3Ydmbu5L9giAYtiSNwE0U.jpg",
-        "released": "2009-04-24"
+        "released": "2009-01-25"
       },
       {
         "id": "tt1217043",
@@ -1026,7 +1026,7 @@
         "id": "tt1313120",
         "title": "Hells",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wzakuhm5mMxZXt6oP6CbkJuA7rV.jpg",
-        "released": "2008-10-24"
+        "released": "2008-02-14"
       },
       {
         "id": "tt1343089",
@@ -1035,28 +1035,34 @@
         "released": "2008-12-20"
       },
       {
-        "id": "tt1155652",
-        "title": "The Garden of Sinners: Remaining Sense of Pain",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/3TeeCstvdqb6E72dMPEb43rCD0U.jpg",
-        "released": "2008-02-09"
-      },
-      {
         "id": "tt1233474",
         "title": "The Garden of Sinners: The Hollow Shrine",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5jycWY9V9Chf8XlAwrjBSVWONTi.jpg",
         "released": "2008-05-24"
       },
       {
-        "id": "tt1183732",
-        "title": "Tokyo Gore Police",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/d1LqkFMhFO5lfV3uwEpwyTLxXgR.jpg",
-        "released": "2008-10-04"
+        "id": "tt1155652",
+        "title": "The Garden of Sinners: Remaining Sense of Pain",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/3TeeCstvdqb6E72dMPEb43rCD0U.jpg",
+        "released": "2008-02-09"
       },
       {
         "id": "tt1050160",
         "title": "The Machine Girl",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ln2ld7e5BwNqcBgUO7lqaBtAsuh.jpg",
         "released": "2008-01-02"
+      },
+      {
+        "id": "tt1183732",
+        "title": "Tokyo Gore Police",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/d1LqkFMhFO5lfV3uwEpwyTLxXgR.jpg",
+        "released": "2008-07-12"
+      },
+      {
+        "id": "tt0994794",
+        "title": "Shakugan no Shana: The Movie",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/fMRs3Km9gcjVWt9WCujO5E3FPUO.jpg",
+        "released": "2007-04-21"
       },
       {
         "id": "tt1121794",
@@ -1069,12 +1075,6 @@
         "title": "The Garden of Sinners: A Study in Murder - Part 1",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zxNZpMkis5XnD81Y3gqJhh9ZOmk.jpg",
         "released": "2007-12-29"
-      },
-      {
-        "id": "tt0994794",
-        "title": "Shakugan no Shana: The Movie",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/fMRs3Km9gcjVWt9WCujO5E3FPUO.jpg",
-        "released": "2007-04-21"
       },
       {
         "id": "tt1002567",
@@ -1122,7 +1122,7 @@
         "id": "tt23356372",
         "title": "Onimusha: Dawn of Dreams",
         "thumbnail": "https://image.tmdb.org/t/p/w500/q6AZ3hHgpmB8WjC96S4rKWLszOv.jpg",
-        "released": "2006-06-26"
+        "released": "2006-03-07"
       },
       {
         "id": "tt0443771",
@@ -1164,19 +1164,19 @@
         "id": "tt0193253",
         "title": "Jin-Roh: The Wolf Brigade",
         "thumbnail": "https://image.tmdb.org/t/p/w500/63EMBxmcafkc4cWuUWQh2Ttd2jh.jpg",
-        "released": "1999-11-17"
-      },
-      {
-        "id": "tt0301082",
-        "title": "Cardcaptor Sakura: The Movie",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/qgFFwLekxzDYLjc07OqnsSShqwb.jpg",
-        "released": "1999-08-21"
+        "released": "1999-08-06"
       },
       {
         "id": "tt0211310",
         "title": "City Hunter Special: The Death of Vicious Criminal Saeba Ryo",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mVQcQEoiv276muMUH2m4Kf0TGkD.jpg",
         "released": "1999-04-22"
+      },
+      {
+        "id": "tt0301082",
+        "title": "Cardcaptor Sakura: The Movie",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/qgFFwLekxzDYLjc07OqnsSShqwb.jpg",
+        "released": "1999-08-21"
       },
       {
         "id": "tt0260191",
@@ -1221,16 +1221,16 @@
         "released": "1995-03-04"
       },
       {
-        "id": "tt0114563",
-        "title": "Street Fighter II: The Animated Movie",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dZ1rqmE4eIhPbUCr7sn2Pw2wwGW.jpg",
-        "released": "1994-08-06"
-      },
-      {
         "id": "tt0142239",
         "title": "Dragon Ball Z: Broly - Second Coming",
         "thumbnail": "https://image.tmdb.org/t/p/w500/Apnw8FWoPOIsu14d5dvaNZzFSJE.jpg",
         "released": "1994-03-12"
+      },
+      {
+        "id": "tt0114563",
+        "title": "Street Fighter II: The Animated Movie",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dZ1rqmE4eIhPbUCr7sn2Pw2wwGW.jpg",
+        "released": "1994-08-06"
       },
       {
         "id": "tt0142234",
@@ -1377,16 +1377,16 @@
         "released": "1985-07-13"
       },
       {
-        "id": "tt0086515",
-        "title": "Unico in the Island of Magic",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/xG9cJlugwqj92ooeRrRsIJw0WER.jpg",
-        "released": "1983-07-16"
-      },
-      {
         "id": "tt0086520",
         "title": "Urusei Yatsura: Only You",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ljvg1lHdN52yNgTTOw6rNwzr9rx.jpg",
         "released": "1983-02-11"
+      },
+      {
+        "id": "tt0086515",
+        "title": "Unico in the Island of Magic",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xG9cJlugwqj92ooeRrRsIJw0WER.jpg",
+        "released": "1983-07-16"
       },
       {
         "id": "tt0083258",

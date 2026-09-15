@@ -3,7 +3,7 @@
     "id": "odincol3.apple",
     "type": "movie",
     "name": "Apple TV+",
-    "description": "Apple TV+ recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
+    "description": "Apple TV+ recent and popular movies available in US. Provider membership from JustWatch; title, earliest known release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png",
     "posterShape": "landscape",
@@ -48,37 +48,37 @@
         "id": "tt16311594",
         "title": "F1",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9PXZIUsSDh4alB80jheWX4fhZmy.jpg",
-        "released": "2025-06-25"
+        "released": "2025-06-16"
       },
       {
         "id": "tt31194612",
         "title": "Highest 2 Lowest",
         "thumbnail": "https://image.tmdb.org/t/p/w500/RFQtinuiHhOnbmJaCn3uzegCYF.jpg",
-        "released": "2025-08-14"
+        "released": "2025-05-19"
       },
       {
         "id": "tt24950660",
         "title": "Eternity",
         "thumbnail": "https://image.tmdb.org/t/p/w500/yiwGcjfDKXD5PqQnyKUU9kspWQQ.jpg",
-        "released": "2025-11-10"
+        "released": "2025-09-07"
       },
       {
         "id": "tt37674658",
         "title": "Stiller & Meara: Nothing Is Lost",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zJuzuanxfc7D7Kqz4qYQqsDhRY3.jpg",
-        "released": "2025-10-17"
+        "released": "2025-10-05"
+      },
+      {
+        "id": "tt27052633",
+        "title": "Echo Valley",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/AsqALJWqGRgnKEo3gt1TCOF4nCM.jpg",
+        "released": "2025-06-04"
       },
       {
         "id": "tt27075958",
         "title": "Fountain of Youth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4iWjGghUj2uyHo2Hyw8NFBvsNGm.jpg",
         "released": "2025-05-19"
-      },
-      {
-        "id": "tt27052633",
-        "title": "Echo Valley",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/AsqALJWqGRgnKEo3gt1TCOF4nCM.jpg",
-        "released": "2025-06-13"
       },
       {
         "id": "tt36988583",
@@ -96,7 +96,7 @@
         "id": "tt34966013",
         "title": "Come See Me in the Good Light",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5AFbcDGT78cLZTyHTSDBohczjuO.jpg",
-        "released": "2025-11-14"
+        "released": "2025-01-25"
       },
       {
         "id": "tt13654226",
@@ -120,7 +120,7 @@
         "id": "tt21103218",
         "title": "The Lost Bus",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4IPxzGlE17fJAwUTMul4opMeutA.jpg",
-        "released": "2025-09-19"
+        "released": "2025-09-05"
       },
       {
         "id": "tt35046370",
@@ -132,7 +132,7 @@
         "id": "tt1896747",
         "title": "Fly Me to the Moon",
         "thumbnail": "https://image.tmdb.org/t/p/w500/gjk8YdXpItoC1in53FCrZMFIuBx.jpg",
-        "released": "2024-07-10"
+        "released": "2024-07-03"
       },
       {
         "id": "tt30841644",
@@ -150,25 +150,25 @@
         "id": "tt24169886",
         "title": "The Instigators",
         "thumbnail": "https://image.tmdb.org/t/p/w500/dnYWsIFDmygCjNg65rY3uBymx81.jpg",
-        "released": "2024-08-02"
+        "released": "2024-07-31"
       },
       {
         "id": "tt15009428",
         "title": "Argylle",
         "thumbnail": "https://image.tmdb.org/t/p/w500/siduVKgOnABO4WH4lOwPQwaGwJp.jpg",
-        "released": "2024-01-31"
+        "released": "2024-01-24"
       },
       {
         "id": "tt27599265",
         "title": "Bread & Roses",
         "thumbnail": "https://image.tmdb.org/t/p/w500/hd5avfP3vzlJy1cafFr4YP72IJ8.jpg",
-        "released": "2024-11-22"
+        "released": "2023-05-21"
       },
       {
         "id": "tt21813994",
         "title": "Fancy Dance",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kMOqbt2cdWryPJIrxnwzplPNmF6.jpg",
-        "released": "2024-06-21"
+        "released": "2023-01-20"
       },
       {
         "id": "tt30259532",
@@ -177,28 +177,28 @@
         "released": "2024-01-18"
       },
       {
-        "id": "tt14257582",
-        "title": "Wolfs",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vOX1Zng472PC2KnS0B9nRfM8aaZ.jpg",
-        "released": "2024-09-20"
-      },
-      {
         "id": "tt31510396",
         "title": "The Bloody Hundredth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/5GnpAw5BaQBNqYd4wE1IptYEVKd.jpg",
         "released": "2024-03-14"
       },
       {
-        "id": "tt30852384",
-        "title": "All of You",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/U2KFjtXN9NL9eCENB28w42Jakp.jpg",
-        "released": "2025-09-26"
+        "id": "tt14257582",
+        "title": "Wolfs",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vOX1Zng472PC2KnS0B9nRfM8aaZ.jpg",
+        "released": "2024-09-01"
       },
       {
         "id": "tt15939198",
         "title": "Blitz",
         "thumbnail": "https://image.tmdb.org/t/p/w500/e9tyjbF2rugENtBolTtEhHOXgzD.jpg",
-        "released": "2024-11-01"
+        "released": "2024-10-09"
+      },
+      {
+        "id": "tt30852384",
+        "title": "All of You",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/U2KFjtXN9NL9eCENB28w42Jakp.jpg",
+        "released": "2024-09-07"
       },
       {
         "id": "tt17007120",
@@ -207,34 +207,34 @@
         "released": "2023-07-21"
       },
       {
-        "id": "tt13968674",
-        "title": "Fingernails",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/q04g3un61aeBoheQEso7enM28AF.jpg",
-        "released": "2023-10-27"
-      },
-      {
         "id": "tt15210256",
         "title": "Stephen Curry: Underrated",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mFpnGiDrY9Brz4FQLKBKX1uCbl.jpg",
-        "released": "2023-07-21"
+        "released": "2023-01-23"
       },
       {
-        "id": "tt12573454",
-        "title": "Sharper",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tq8x5F17q95T1j0up5rpzXFAylN.jpg",
-        "released": "2023-02-10"
-      },
-      {
-        "id": "tt13287846",
-        "title": "Napoleon",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/ytFOXyghxLzAM4KZyazDdEkM66q.jpg",
-        "released": "2023-11-22"
+        "id": "tt13968674",
+        "title": "Fingernails",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/q04g3un61aeBoheQEso7enM28AF.jpg",
+        "released": "2023-08-31"
       },
       {
         "id": "tt25471950",
         "title": "Flora and Son",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pq2p8ovf8PZps2HafvJaLrZK8gS.jpg",
-        "released": "2023-09-21"
+        "released": "2023-01-22"
+      },
+      {
+        "id": "tt12573454",
+        "title": "Sharper",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tq8x5F17q95T1j0up5rpzXFAylN.jpg",
+        "released": "2023-02-07"
+      },
+      {
+        "id": "tt13287846",
+        "title": "Napoleon",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/ytFOXyghxLzAM4KZyazDdEkM66q.jpg",
+        "released": "2023-11-14"
       },
       {
         "id": "tt12758060",
@@ -243,16 +243,16 @@
         "released": "2023-03-15"
       },
       {
-        "id": "tt5537002",
-        "title": "Killers of the Flower Moon",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
-        "released": "2023-10-18"
-      },
-      {
         "id": "tt28486633",
         "title": "The Pigeon Tunnel",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xsDb7JlPS6QnI26bTP3sREz9n0K.jpg",
-        "released": "2023-10-20"
+        "released": "2023-09-01"
+      },
+      {
+        "id": "tt5537002",
+        "title": "Killers of the Flower Moon",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
+        "released": "2023-05-20"
       },
       {
         "id": "tt27865284",
@@ -294,13 +294,13 @@
         "id": "tt14376344",
         "title": "Cha Cha Real Smooth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/iUvoVhvwTlP8DofoqeIu7QAGLAe.jpg",
-        "released": "2022-06-17"
+        "released": "2022-01-23"
       },
       {
         "id": "tt7214954",
         "title": "Luck",
         "thumbnail": "https://image.tmdb.org/t/p/w500/1HOYvwGFioUFL58UVvDRG6beEDm.jpg",
-        "released": "2022-08-05"
+        "released": "2022-07-30"
       },
       {
         "id": "tt19866966",
@@ -312,13 +312,13 @@
         "id": "tt22667880",
         "title": "The Boy, the Mole, the Fox and the Horse",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wAKBWRhMmBtrCCuqmFwPm2RGTph.jpg",
-        "released": "2022-12-25"
+        "released": "2022-12-02"
       },
       {
         "id": "tt21819250",
         "title": "Selena Gomez: My Mind & Me",
         "thumbnail": "https://image.tmdb.org/t/p/w500/oMpsswJv8x4vnOnIKqs4xJs2Kn3.jpg",
-        "released": "2022-11-04"
+        "released": "2022-11-02"
       },
       {
         "id": "tt10999120",
@@ -330,13 +330,13 @@
         "id": "tt12530246",
         "title": "Emancipation",
         "thumbnail": "https://image.tmdb.org/t/p/w500/AkdNXEquLf4GIkwh1dcSB7j0FTY.jpg",
-        "released": "2022-12-02"
+        "released": "2022-11-30"
       },
       {
         "id": "tt10268488",
         "title": "The Greatest Beer Run Ever",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ggf37TpcKaxwguhvtNn6MQpyqBn.jpg",
-        "released": "2022-09-23"
+        "released": "2022-09-13"
       },
       {
         "id": "tt14447458",
@@ -354,13 +354,13 @@
         "id": "tt2201261",
         "title": "The Sky Is Everywhere",
         "thumbnail": "https://image.tmdb.org/t/p/w500/qMVUlq6rdqFo1xZ5ozQcKFCDbgj.jpg",
-        "released": "2022-02-11"
+        "released": "2022-02-10"
       },
       {
         "id": "tt10192406",
         "title": "Causeway",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bUzKIqFIS05Ss31zRTfZfHJIgDP.jpg",
-        "released": "2022-10-28"
+        "released": "2022-09-10"
       },
       {
         "id": "tt16977750",
@@ -372,7 +372,7 @@
         "id": "tt15334032",
         "title": "Raymond & Ray",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fdKZmSQHD17JjGUYkluhpttgJRi.jpg",
-        "released": "2022-10-14"
+        "released": "2022-09-12"
       },
       {
         "id": "tt21405896",
@@ -390,7 +390,7 @@
         "id": "tt11459366",
         "title": "Billie Eilish: The World's a Little Blurry",
         "thumbnail": "https://image.tmdb.org/t/p/w500/bDQ95W5LPHW9FHlPj3QX3jvM9Z7.jpg",
-        "released": "2021-02-26"
+        "released": "2021-02-25"
       },
       {
         "id": "tt15829598",
@@ -411,16 +411,16 @@
         "released": "2021-11-24"
       },
       {
-        "id": "tt14460998",
-        "title": "Blush",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/vbQ5CVld2AjH8DEo0L8Wz8ag3Xy.jpg",
-        "released": "2021-06-13"
-      },
-      {
         "id": "tt9130508",
         "title": "Cherry",
         "thumbnail": "https://image.tmdb.org/t/p/w500/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg",
         "released": "2021-02-26"
+      },
+      {
+        "id": "tt14460998",
+        "title": "Blush",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/vbQ5CVld2AjH8DEo0L8Wz8ag3Xy.jpg",
+        "released": "2021-06-13"
       },
       {
         "id": "tt3420504",
@@ -432,19 +432,13 @@
         "id": "tt10095582",
         "title": "The Tragedy of Macbeth",
         "thumbnail": "https://image.tmdb.org/t/p/w500/tDNJEhcLbX3jIk3BMCur9pCdaVD.jpg",
-        "released": "2021-12-05"
-      },
-      {
-        "id": "tt6857376",
-        "title": "Palmer",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
-        "released": "2021-01-28"
+        "released": "2021-09-24"
       },
       {
         "id": "tt10366460",
         "title": "CODA",
         "thumbnail": "https://image.tmdb.org/t/p/w500/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
-        "released": "2021-08-13"
+        "released": "2021-01-29"
       },
       {
         "id": "tt13622130",
@@ -459,10 +453,16 @@
         "released": "2021-04-15"
       },
       {
+        "id": "tt6857376",
+        "title": "Palmer",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
+        "released": "2021-01-28"
+      },
+      {
         "id": "tt7230750",
         "title": "The Velvet Underground",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9uRF6vERWfhlSZKc1sAJTTdG2Ix.jpg",
-        "released": "2021-10-15"
+        "released": "2021-07-07"
       },
       {
         "id": "tt14784858",
@@ -474,7 +474,7 @@
         "id": "tt13207508",
         "title": "Swan Song",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zzCdikGD9Qa5NT8lZtUv9dXNgsm.jpg",
-        "released": "2021-12-17"
+        "released": "2021-11-12"
       },
       {
         "id": "tt15553258",
@@ -492,7 +492,7 @@
         "id": "tt5198068",
         "title": "Wolfwalkers",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vqGiNbdc2sDwsnivMMYzwAoSSu6.jpg",
-        "released": "2020-10-26"
+        "released": "2020-09-12"
       },
       {
         "id": "tt11692010",
@@ -516,13 +516,13 @@
         "id": "tt9606374",
         "title": "On the Rocks",
         "thumbnail": "https://image.tmdb.org/t/p/w500/fcijRCmB7yTtloh4Pumy9b1rkwU.jpg",
-        "released": "2020-10-02"
+        "released": "2020-09-22"
       },
       {
         "id": "tt11615290",
         "title": "Beastie Boys Story",
         "thumbnail": "https://image.tmdb.org/t/p/w500/mph9vxXnEgiFrkrUqMk40DpPtEX.jpg",
-        "released": "2020-04-24"
+        "released": "2020-04-23"
       },
       {
         "id": "tt13017992",
@@ -552,7 +552,7 @@
         "id": "tt6722976",
         "title": "The Elephant Queen",
         "thumbnail": "https://image.tmdb.org/t/p/w500/26hkYwRR6VsdjoelsOLpB5Cx1HD.jpg",
-        "released": "2019-10-18"
+        "released": "2018-09-08"
       },
       {
         "id": "tt10883124",
@@ -564,19 +564,19 @@
         "id": "tt6348410",
         "title": "Hala",
         "thumbnail": "https://image.tmdb.org/t/p/w500/oMC0S5kpUq5AFIf4e5bZSEVRB7u.jpg",
-        "released": "2019-11-22"
+        "released": "2019-01-26"
       },
       {
         "id": "tt0993846",
         "title": "The Wolf of Wall Street",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
-        "released": "2013-12-25"
+        "released": "2013-12-09"
       },
       {
         "id": "tt1798709",
         "title": "Her",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
-        "released": "2013-12-18"
+        "released": "2013-10-12"
       },
       {
         "id": "tt1790885",
@@ -588,19 +588,19 @@
         "id": "tt1282140",
         "title": "Easy A",
         "thumbnail": "https://image.tmdb.org/t/p/w500/v5f1qO6NJnxWgONgkYg21TW39DT.jpg",
-        "released": "2010-09-16"
+        "released": "2010-09-11"
       },
       {
         "id": "tt1285016",
         "title": "The Social Network",
         "thumbnail": "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
-        "released": "2010-10-01"
+        "released": "2010-09-24"
       },
       {
         "id": "tt1130080",
         "title": "The Informant!",
         "thumbnail": "https://image.tmdb.org/t/p/w500/eV8u5crNe4QYWcu0zjKxFVq2Qem.jpg",
-        "released": "2009-09-18"
+        "released": "2009-09-07"
       },
       {
         "id": "tt0800039",
@@ -612,19 +612,19 @@
         "id": "tt0795421",
         "title": "Mamma Mia!",
         "thumbnail": "https://image.tmdb.org/t/p/w500/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg",
-        "released": "2008-07-03"
+        "released": "2008-06-30"
       },
       {
         "id": "tt0832266",
         "title": "Definitely, Maybe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7eS5RurcMyi8eVUDenaCjPGAzJ2.jpg",
-        "released": "2008-02-08"
+        "released": "2008-01-24"
       },
       {
         "id": "tt0829482",
         "title": "Superbad",
         "thumbnail": "https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
-        "released": "2007-08-17"
+        "released": "2007-08-13"
       },
       {
         "id": "tt0407304",
@@ -642,13 +642,13 @@
         "id": "tt0332452",
         "title": "Troy",
         "thumbnail": "https://image.tmdb.org/t/p/w500/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
-        "released": "2004-05-13"
+        "released": "2004-05-09"
       },
       {
         "id": "tt0332379",
         "title": "The School of Rock",
         "thumbnail": "https://image.tmdb.org/t/p/w500/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
-        "released": "2003-10-03"
+        "released": "2003-09-09"
       },
       {
         "id": "tt0387301",
@@ -684,13 +684,13 @@
         "id": "tt0268978",
         "title": "A Beautiful Mind",
         "thumbnail": "https://image.tmdb.org/t/p/w500/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg",
-        "released": "2001-12-14"
+        "released": "2001-12-13"
       },
       {
         "id": "tt0167404",
         "title": "The Sixth Sense",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
-        "released": "1999-08-06"
+        "released": "1999-08-02"
       },
       {
         "id": "tt0104694",
@@ -744,7 +744,7 @@
         "id": "tt0059026",
         "title": "A Charlie Brown Christmas",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vtaufTzJBMJAeziQA1eP4BLU24C.jpg",
-        "released": "1965-12-09"
+        "released": "1965-12-05"
       }
     ]
   }
