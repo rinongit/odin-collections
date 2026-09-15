@@ -3,7 +3,7 @@
     "id": "odincol.prime",
     "type": "movie",
     "name": "Prime Video",
-    "description": "Prime Video recent and popular movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Prime Video recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
     "posterShape": "landscape",
@@ -1191,12 +1191,6 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt33028778",
-        "title": "Primate",
-        "thumbnail": "https://images.justwatch.com/poster/336996779/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt0427340",
         "title": "Masters of the Universe",
         "thumbnail": "https://images.justwatch.com/poster/347453342/s332/img",
@@ -1212,6 +1206,12 @@
         "id": "tt26234108",
         "title": "Vaa Vaathiyaar",
         "thumbnail": "https://images.justwatch.com/poster/335445071/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33028778",
+        "title": "Primate",
+        "thumbnail": "https://images.justwatch.com/poster/336996779/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -1629,15 +1629,15 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt33143854",
-        "title": "Couple Friendly",
-        "thumbnail": "https://images.justwatch.com/poster/344267533/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt31050594",
         "title": "Mercy",
         "thumbnail": "https://images.justwatch.com/poster/336651234/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33143854",
+        "title": "Couple Friendly",
+        "thumbnail": "https://images.justwatch.com/poster/344267533/s332/img",
         "released": "2026-01-01"
       },
       {

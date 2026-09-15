@@ -3,7 +3,7 @@
     "id": "odincol3.netflix",
     "type": "movie",
     "name": "Netflix",
-    "description": "Netflix recent and popular movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Netflix recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png",
     "posterShape": "landscape",

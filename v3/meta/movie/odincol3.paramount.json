@@ -3,7 +3,7 @@
     "id": "odincol3.paramount",
     "type": "movie",
     "name": "Paramount+",
-    "description": "Paramount+ recent and popular movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Paramount+ recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png",
     "posterShape": "landscape",
@@ -1641,12 +1641,6 @@
         "released": "2019-01-01"
       },
       {
-        "id": "tt13452610",
-        "title": "Madagascar: Africa's Galapagos",
-        "thumbnail": "https://images.justwatch.com/poster/320408408/s332/img",
-        "released": "2019-01-01"
-      },
-      {
         "id": "tt11142536",
         "title": "The SpongeBob Musical: Live on Stage!",
         "thumbnail": "https://images.justwatch.com/poster/237932054/s332/img",
@@ -1677,12 +1671,6 @@
         "released": "2018-01-01"
       },
       {
-        "id": "tt7962784",
-        "title": "Ali Siddiq: It's Bigger Than These Bars",
-        "thumbnail": "https://images.justwatch.com/poster/289305353/s332/img",
-        "released": "2018-01-01"
-      },
-      {
         "id": "tt7817874",
         "title": "The Coronation",
         "thumbnail": "https://images.justwatch.com/poster/300739953/s332/img",
@@ -1692,6 +1680,12 @@
         "id": "tt9014006",
         "title": "Sam Morril: Positive Influence",
         "thumbnail": "https://images.justwatch.com/poster/319503337/s332/img",
+        "released": "2018-01-01"
+      },
+      {
+        "id": "tt7962784",
+        "title": "Ali Siddiq: It's Bigger Than These Bars",
+        "thumbnail": "https://images.justwatch.com/poster/289305353/s332/img",
         "released": "2018-01-01"
       },
       {
@@ -1803,9 +1797,15 @@
         "released": "2018-01-01"
       },
       {
-        "id": "tt7620650",
-        "title": "Jeff Ross Roasts the Border",
-        "thumbnail": "https://images.justwatch.com/poster/31549432/s332/img",
+        "id": "tt7272984",
+        "title": "JoJo Siwa: My World",
+        "thumbnail": "https://images.justwatch.com/poster/327074014/s332/img",
+        "released": "2017-01-01"
+      },
+      {
+        "id": "tt15347528",
+        "title": "The Obama Years: The Power of Words",
+        "thumbnail": "https://images.justwatch.com/poster/177635412/s332/img",
         "released": "2017-01-01"
       },
       {

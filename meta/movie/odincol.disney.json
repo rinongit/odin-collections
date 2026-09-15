@@ -3,7 +3,7 @@
     "id": "odincol.disney",
     "type": "movie",
     "name": "Disney+",
-    "description": "Disney+ recent and popular movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Disney+ recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png",
     "posterShape": "landscape",

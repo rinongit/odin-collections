@@ -3,7 +3,7 @@
     "id": "odincol2.hulu",
     "type": "movie",
     "name": "Hulu",
-    "description": "Hulu recent and popular movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Hulu recent and popular movies available in US. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.",
     "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png",
     "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png",
     "posterShape": "landscape",
@@ -117,9 +117,9 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt39216314",
-        "title": "Stray Kids: The dominATE Experience",
-        "thumbnail": "https://images.justwatch.com/poster/343107415/s332/img",
+        "id": "tt22868010",
+        "title": "Return to Silent Hill",
+        "thumbnail": "https://images.justwatch.com/poster/336106037/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -129,9 +129,9 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt22868010",
-        "title": "Return to Silent Hill",
-        "thumbnail": "https://images.justwatch.com/poster/336106037/s332/img",
+        "id": "tt39216314",
+        "title": "Stray Kids: The dominATE Experience",
+        "thumbnail": "https://images.justwatch.com/poster/343107415/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -195,15 +195,15 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt8036976",
-        "title": "Send Help",
-        "thumbnail": "https://images.justwatch.com/poster/342979231/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt29713093",
         "title": "We Bury the Dead",
         "thumbnail": "https://images.justwatch.com/poster/336744758/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt8036976",
+        "title": "Send Help",
+        "thumbnail": "https://images.justwatch.com/poster/342979231/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -213,15 +213,15 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt40930268",
-        "title": "Breaking Glass: The Pat Summitt Story",
-        "thumbnail": "https://images.justwatch.com/poster/343720958/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt32205214",
         "title": "Mexican Psycho",
         "thumbnail": "https://images.justwatch.com/poster/347681697/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt40930268",
+        "title": "Breaking Glass: The Pat Summitt Story",
+        "thumbnail": "https://images.justwatch.com/poster/343720958/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -243,12 +243,6 @@
         "released": "2026-01-01"
       },
       {
-        "id": "tt43444517",
-        "title": "Sports Illustrated Swimsuit Runway Show",
-        "thumbnail": "https://images.justwatch.com/poster/346310882/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt43356089",
         "title": "Paul Simon: The Quiet Celebration Concert",
         "thumbnail": "https://images.justwatch.com/poster/346519398/s332/img",
@@ -261,21 +255,27 @@
         "released": "2026-01-01"
       },
       {
+        "id": "tt43444517",
+        "title": "Sports Illustrated Swimsuit Runway Show",
+        "thumbnail": "https://images.justwatch.com/poster/346310882/s332/img",
+        "released": "2026-01-01"
+      },
+      {
         "id": "tt35237771",
         "title": "Ghost Elephants",
         "thumbnail": "https://images.justwatch.com/poster/342820349/s332/img",
         "released": "2026-01-01"
       },
       {
-        "id": "tt23745668",
-        "title": "Jimpa",
-        "thumbnail": "https://images.justwatch.com/poster/340671293/s332/img",
-        "released": "2026-01-01"
-      },
-      {
         "id": "tt38380143",
         "title": "The Pastor Who Preys",
         "thumbnail": "https://images.justwatch.com/poster/341172007/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt23745668",
+        "title": "Jimpa",
+        "thumbnail": "https://images.justwatch.com/poster/340671293/s332/img",
         "released": "2026-01-01"
       },
       {
@@ -429,12 +429,6 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt27714581",
-        "title": "Sentimental Value",
-        "thumbnail": "https://images.justwatch.com/poster/348584918/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt27829510",
         "title": "High Rollers",
         "thumbnail": "https://images.justwatch.com/poster/327280252/s332/img",
@@ -444,6 +438,12 @@
         "id": "tt32332404",
         "title": "Keeper",
         "thumbnail": "https://images.justwatch.com/poster/332938972/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt27714581",
+        "title": "Sentimental Value",
+        "thumbnail": "https://images.justwatch.com/poster/348584918/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -525,12 +525,6 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt17676734",
-        "title": "Americana",
-        "thumbnail": "https://images.justwatch.com/poster/331126481/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt23173980",
         "title": "Darkness of Man",
         "thumbnail": "https://images.justwatch.com/poster/316477886/s332/img",
@@ -546,6 +540,12 @@
         "id": "tt27813235",
         "title": "The Surfer",
         "thumbnail": "https://images.justwatch.com/poster/326395014/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt17676734",
+        "title": "Americana",
+        "thumbnail": "https://images.justwatch.com/poster/331126481/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -627,12 +627,6 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt23060698",
-        "title": "Clown in a Cornfield",
-        "thumbnail": "https://images.justwatch.com/poster/331878512/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt38202962",
         "title": "Avihitham",
         "thumbnail": "https://images.justwatch.com/poster/337817777/s332/img",
@@ -651,15 +645,21 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt33517417",
-        "title": "Chris Distefano: It's Just Unfortunate",
-        "thumbnail": "https://images.justwatch.com/poster/326223753/s332/img",
+        "id": "tt23060698",
+        "title": "Clown in a Cornfield",
+        "thumbnail": "https://images.justwatch.com/poster/331878512/s332/img",
         "released": "2025-01-01"
       },
       {
         "id": "tt33998357",
         "title": "Matteo Lane: The Al Dente Special",
         "thumbnail": "https://images.justwatch.com/poster/331492907/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt33517417",
+        "title": "Chris Distefano: It's Just Unfortunate",
+        "thumbnail": "https://images.justwatch.com/poster/326223753/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -705,15 +705,15 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt30400277",
-        "title": "Kiss of the Spider Woman",
-        "thumbnail": "https://images.justwatch.com/poster/336809879/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt32801387",
         "title": "Thieves Highway",
         "thumbnail": "https://images.justwatch.com/poster/338489863/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt30400277",
+        "title": "Kiss of the Spider Woman",
+        "thumbnail": "https://images.justwatch.com/poster/336809879/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -723,33 +723,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt13964560",
-        "title": "The Astronaut",
-        "thumbnail": "https://images.justwatch.com/poster/336240815/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt32395062",
-        "title": "Muzzle: City of Wolves",
-        "thumbnail": "https://images.justwatch.com/poster/336461958/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt15010692",
-        "title": "The Damned",
-        "thumbnail": "https://images.justwatch.com/poster/323138560/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt21442114",
         "title": "Valiant One",
         "thumbnail": "https://images.justwatch.com/poster/324758962/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt28613536",
-        "title": "Bob Trevino Likes It",
-        "thumbnail": "https://images.justwatch.com/poster/331090404/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -759,9 +735,21 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt31923069",
-        "title": "Springsteen: Deliver Me from Nowhere",
-        "thumbnail": "https://images.justwatch.com/poster/332102076/s332/img",
+        "id": "tt15010692",
+        "title": "The Damned",
+        "thumbnail": "https://images.justwatch.com/poster/323138560/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt13964560",
+        "title": "The Astronaut",
+        "thumbnail": "https://images.justwatch.com/poster/336240815/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt28613536",
+        "title": "Bob Trevino Likes It",
+        "thumbnail": "https://images.justwatch.com/poster/331090404/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -771,9 +759,15 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt30789086",
-        "title": "Control Freak",
-        "thumbnail": "https://images.justwatch.com/poster/327533075/s332/img",
+        "id": "tt32298285",
+        "title": "Sirât",
+        "thumbnail": "https://images.justwatch.com/poster/336489347/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt32395062",
+        "title": "Muzzle: City of Wolves",
+        "thumbnail": "https://images.justwatch.com/poster/336461958/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -783,9 +777,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt32298285",
-        "title": "Sirât",
-        "thumbnail": "https://images.justwatch.com/poster/336489347/s332/img",
+        "id": "tt30096221",
+        "title": "Ella McCay",
+        "thumbnail": "https://images.justwatch.com/poster/337629865/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -795,15 +789,21 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt30096221",
-        "title": "Ella McCay",
-        "thumbnail": "https://images.justwatch.com/poster/337629865/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt34819091",
         "title": "The Testament of Ann Lee",
         "thumbnail": "https://images.justwatch.com/poster/342762842/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt30789086",
+        "title": "Control Freak",
+        "thumbnail": "https://images.justwatch.com/poster/327533075/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt31923069",
+        "title": "Springsteen: Deliver Me from Nowhere",
+        "thumbnail": "https://images.justwatch.com/poster/332102076/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -879,18 +879,6 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt27714946",
-        "title": "The Monkey",
-        "thumbnail": "https://images.justwatch.com/poster/327342317/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt18312380",
-        "title": "Primitive War",
-        "thumbnail": "https://images.justwatch.com/poster/328463674/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt1527793",
         "title": "No Other Choice",
         "thumbnail": "https://images.justwatch.com/poster/338983692/s332/img",
@@ -903,15 +891,15 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt21267296",
-        "title": "Hell of a Summer",
-        "thumbnail": "https://images.justwatch.com/poster/326233509/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt4419684",
         "title": "In the Lost Lands",
         "thumbnail": "https://images.justwatch.com/poster/323667171/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt21267296",
+        "title": "Hell of a Summer",
+        "thumbnail": "https://images.justwatch.com/poster/326233509/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -927,9 +915,21 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt38129252",
-        "title": "Jiaoying Summers: What Specie Are You?",
-        "thumbnail": "https://images.justwatch.com/poster/335605531/s332/img",
+        "id": "tt18312380",
+        "title": "Primitive War",
+        "thumbnail": "https://images.justwatch.com/poster/328463674/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt27714946",
+        "title": "The Monkey",
+        "thumbnail": "https://images.justwatch.com/poster/327342317/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt37815958",
+        "title": "Love+War",
+        "thumbnail": "https://images.justwatch.com/poster/338477496/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -939,21 +939,21 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt34501524",
-        "title": "Abducted in the Everglades",
-        "thumbnail": "https://images.justwatch.com/poster/327084753/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt36364892",
         "title": "The Body in the Locker",
         "thumbnail": "https://images.justwatch.com/poster/338973441/s332/img",
         "released": "2025-01-01"
       },
       {
-        "id": "tt37815958",
-        "title": "Love+War",
-        "thumbnail": "https://images.justwatch.com/poster/338477496/s332/img",
+        "id": "tt38129252",
+        "title": "Jiaoying Summers: What Specie Are You?",
+        "thumbnail": "https://images.justwatch.com/poster/335605531/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt34501524",
+        "title": "Abducted in the Everglades",
+        "thumbnail": "https://images.justwatch.com/poster/327084753/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -999,9 +999,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt19403516",
-        "title": "Hallow Road",
-        "thumbnail": "https://images.justwatch.com/poster/331684818/s332/img",
+        "id": "tt31227572",
+        "title": "Predator: Badlands",
+        "thumbnail": "https://images.justwatch.com/poster/330277075/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -1017,9 +1017,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt31227572",
-        "title": "Predator: Badlands",
-        "thumbnail": "https://images.justwatch.com/poster/330277075/s332/img",
+        "id": "tt19403516",
+        "title": "Hallow Road",
+        "thumbnail": "https://images.justwatch.com/poster/331684818/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -1077,6 +1077,24 @@
         "released": "2025-01-01"
       },
       {
+        "id": "tt36424914",
+        "title": "Pets on a Train",
+        "thumbnail": "https://images.justwatch.com/poster/340933420/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt32378300",
+        "title": "Summer of 69",
+        "thumbnail": "https://images.justwatch.com/poster/330780403/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt32331377",
+        "title": "The Luckiest Man in America",
+        "thumbnail": "https://images.justwatch.com/poster/328602380/s332/img",
+        "released": "2025-01-01"
+      },
+      {
         "id": "tt27847051",
         "title": "The Secret Agent",
         "thumbnail": "https://images.justwatch.com/poster/336538539/s332/img",
@@ -1089,9 +1107,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt13491834",
-        "title": "Sacramento",
-        "thumbnail": "https://images.justwatch.com/poster/330309028/s332/img",
+        "id": "tt31322753",
+        "title": "Twinless",
+        "thumbnail": "https://images.justwatch.com/poster/336806091/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -1101,51 +1119,9 @@
         "released": "2025-01-01"
       },
       {
-        "id": "tt29344903",
-        "title": "The Ugly Stepsister",
-        "thumbnail": "https://images.justwatch.com/poster/330798000/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt32331377",
-        "title": "The Luckiest Man in America",
-        "thumbnail": "https://images.justwatch.com/poster/328602380/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt31322753",
-        "title": "Twinless",
-        "thumbnail": "https://images.justwatch.com/poster/336806091/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt36424914",
-        "title": "Pets on a Train",
-        "thumbnail": "https://images.justwatch.com/poster/340933420/s332/img",
-        "released": "2025-01-01"
-      },
-      {
         "id": "tt7068946",
         "title": "The Accountant²",
         "thumbnail": "https://images.justwatch.com/poster/331896808/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt32378300",
-        "title": "Summer of 69",
-        "thumbnail": "https://images.justwatch.com/poster/330780403/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt27775403",
-        "title": "Riff Raff",
-        "thumbnail": "https://images.justwatch.com/poster/327521043/s332/img",
-        "released": "2025-01-01"
-      },
-      {
-        "id": "tt9569096",
-        "title": "Sharp Corner",
-        "thumbnail": "https://images.justwatch.com/poster/342626753/s332/img",
         "released": "2025-01-01"
       },
       {
@@ -1155,9 +1131,33 @@
         "released": "2025-01-01"
       },
       {
+        "id": "tt9569096",
+        "title": "Sharp Corner",
+        "thumbnail": "https://images.justwatch.com/poster/342626753/s332/img",
+        "released": "2025-01-01"
+      },
+      {
         "id": "tt12908150",
         "title": "The Life of Chuck",
         "thumbnail": "https://images.justwatch.com/poster/328335894/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt29344903",
+        "title": "The Ugly Stepsister",
+        "thumbnail": "https://images.justwatch.com/poster/330798000/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt13491834",
+        "title": "Sacramento",
+        "thumbnail": "https://images.justwatch.com/poster/330309028/s332/img",
+        "released": "2025-01-01"
+      },
+      {
+        "id": "tt27775403",
+        "title": "Riff Raff",
+        "thumbnail": "https://images.justwatch.com/poster/327521043/s332/img",
         "released": "2025-01-01"
       },
       {
