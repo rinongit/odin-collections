@@ -1,8 +1,8 @@
 {
   "id": "com.rinongit.odin.streamingcollections",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "Odin Streaming Collections",
-  "description": "Streaming-provider movie collections exposed as BoxSets for the AIOStreams Jellyfin adapter and Odin.",
+  "description": "Streaming-provider movie collections exposed as landscape BoxSets for the AIOStreams Jellyfin adapter and Odin.",
   "resources": ["catalog", "meta"],
   "types": ["movie"],
   "idPrefixes": ["odincol."],
