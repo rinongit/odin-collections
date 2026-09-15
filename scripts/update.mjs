@@ -238,9 +238,10 @@ for (const provider of providers) {
     for (const version of [1, 2]) {
       const prefix = version === 1 ? 'odincol' : 'odincol2';
       const base = version === 1 ? path.join('meta', 'movie') : path.join('v2', 'meta', 'movie');
+      const itemKey = version === 2 && provider.key === 'max' ? 'hbomax' : provider.key;
       const payload = {
         meta: {
-          id: `${prefix}.${provider.key}`,
+          id: `${prefix}.${itemKey}`,
           type: 'movie',
           name: provider.name,
           description: `${provider.name} recent and popular movies available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
@@ -250,7 +251,7 @@ for (const provider of providers) {
           videos,
         },
       };
-      await fs.writeFile(path.join(base, `${prefix}.${provider.key}.json`), `${JSON.stringify(payload, null, 2)}\n`);
+      await fs.writeFile(path.join(base, `${prefix}.${itemKey}.json`), `${JSON.stringify(payload, null, 2)}\n`);
     }
 
     successfulProviders += 1;
