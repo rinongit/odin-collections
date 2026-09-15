@@ -7,6 +7,11 @@ const TARGET = Math.max(100, Math.min(1500, Number(process.env.TARGET || 750)));
 const PAGE_SIZE = Math.max(25, Math.min(100, Number(process.env.PAGE_SIZE || 100)));
 const RECENT_TARGET = Math.min(TARGET, Math.max(100, Number(process.env.RECENT_TARGET || 300)));
 const REQUEST_DELAY_MS = Math.max(0, Number(process.env.REQUEST_DELAY_MS || 120));
+const TMDB_TOKEN = String(process.env.TMDB_TOKEN || '').trim();
+const TMDB_CONCURRENCY = Math.max(1, Math.min(12, Number(process.env.TMDB_CONCURRENCY || 8)));
+const TMDB_CACHE_TTL_MS = Math.max(1, Number(process.env.TMDB_CACHE_TTL_DAYS || 30)) * 24 * 60 * 60 * 1000;
+const TMDB_MISS_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+const TMDB_CACHE_PATH = path.join('data', 'tmdb-cache.json');
 const ART = 'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov';
 
 const providers = [
@@ -76,7 +81,7 @@ async function fetchPackages() {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.4',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.5',
     },
     body: JSON.stringify({
       operationName: 'GetPackages',
@@ -162,7 +167,7 @@ async function fetchPage(provider, sortBy, after) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.4',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.5',
     },
     body: JSON.stringify(body),
   });
@@ -218,6 +223,119 @@ async function fetchProvider(provider) {
   return videos.slice(0, TARGET);
 }
 
+async function loadTmdbCache() {
+  try {
+    return JSON.parse(await fs.readFile(TMDB_CACHE_PATH, 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+async function saveTmdbCache(cache) {
+  await fs.mkdir(path.dirname(TMDB_CACHE_PATH), { recursive: true });
+  const ordered = Object.fromEntries(Object.entries(cache).sort(([a], [b]) => a.localeCompare(b)));
+  await fs.writeFile(TMDB_CACHE_PATH, `${JSON.stringify(ordered, null, 2)}\n`);
+}
+
+function cacheIsFresh(entry) {
+  const checkedAt = Number(entry?.checkedAt || 0);
+  if (!checkedAt) return false;
+  const ttl = entry?.missing ? TMDB_MISS_TTL_MS : TMDB_CACHE_TTL_MS;
+  return Date.now() - checkedAt < ttl;
+}
+
+async function fetchTmdbMeta(imdbId) {
+  const url = new URL(`https://api.themoviedb.org/3/find/${encodeURIComponent(imdbId)}`);
+  url.searchParams.set('external_source', 'imdb_id');
+  url.searchParams.set('language', 'en-US');
+
+  const response = await fetch(url, {
+    headers: {
+      accept: 'application/json',
+      authorization: `Bearer ${TMDB_TOKEN}`,
+      'user-agent': 'OdinCollections/3.5',
+    },
+  });
+
+  if (response.status === 429) {
+    const retryAfter = Math.max(1, Number(response.headers.get('retry-after') || 1));
+    await sleep(retryAfter * 1000);
+    return fetchTmdbMeta(imdbId);
+  }
+
+  const text = await response.text();
+  if (!response.ok) throw new Error(`TMDB ${imdbId} HTTP ${response.status}: ${text.slice(0, 180)}`);
+  const json = JSON.parse(text);
+  const movie = Array.isArray(json?.movie_results) ? json.movie_results[0] : null;
+  if (!movie) return null;
+
+  return {
+    title: movie.title || movie.original_title || imdbId,
+    released: /^\d{4}-\d{2}-\d{2}$/.test(movie.release_date || '') ? movie.release_date : undefined,
+    thumbnail: movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : undefined,
+  };
+}
+
+async function enrichFromTmdb(providerResults) {
+  if (!TMDB_TOKEN) {
+    console.log('TMDB_TOKEN not configured; keeping JustWatch title/year metadata.');
+    return;
+  }
+
+  const cache = await loadTmdbCache();
+  const unique = new Map();
+  for (const result of providerResults) {
+    for (const video of result.videos) {
+      if (!unique.has(video.id)) unique.set(video.id, video);
+    }
+  }
+
+  const ids = [...unique.keys()];
+  let cursor = 0;
+  let fetched = 0;
+  let cacheHits = 0;
+  let misses = 0;
+  let failures = 0;
+
+  async function worker() {
+    for (;;) {
+      const index = cursor++;
+      if (index >= ids.length) return;
+      const imdbId = ids[index];
+      let entry = cache[imdbId];
+
+      if (cacheIsFresh(entry)) {
+        cacheHits += 1;
+      } else {
+        try {
+          const meta = await fetchTmdbMeta(imdbId);
+          entry = meta
+            ? { ...meta, checkedAt: Date.now() }
+            : { missing: true, checkedAt: Date.now() };
+          cache[imdbId] = entry;
+          fetched += 1;
+          if (entry.missing) misses += 1;
+        } catch (error) {
+          failures += 1;
+          console.error(`TMDB lookup failed for ${imdbId}: ${error.message}`);
+          continue;
+        }
+      }
+
+      if (!entry?.missing) {
+        const source = unique.get(imdbId);
+        if (entry.title) source.title = entry.title;
+        if (entry.released) source.released = entry.released;
+        if (entry.thumbnail) source.thumbnail = entry.thumbnail;
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: TMDB_CONCURRENCY }, () => worker()));
+  await saveTmdbCache(cache);
+  console.log(`TMDB metadata: ${unique.size} unique IDs, ${cacheHits} cache hits, ${fetched} fetched, ${misses} not found, ${failures} failures`);
+}
+
 const versions = [
   { prefix: 'odincol', base: path.join('meta', 'movie') },
   { prefix: 'odincol2', base: path.join('v2', 'meta', 'movie') },
@@ -235,39 +353,45 @@ try {
   console.error(`Provider-code refresh failed; using fallbacks: ${error.message}`);
 }
 
+const providerResults = [];
 const summary = [];
-let successfulProviders = 0;
+
 for (const provider of providers) {
   try {
     const videos = await fetchProvider(provider);
     if (!videos.length) throw new Error('No IMDb movie IDs returned');
-
-    for (const version of versions) {
-      const itemKey = version.prefix === 'odincol2' && provider.key === 'max' ? 'hbomax' : provider.key;
-      const payload = {
-        meta: {
-          id: `${version.prefix}.${itemKey}`,
-          type: 'movie',
-          name: provider.name,
-          description: `${provider.name} recent and popular movies available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
-          poster: provider.art,
-          background: provider.art,
-          posterShape: 'landscape',
-          videos,
-        },
-      };
-      await fs.writeFile(path.join(version.base, `${version.prefix}.${itemKey}.json`), `${JSON.stringify(payload, null, 2)}\n`);
-    }
-
-    successfulProviders += 1;
-    summary.push(`${provider.name}: ${videos.length}`);
+    providerResults.push({ provider, videos });
   } catch (error) {
     console.error(`Failed ${provider.name}:`, error.message);
     summary.push(`${provider.name}: kept previous data`);
   }
 }
 
-console.log(summary.join('\n'));
-if (successfulProviders === 0) {
+if (!providerResults.length) {
   throw new Error('All provider refreshes failed; refusing to publish an empty update.');
 }
+
+await enrichFromTmdb(providerResults);
+
+for (const { provider, videos } of providerResults) {
+  for (const version of versions) {
+    const itemKey = version.prefix === 'odincol2' && provider.key === 'max' ? 'hbomax' : provider.key;
+    const payload = {
+      meta: {
+        id: `${version.prefix}.${itemKey}`,
+        type: 'movie',
+        name: provider.name,
+        description: `${provider.name} recent and popular movies available in ${COUNTRY}. Provider membership from JustWatch; title, release date and poster enriched from TMDB when available.`,
+        poster: provider.art,
+        background: provider.art,
+        posterShape: 'landscape',
+        videos,
+      },
+    };
+    await fs.writeFile(path.join(version.base, `${version.prefix}.${itemKey}.json`), `${JSON.stringify(payload, null, 2)}\n`);
+  }
+
+  summary.push(`${provider.name}: ${videos.length}`);
+}
+
+console.log(summary.join('\n'));
