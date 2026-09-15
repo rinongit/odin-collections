@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/manifest.json", "destination": "/api/index?route=manifest" },
+    { "source": "/configure", "destination": "/api/index?route=configure" },
+    { "source": "/oauth/start", "destination": "/api/index?route=oauth-start" },
+    { "source": "/oauth/callback", "destination": "/api/index?route=oauth-callback" },
+    { "source": "/watch_state/push/:type/:videoId.json", "destination": "/api/index?route=push&type=:type&videoId=:videoId" }
+  ]
+}
