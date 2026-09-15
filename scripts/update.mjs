@@ -4,16 +4,18 @@ import path from 'node:path';
 const COUNTRY = process.env.COUNTRY || 'US';
 const LANGUAGE = process.env.LANGUAGE || 'en';
 const LIMIT = Number(process.env.LIMIT || 100);
+const ART = 'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov';
 
 const providers = [
-  { key: 'netflix', name: 'Netflix', code: 'nfx' },
-  { key: 'prime', name: 'Prime Video', code: 'amp' },
-  { key: 'disney', name: 'Disney+', code: 'dnp' },
-  { key: 'max', name: 'Max / HBO', code: 'hbm' },
-  { key: 'apple', name: 'Apple TV+', code: 'atp' },
-  { key: 'paramount', name: 'Paramount+', code: 'pmp' },
-  { key: 'peacock', name: 'Peacock', code: 'pcp' },
-  { key: 'hulu', name: 'Hulu', code: 'hlu' },
+  { key: 'netflix', name: 'Netflix', code: 'nfx', art: `${ART}/NetflixC.png` },
+  { key: 'prime', name: 'Prime Video', code: 'amp', art: `${ART}/PrimeVideoC.png` },
+  { key: 'disney', name: 'Disney+', code: 'dnp', art: `${ART}/DiscneyC.png` },
+  { key: 'max', name: 'Max / HBO', code: 'hbm', art: `${ART}/HBOTrans.png` },
+  { key: 'apple', name: 'Apple TV+', code: 'atp', art: `${ART}/AppleC.png` },
+  { key: 'paramount', name: 'Paramount+', code: 'pmp', art: `${ART}/ParamountC.png` },
+  { key: 'peacock', name: 'Peacock', code: 'pcp', art: `${ART}/Peacock40.png` },
+  { key: 'hulu', name: 'Hulu', code: 'hlu', art: `${ART}/Hulu.png` },
+  { key: 'crunchyroll', name: 'Crunchyroll', code: 'cru', art: `${ART}/CrunchyrollC.png` },
 ];
 
 const query = `query GetPopularTitles(
@@ -133,6 +135,9 @@ for (const provider of providers) {
         type: 'movie',
         name: provider.name,
         description: `${provider.name} latest movie releases available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
+        poster: provider.art,
+        background: provider.art,
+        posterShape: 'landscape',
         videos,
       },
     };
