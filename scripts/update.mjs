@@ -21,7 +21,45 @@ const providers = [
   { key: 'crunchyroll', name: 'Crunchyroll', code: 'cru', art: `${ART}/CrunchyrollC.png` },
 ];
 
-const query = `query GetPopularTitles($country: Country!, $popularTitlesFilter: TitleFilter, $popularTitlesSortBy: PopularTitlesSorting!, $first: Int!, $language: Language!, $offset: Int!, $sortRandomSeed: Int! = 0, $profile: PosterProfile, $format: ImageFormat) { popularTitles(country: $country, filter: $popularTitlesFilter, offset: $offset, sortBy: $popularTitlesSortBy, first: $first, sortRandomSeed: $sortRandomSeed) { totalCount edges { node { content(country: $country, language: $language) { externalIds { imdbId } title originalReleaseYear posterUrl(profile: $profile, format: $format) } } } } } }`;
+const query = `query GetPopularTitles(
+  $country: Country!
+  $popularTitlesFilter: TitleFilter
+  $popularAfterCursor: String
+  $popularTitlesSortBy: PopularTitlesSorting! = POPULAR
+  $first: Int!
+  $language: Language!
+  $offset: Int = 0
+  $sortRandomSeed: Int! = 0
+  $profile: PosterProfile
+  $format: ImageFormat
+) {
+  popularTitles(
+    country: $country
+    filter: $popularTitlesFilter
+    offset: $offset
+    after: $popularAfterCursor
+    sortBy: $popularTitlesSortBy
+    first: $first
+    sortRandomSeed: $sortRandomSeed
+  ) {
+    totalCount
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    edges {
+      cursor
+      node {
+        content(country: $country, language: $language) {
+          externalIds { imdbId }
+          title
+          originalReleaseYear
+          posterUrl(profile: $profile, format: $format)
+        }
+      }
+    }
+  }
+}`;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -39,14 +77,16 @@ function toVideo(content) {
   };
 }
 
-async function fetchPage(provider, sortBy, offset) {
+async function fetchPage(provider, sortBy, after) {
   const body = {
     operationName: 'GetPopularTitles',
     variables: {
       popularTitlesSortBy: sortBy,
       first: PAGE_SIZE,
-      offset,
+      platform: 'WEB',
       sortRandomSeed: 0,
+      popularAfterCursor: after || '',
+      offset: null,
       popularTitlesFilter: {
         ageCertifications: [],
         excludeGenres: [],
@@ -71,30 +111,36 @@ async function fetchPage(provider, sortBy, offset) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.0',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.1',
     },
     body: JSON.stringify(body),
   });
 
-  if (!response.ok) throw new Error(`${provider.name}: JustWatch HTTP ${response.status}`);
-  const json = await response.json();
+  const text = await response.text();
+  if (!response.ok) throw new Error(`${provider.name}: JustWatch HTTP ${response.status}: ${text.slice(0, 220)}`);
+  const json = JSON.parse(text);
   if (json.errors?.length) throw new Error(`${provider.name}: ${json.errors[0].message}`);
 
   const result = json?.data?.popularTitles;
   return {
     totalCount: Number(result?.totalCount || 0),
     edges: Array.isArray(result?.edges) ? result.edges : [],
+    endCursor: result?.pageInfo?.endCursor || '',
+    hasNextPage: Boolean(result?.pageInfo?.hasNextPage),
   };
 }
 
 async function addFromSort(provider, sortBy, stopAt, seen, videos) {
-  let offset = 0;
+  let after = '';
+  let pages = 0;
+
   for (;;) {
     if (videos.length >= stopAt) break;
-    const { totalCount, edges } = await fetchPage(provider, sortBy, offset);
-    if (!edges.length) break;
+    const page = await fetchPage(provider, sortBy, after);
+    pages += 1;
+    if (!page.edges.length) break;
 
-    for (const edge of edges) {
+    for (const edge of page.edges) {
       const video = toVideo(edge?.node?.content);
       if (!video || seen.has(video.id)) continue;
       seen.add(video.id);
@@ -102,9 +148,10 @@ async function addFromSort(provider, sortBy, stopAt, seen, videos) {
       if (videos.length >= stopAt) break;
     }
 
-    offset += edges.length;
-    if (edges.length < PAGE_SIZE || (totalCount > 0 && offset >= totalCount)) break;
+    if (!page.hasNextPage || !page.endCursor || page.endCursor === after) break;
+    after = page.endCursor;
     if (REQUEST_DELAY_MS) await sleep(REQUEST_DELAY_MS);
+    if (pages >= 30) break;
   }
 }
 
@@ -112,10 +159,10 @@ async function fetchProvider(provider) {
   const seen = new Set();
   const videos = [];
 
-  // New releases first so fresh additions surface quickly in Odin.
+  // Keep newest releases at the front so newly available movies appear quickly.
   await addFromSort(provider, 'RELEASE_YEAR', RECENT_TARGET, seen, videos);
 
-  // Fill the rest with popular catalogue titles for a much larger folder.
+  // Fill the rest with popular back-catalogue titles.
   if (videos.length < TARGET) {
     await addFromSort(provider, 'POPULAR', TARGET, seen, videos);
   }
