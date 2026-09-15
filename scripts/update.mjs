@@ -97,7 +97,11 @@ async function fetchPage(provider, sortBy, after) {
         packages: [provider.code],
         excludeIrrelevantTitles: false,
         presentationTypes: [],
-        monetizationTypes: ['FLATRATE'],
+        // Match JustWatch's current provider-catalog query. The package ID
+        // already selects the service; leaving monetization unrestricted
+        // avoids dropping subscription titles that JustWatch classifies via
+        // bundles/add-ons instead of FLATRATE.
+        monetizationTypes: [],
       },
       language: LANGUAGE,
       country: COUNTRY,
@@ -111,7 +115,7 @@ async function fetchPage(provider, sortBy, after) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.1',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.2',
     },
     body: JSON.stringify(body),
   });
