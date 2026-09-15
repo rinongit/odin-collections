@@ -3,7 +3,10 @@ import path from 'node:path';
 
 const COUNTRY = process.env.COUNTRY || 'US';
 const LANGUAGE = process.env.LANGUAGE || 'en';
-const LIMIT = Number(process.env.LIMIT || 100);
+const TARGET = Math.max(100, Math.min(1500, Number(process.env.TARGET || 750)));
+const PAGE_SIZE = Math.max(25, Math.min(100, Number(process.env.PAGE_SIZE || 100)));
+const RECENT_TARGET = Math.min(TARGET, Math.max(100, Number(process.env.RECENT_TARGET || 300)));
+const REQUEST_DELAY_MS = Math.max(0, Number(process.env.REQUEST_DELAY_MS || 120));
 const ART = 'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov';
 
 const providers = [
@@ -18,47 +21,106 @@ const providers = [
   { key: 'crunchyroll', name: 'Crunchyroll', code: 'cru', art: `${ART}/CrunchyrollC.png` },
 ];
 
-const query = `query GetPopularTitles($country: Country!, $popularTitlesFilter: TitleFilter, $popularAfterCursor: String, $popularTitlesSortBy: PopularTitlesSorting! = RELEASE_YEAR, $first: Int!, $language: Language!, $offset: Int = 0, $sortRandomSeed: Int! = 0, $profile: PosterProfile, $format: ImageFormat) { popularTitles(country: $country, filter: $popularTitlesFilter, offset: $offset, after: $popularAfterCursor, sortBy: $popularTitlesSortBy, first: $first, sortRandomSeed: $sortRandomSeed) { edges { node { content(country: $country, language: $language) { externalIds { imdbId } title originalReleaseYear posterUrl(profile: $profile, format: $format) } } } } }`;
+const query = `query GetPopularTitles($country: Country!, $popularTitlesFilter: TitleFilter, $popularTitlesSortBy: PopularTitlesSorting!, $first: Int!, $language: Language!, $offset: Int!, $sortRandomSeed: Int! = 0, $profile: PosterProfile, $format: ImageFormat) { popularTitles(country: $country, filter: $popularTitlesFilter, offset: $offset, sortBy: $popularTitlesSortBy, first: $first, sortRandomSeed: $sortRandomSeed) { totalCount edges { node { content(country: $country, language: $language) { externalIds { imdbId } title originalReleaseYear posterUrl(profile: $profile, format: $format) } } } } } }`;
 
-async function fetchProvider(provider) {
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function toVideo(content) {
+  const imdb = content?.externalIds?.imdbId;
+  if (!imdb || !/^tt\d+$/.test(imdb)) return null;
+  const posterId = content?.posterUrl?.match(/\/poster\/(\d+)\//)?.[1];
+  return {
+    id: imdb,
+    title: content?.title || imdb,
+    thumbnail: posterId
+      ? `https://images.justwatch.com/poster/${posterId}/s332/img`
+      : `https://live.metahub.space/poster/medium/${imdb}/img`,
+    released: content?.originalReleaseYear ? `${content.originalReleaseYear}-01-01` : undefined,
+  };
+}
+
+async function fetchPage(provider, sortBy, offset) {
   const body = {
     operationName: 'GetPopularTitles',
     variables: {
-      popularTitlesSortBy: 'RELEASE_YEAR', first: LIMIT, sortRandomSeed: 0,
-      popularAfterCursor: '', offset: null,
+      popularTitlesSortBy: sortBy,
+      first: PAGE_SIZE,
+      offset,
+      sortRandomSeed: 0,
       popularTitlesFilter: {
-        ageCertifications: [], excludeGenres: [], excludeProductionCountries: [], genres: [],
-        objectTypes: ['MOVIE'], productionCountries: [], packages: [provider.code],
-        excludeIrrelevantTitles: false, presentationTypes: [], monetizationTypes: ['FLATRATE'],
+        ageCertifications: [],
+        excludeGenres: [],
+        excludeProductionCountries: [],
+        genres: [],
+        objectTypes: ['MOVIE'],
+        productionCountries: [],
+        packages: [provider.code],
+        excludeIrrelevantTitles: false,
+        presentationTypes: [],
+        monetizationTypes: ['FLATRATE'],
       },
-      language: LANGUAGE, country: COUNTRY, profile: null, format: null,
+      language: LANGUAGE,
+      country: COUNTRY,
+      profile: null,
+      format: null,
     },
     query,
   };
+
   const response = await fetch('https://apis.justwatch.com/graphql', {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'user-agent': 'Mozilla/5.0 OdinCollections/2.0' },
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.0',
+    },
     body: JSON.stringify(body),
   });
+
   if (!response.ok) throw new Error(`${provider.name}: JustWatch HTTP ${response.status}`);
   const json = await response.json();
   if (json.errors?.length) throw new Error(`${provider.name}: ${json.errors[0].message}`);
+
+  const result = json?.data?.popularTitles;
+  return {
+    totalCount: Number(result?.totalCount || 0),
+    edges: Array.isArray(result?.edges) ? result.edges : [],
+  };
+}
+
+async function addFromSort(provider, sortBy, stopAt, seen, videos) {
+  let offset = 0;
+  for (;;) {
+    if (videos.length >= stopAt) break;
+    const { totalCount, edges } = await fetchPage(provider, sortBy, offset);
+    if (!edges.length) break;
+
+    for (const edge of edges) {
+      const video = toVideo(edge?.node?.content);
+      if (!video || seen.has(video.id)) continue;
+      seen.add(video.id);
+      videos.push(video);
+      if (videos.length >= stopAt) break;
+    }
+
+    offset += edges.length;
+    if (edges.length < PAGE_SIZE || (totalCount > 0 && offset >= totalCount)) break;
+    if (REQUEST_DELAY_MS) await sleep(REQUEST_DELAY_MS);
+  }
+}
+
+async function fetchProvider(provider) {
   const seen = new Set();
   const videos = [];
-  for (const edge of json?.data?.popularTitles?.edges || []) {
-    const content = edge?.node?.content;
-    const imdb = content?.externalIds?.imdbId;
-    if (!imdb || !/^tt\d+$/.test(imdb) || seen.has(imdb)) continue;
-    seen.add(imdb);
-    const posterId = content?.posterUrl?.match(/\/poster\/(\d+)\//)?.[1];
-    videos.push({
-      id: imdb,
-      title: content?.title || imdb,
-      thumbnail: posterId ? `https://images.justwatch.com/poster/${posterId}/s332/img` : `https://live.metahub.space/poster/medium/${imdb}/img`,
-      released: content?.originalReleaseYear ? `${content.originalReleaseYear}-01-01` : undefined,
-    });
+
+  // New releases first so fresh additions surface quickly in Odin.
+  await addFromSort(provider, 'RELEASE_YEAR', RECENT_TARGET, seen, videos);
+
+  // Fill the rest with popular catalogue titles for a much larger folder.
+  if (videos.length < TARGET) {
+    await addFromSort(provider, 'POPULAR', TARGET, seen, videos);
   }
-  return videos;
+
+  return videos.slice(0, TARGET);
 }
 
 await fs.mkdir(path.join('meta', 'movie'), { recursive: true });
@@ -70,6 +132,7 @@ for (const provider of providers) {
   try {
     const videos = await fetchProvider(provider);
     if (!videos.length) throw new Error('No IMDb movie IDs returned');
+
     for (const version of [1, 2]) {
       const prefix = version === 1 ? 'odincol' : 'odincol2';
       const base = version === 1 ? path.join('meta', 'movie') : path.join('v2', 'meta', 'movie');
@@ -78,7 +141,7 @@ for (const provider of providers) {
           id: `${prefix}.${provider.key}`,
           type: 'movie',
           name: provider.name,
-          description: `${provider.name} latest movie releases available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
+          description: `${provider.name} recent and popular movies available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
           poster: provider.art,
           background: provider.art,
           posterShape: 'landscape',
@@ -87,6 +150,7 @@ for (const provider of providers) {
       };
       await fs.writeFile(path.join(base, `${prefix}.${provider.key}.json`), `${JSON.stringify(payload, null, 2)}\n`);
     }
+
     successfulProviders += 1;
     summary.push(`${provider.name}: ${videos.length}`);
   } catch (error) {
@@ -96,4 +160,6 @@ for (const provider of providers) {
 }
 
 console.log(summary.join('\n'));
-if (successfulProviders === 0) throw new Error('All provider refreshes failed; refusing to publish an empty update.');
+if (successfulProviders === 0) {
+  throw new Error('All provider refreshes failed; refusing to publish an empty update.');
+}
