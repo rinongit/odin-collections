@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Hulu",
     "description": "Hulu latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt35518410",

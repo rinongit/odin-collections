@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Disney+",
     "description": "Disney+ latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt34477910",

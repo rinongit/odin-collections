@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Apple TV+",
     "description": "Apple TV+ latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt33499146",

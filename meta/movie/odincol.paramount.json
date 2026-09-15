@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Paramount+",
     "description": "Paramount+ latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt32490110",

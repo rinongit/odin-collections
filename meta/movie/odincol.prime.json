@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Prime Video",
     "description": "Prime Video latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt39577669",

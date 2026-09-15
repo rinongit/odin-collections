@@ -4,6 +4,9 @@
     "type": "movie",
     "name": "Netflix",
     "description": "Netflix latest movie releases available in US. Automatically refreshed from JustWatch.",
+    "poster": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png",
+    "background": "https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png",
+    "posterShape": "landscape",
     "videos": [
       {
         "id": "tt38188489",
