@@ -10,15 +10,15 @@ const REQUEST_DELAY_MS = Math.max(0, Number(process.env.REQUEST_DELAY_MS || 120)
 const ART = 'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov';
 
 const providers = [
-  { key: 'netflix', name: 'Netflix', code: 'nfx', art: `${ART}/NetflixC.png` },
-  { key: 'prime', name: 'Prime Video', code: 'amp', art: `${ART}/PrimeVideoC.png` },
-  { key: 'disney', name: 'Disney+', code: 'dnp', art: `${ART}/DiscneyC.png` },
-  { key: 'max', name: 'Max / HBO', code: 'hbm', art: `${ART}/HBOTrans.png` },
-  { key: 'apple', name: 'Apple TV+', code: 'atp', art: `${ART}/AppleC.png` },
-  { key: 'paramount', name: 'Paramount+', code: 'pmp', art: `${ART}/ParamountC.png` },
-  { key: 'peacock', name: 'Peacock', code: 'pcp', art: `${ART}/Peacock40.png` },
-  { key: 'hulu', name: 'Hulu', code: 'hlu', art: `${ART}/Hulu.png` },
-  { key: 'crunchyroll', name: 'Crunchyroll', code: 'cru', art: `${ART}/CrunchyrollC.png` },
+  { key: 'netflix', name: 'Netflix', code: 'nfx', aliases: ['Netflix'], art: `${ART}/NetflixC.png` },
+  { key: 'prime', name: 'Prime Video', code: 'amp', aliases: ['Amazon Prime Video', 'Prime Video', 'Amazon Prime'], art: `${ART}/PrimeVideoC.png` },
+  { key: 'disney', name: 'Disney+', code: 'dnp', aliases: ['Disney Plus', 'Disney+'], art: `${ART}/DiscneyC.png` },
+  { key: 'max', name: 'Max / HBO', code: 'hbm', aliases: ['HBO Max', 'Max'], art: `${ART}/HBOTrans.png` },
+  { key: 'apple', name: 'Apple TV+', code: 'atp', aliases: ['Apple TV Plus', 'Apple TV+'], art: `${ART}/AppleC.png` },
+  { key: 'paramount', name: 'Paramount+', code: 'pmp', aliases: ['Paramount Plus', 'Paramount+'], art: `${ART}/ParamountC.png` },
+  { key: 'peacock', name: 'Peacock', code: 'pcp', aliases: ['Peacock Premium', 'Peacock'], art: `${ART}/Peacock40.png` },
+  { key: 'hulu', name: 'Hulu', code: 'hlu', aliases: ['Hulu'], art: `${ART}/Hulu.png` },
+  { key: 'crunchyroll', name: 'Crunchyroll', code: 'cru', aliases: ['Crunchyroll'], art: `${ART}/CrunchyrollC.png` },
 ];
 
 const query = `query GetPopularTitles(
@@ -61,7 +61,58 @@ const query = `query GetPopularTitles(
   }
 }`;
 
+const packagesQuery = `query GetPackages($country: Country!, $platform: Platform!) {
+  packages(country: $country, platform: $platform) {
+    shortName
+    clearName
+  }
+}`;
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+async function fetchPackages() {
+  const response = await fetch('https://apis.justwatch.com/graphql', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.3',
+    },
+    body: JSON.stringify({
+      operationName: 'GetPackages',
+      variables: { country: COUNTRY, platform: 'WEB' },
+      query: packagesQuery,
+    }),
+  });
+
+  const text = await response.text();
+  if (!response.ok) throw new Error(`JustWatch packages HTTP ${response.status}: ${text.slice(0, 220)}`);
+  const json = JSON.parse(text);
+  if (json.errors?.length) throw new Error(`JustWatch packages: ${json.errors[0].message}`);
+  return Array.isArray(json?.data?.packages) ? json.data.packages : [];
+}
+
+function resolveProviderCodes(packages) {
+  for (const provider of providers) {
+    const aliases = provider.aliases.map(norm);
+    let match = packages.find((pkg) => aliases.includes(norm(pkg?.clearName)));
+
+    if (!match && provider.key === 'max') {
+      match = packages.find((pkg) => {
+        const name = norm(pkg?.clearName);
+        return name.includes('hbo max') && !name.includes('amazon');
+      });
+    }
+
+    if (match?.shortName) {
+      const old = provider.code;
+      provider.code = match.shortName;
+      console.log(`${provider.name} provider code: ${old} -> ${provider.code} (${match.clearName})`);
+    } else {
+      console.log(`${provider.name} provider code: using fallback ${provider.code}`);
+    }
+  }
+}
 
 function toVideo(content) {
   const imdb = content?.externalIds?.imdbId;
@@ -97,10 +148,6 @@ async function fetchPage(provider, sortBy, after) {
         packages: [provider.code],
         excludeIrrelevantTitles: false,
         presentationTypes: [],
-        // Match JustWatch's current provider-catalog query. The package ID
-        // already selects the service; leaving monetization unrestricted
-        // avoids dropping subscription titles that JustWatch classifies via
-        // bundles/add-ons instead of FLATRATE.
         monetizationTypes: [],
       },
       language: LANGUAGE,
@@ -115,7 +162,7 @@ async function fetchPage(provider, sortBy, after) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.2',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.3',
     },
     body: JSON.stringify(body),
   });
@@ -163,10 +210,7 @@ async function fetchProvider(provider) {
   const seen = new Set();
   const videos = [];
 
-  // Keep newest releases at the front so newly available movies appear quickly.
   await addFromSort(provider, 'RELEASE_YEAR', RECENT_TARGET, seen, videos);
-
-  // Fill the rest with popular back-catalogue titles.
   if (videos.length < TARGET) {
     await addFromSort(provider, 'POPULAR', TARGET, seen, videos);
   }
@@ -176,6 +220,13 @@ async function fetchProvider(provider) {
 
 await fs.mkdir(path.join('meta', 'movie'), { recursive: true });
 await fs.mkdir(path.join('v2', 'meta', 'movie'), { recursive: true });
+
+try {
+  const packages = await fetchPackages();
+  resolveProviderCodes(packages);
+} catch (error) {
+  console.error(`Provider-code refresh failed; using fallbacks: ${error.message}`);
+}
 
 const summary = [];
 let successfulProviders = 0;
