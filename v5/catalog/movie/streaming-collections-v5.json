@@ -1,0 +1,13 @@
+{
+  "metas": [
+    {"id":"odincol5.netflix","type":"movie","name":"Netflix","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png","posterShape":"landscape"},
+    {"id":"odincol5.prime","type":"movie","name":"Prime Video","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/PrimeVideoC.png","posterShape":"landscape"},
+    {"id":"odincol5.disney","type":"movie","name":"Disney+","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/DiscneyC.png","posterShape":"landscape"},
+    {"id":"odincol5.max","type":"movie","name":"Max / HBO","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/HBOTrans.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/HBOTrans.png","posterShape":"landscape"},
+    {"id":"odincol5.apple","type":"movie","name":"Apple TV+","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/AppleC.png","posterShape":"landscape"},
+    {"id":"odincol5.paramount","type":"movie","name":"Paramount+","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/ParamountC.png","posterShape":"landscape"},
+    {"id":"odincol5.peacock","type":"movie","name":"Peacock","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Peacock40.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Peacock40.png","posterShape":"landscape"},
+    {"id":"odincol5.hulu","type":"movie","name":"Hulu","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/Hulu.png","posterShape":"landscape"},
+    {"id":"odincol5.crunchyroll","type":"movie","name":"Crunchyroll","poster":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/CrunchyrollC.png","background":"https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/CrunchyrollC.png","posterShape":"landscape"}
+  ]
+}
