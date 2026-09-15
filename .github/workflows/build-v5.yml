@@ -1,0 +1,62 @@
+name: Build v5 collections
+
+on:
+  workflow_run:
+    workflows: ["Update streaming collections"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Build v5 metadata with fresh IDs
+        run: |
+          mkdir -p v5/meta/movie
+          for key in netflix prime disney max apple paramount peacock hulu crunchyroll; do
+            sed "s/odincol3\.${key}/odincol5.${key}/g" \
+              "v3/meta/movie/odincol3.${key}.json" \
+              > "v5/meta/movie/odincol5.${key}.json"
+          done
+
+      - name: Commit v5 metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v5/meta/movie
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh v5 earliest-release collections"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Purge v5 jsDelivr cache
+        continue-on-error: true
+        run: |
+          paths=(
+            "v5/manifest.json"
+            "v5/catalog/movie/streaming-collections-v5.json"
+            "v5/meta/movie/odincol5.netflix.json"
+            "v5/meta/movie/odincol5.prime.json"
+            "v5/meta/movie/odincol5.disney.json"
+            "v5/meta/movie/odincol5.max.json"
+            "v5/meta/movie/odincol5.apple.json"
+            "v5/meta/movie/odincol5.paramount.json"
+            "v5/meta/movie/odincol5.peacock.json"
+            "v5/meta/movie/odincol5.hulu.json"
+            "v5/meta/movie/odincol5.crunchyroll.json"
+          )
+          for path in "${paths[@]}"; do
+            curl --fail --silent --show-error --retry 2 \
+              "https://purge.jsdelivr.net/gh/rinongit/odin-collections@main/${path}" >/dev/null || true
+          done
