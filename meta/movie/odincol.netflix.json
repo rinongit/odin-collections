@@ -3,487 +3,541 @@
     "id": "odincol.netflix",
     "type": "movie",
     "name": "Netflix",
-    "description": "Netflix movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Netflix latest movie releases available in US. Automatically refreshed from JustWatch.",
     "videos": [
       {
-        "id": "tt12749596",
-        "title": "Host",
-        "thumbnail": "https://images.justwatch.com/poster/197286564/s332/img"
+        "id": "tt38188489",
+        "title": "Sommore: Chandelier Fly",
+        "thumbnail": "https://images.justwatch.com/poster/341945760/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt23289160",
-        "title": "Godzilla Minus One",
-        "thumbnail": "https://images.justwatch.com/poster/313783206/s332/img"
+        "id": "tt38843957",
+        "title": "Mary Beth Barone: Galaxy Brain",
+        "thumbnail": "https://images.justwatch.com/poster/346787915/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt38061210",
-        "title": "Why Did I Get Married Again?",
-        "thumbnail": "https://images.justwatch.com/poster/346833355/s332/img"
+        "id": "tt43708434",
+        "title": "Instadocs: The Prediction Games",
+        "thumbnail": "https://images.justwatch.com/poster/354283722/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt31514146",
-        "title": "I Swear",
-        "thumbnail": "https://images.justwatch.com/poster/336487621/s332/img"
+        "id": "tt32572716",
+        "title": "The Truth and Tragedy of Moriah Wilson",
+        "thumbnail": "https://images.justwatch.com/poster/344116576/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt11271800",
-        "title": "Mayday",
-        "thumbnail": "https://images.justwatch.com/poster/252387635/s332/img"
+        "id": "tt44535692",
+        "title": "The Last Salute",
+        "thumbnail": "https://images.justwatch.com/poster/350182117/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt1790885",
-        "title": "Zero Dark Thirty",
-        "thumbnail": "https://images.justwatch.com/poster/197991429/s332/img"
+        "id": "tt39367471",
+        "title": "Taylor Tomlinson: Prodigal Daughter",
+        "thumbnail": "https://images.justwatch.com/poster/341716447/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt11561116",
-        "title": "The Whisper Man",
-        "thumbnail": "https://images.justwatch.com/poster/347329182/s332/img"
+        "id": "tt39379814",
+        "title": "Bruce Bruce: I Ain't Playin'",
+        "thumbnail": "https://images.justwatch.com/poster/341835580/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt3215824",
-        "title": "Those Who Wish Me Dead",
-        "thumbnail": "https://images.justwatch.com/poster/243959533/s332/img"
+        "id": "tt31390893",
+        "title": "Raja Shivaji",
+        "thumbnail": "https://images.justwatch.com/poster/345547069/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt8367814",
-        "title": "The Gentlemen",
-        "thumbnail": "https://images.justwatch.com/poster/350862481/s332/img"
+        "id": "tt43122943",
+        "title": "Instadocs: Alex Murdaugh, Unconvicted",
+        "thumbnail": "https://images.justwatch.com/poster/346243693/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0114681",
-        "title": "To Die For",
-        "thumbnail": "https://images.justwatch.com/poster/314706501/s332/img"
+        "id": "tt39354078",
+        "title": "Yoh! Bestie",
+        "thumbnail": "https://images.justwatch.com/poster/341585681/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt3416744",
-        "title": "The End of the Tour",
-        "thumbnail": "https://images.justwatch.com/poster/21186519/s332/img"
+        "id": "tt39260895",
+        "title": "Pyaar Prema Kalyanam",
+        "thumbnail": "https://images.justwatch.com/poster/347628842/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt14905854",
-        "title": "Hamnet",
-        "thumbnail": "https://images.justwatch.com/poster/336608673/s332/img"
-      },
-      {
-        "id": "tt11687002",
-        "title": "The Outrun",
-        "thumbnail": "https://images.justwatch.com/poster/321722931/s332/img"
-      },
-      {
-        "id": "tt0108399",
-        "title": "True Romance",
-        "thumbnail": "https://images.justwatch.com/poster/143283868/s332/img"
-      },
-      {
-        "id": "tt13429362",
-        "title": "In the Earth",
-        "thumbnail": "https://images.justwatch.com/poster/255879551/s332/img"
-      },
-      {
-        "id": "tt6149154",
-        "title": "Waiting for the Barbarians",
-        "thumbnail": "https://images.justwatch.com/poster/198863666/s332/img"
-      },
-      {
-        "id": "tt12300742",
-        "title": "Bugonia",
-        "thumbnail": "https://images.justwatch.com/poster/349989660/s332/img"
-      },
-      {
-        "id": "tt36590417",
-        "title": "Don't Say Good Luck",
-        "thumbnail": "https://images.justwatch.com/poster/347522019/s332/img"
-      },
-      {
-        "id": "tt32141377",
-        "title": "28 Years Later: The Bone Temple",
-        "thumbnail": "https://images.justwatch.com/poster/335474351/s332/img"
-      },
-      {
-        "id": "tt32268156",
-        "title": "The Last House",
-        "thumbnail": "https://images.justwatch.com/poster/347571635/s332/img"
-      },
-      {
-        "id": "tt39150120",
-        "title": "The AI Doc: Or How I Became an Apocaloptimist",
-        "thumbnail": "https://images.justwatch.com/poster/343724095/s332/img"
-      },
-      {
-        "id": "tt1392170",
-        "title": "The Hunger Games",
-        "thumbnail": "https://images.justwatch.com/poster/335161995/s332/img"
-      },
-      {
-        "id": "tt27676959",
-        "title": "Lazareth",
-        "thumbnail": "https://images.justwatch.com/poster/315833369/s332/img"
-      },
-      {
-        "id": "tt0111257",
-        "title": "Speed",
-        "thumbnail": "https://images.justwatch.com/poster/305264666/s332/img"
-      },
-      {
-        "id": "tt4034354",
-        "title": "Swiss Army Man",
-        "thumbnail": "https://images.justwatch.com/poster/306908579/s332/img"
-      },
-      {
-        "id": "tt10545296",
-        "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
-        "thumbnail": "https://images.justwatch.com/poster/307659151/s332/img"
-      },
-      {
-        "id": "tt21867434",
-        "title": "BlackBerry",
-        "thumbnail": "https://images.justwatch.com/poster/308572515/s332/img"
-      },
-      {
-        "id": "tt23137390",
-        "title": "Immaculate",
-        "thumbnail": "https://images.justwatch.com/poster/312346467/s332/img"
-      },
-      {
-        "id": "tt0077416",
-        "title": "The Deer Hunter",
-        "thumbnail": "https://images.justwatch.com/poster/242968463/s332/img"
-      },
-      {
-        "id": "tt0116282",
-        "title": "Fargo",
-        "thumbnail": "https://images.justwatch.com/poster/205722428/s332/img"
-      },
-      {
-        "id": "tt33100314",
-        "title": "Remarkably Bright Creatures",
-        "thumbnail": "https://images.justwatch.com/poster/349669532/s332/img"
-      },
-      {
-        "id": "tt2452200",
-        "title": "Son of a Gun",
-        "thumbnail": "https://images.justwatch.com/poster/71646194/s332/img"
-      },
-      {
-        "id": "tt1441395",
-        "title": "Under the Skin",
-        "thumbnail": "https://images.justwatch.com/poster/180523703/s332/img"
-      },
-      {
-        "id": "tt4266638",
-        "title": "Krisha",
-        "thumbnail": "https://images.justwatch.com/poster/170110353/s332/img"
-      },
-      {
-        "id": "tt12788488",
-        "title": "Deadstream",
-        "thumbnail": "https://images.justwatch.com/poster/324035009/s332/img"
-      },
-      {
-        "id": "tt0780548",
-        "title": "Kid Cannabis",
-        "thumbnail": "https://images.justwatch.com/poster/307481133/s332/img"
-      },
-      {
-        "id": "tt19847976",
-        "title": "Wicked: For Good",
-        "thumbnail": "https://images.justwatch.com/poster/331760654/s332/img"
-      },
-      {
-        "id": "tt15940132",
-        "title": "War Machine",
-        "thumbnail": "https://images.justwatch.com/poster/341591989/s332/img"
-      },
-      {
-        "id": "tt4633694",
-        "title": "Spider-Man: Into the Spider-Verse",
-        "thumbnail": "https://images.justwatch.com/poster/65668297/s332/img"
-      },
-      {
-        "id": "tt0120201",
-        "title": "Starship Troopers",
-        "thumbnail": "https://images.justwatch.com/poster/176331535/s332/img"
-      },
-      {
-        "id": "tt0209144",
-        "title": "Memento",
-        "thumbnail": "https://images.justwatch.com/poster/66809044/s332/img"
-      },
-      {
-        "id": "tt10954984",
-        "title": "Nope",
-        "thumbnail": "https://images.justwatch.com/poster/268931580/s332/img"
-      },
-      {
-        "id": "tt7798634",
-        "title": "Ready or Not",
-        "thumbnail": "https://images.justwatch.com/poster/154110983/s332/img"
-      },
-      {
-        "id": "tt1649419",
-        "title": "The Impossible",
-        "thumbnail": "https://images.justwatch.com/poster/176650618/s332/img"
-      },
-      {
-        "id": "tt29268110",
-        "title": "Smile 2",
-        "thumbnail": "https://images.justwatch.com/poster/321821204/s332/img"
-      },
-      {
-        "id": "tt1568346",
-        "title": "The Girl with the Dragon Tattoo",
-        "thumbnail": "https://images.justwatch.com/poster/301733356/s332/img"
-      },
-      {
-        "id": "tt41975820",
-        "title": "Stavros Halkias: Uncle Stav",
-        "thumbnail": "https://images.justwatch.com/poster/354540496/s332/img"
-      },
-      {
-        "id": "tt6499752",
-        "title": "Upgrade",
-        "thumbnail": "https://images.justwatch.com/poster/79022504/s332/img"
-      },
-      {
-        "id": "tt35836025",
-        "title": "Vishwanath & Sons",
-        "thumbnail": "https://images.justwatch.com/poster/345836211/s332/img"
-      },
-      {
-        "id": "tt10548174",
-        "title": "28 Years Later",
-        "thumbnail": "https://images.justwatch.com/poster/332419317/s332/img"
-      },
-      {
-        "id": "tt1951264",
-        "title": "The Hunger Games: Catching Fire",
-        "thumbnail": "https://images.justwatch.com/poster/302914225/s332/img"
-      },
-      {
-        "id": "tt34966025",
-        "title": "Folktales",
-        "thumbnail": "https://images.justwatch.com/poster/332437310/s332/img"
-      },
-      {
-        "id": "tt0056172",
-        "title": "Lawrence of Arabia",
-        "thumbnail": "https://images.justwatch.com/poster/185757762/s332/img"
-      },
-      {
-        "id": "tt4263482",
-        "title": "The Witch",
-        "thumbnail": "https://images.justwatch.com/poster/8873544/s332/img"
-      },
-      {
-        "id": "tt14364480",
-        "title": "Wake Up Dead Man: A Knives Out Mystery",
-        "thumbnail": "https://images.justwatch.com/poster/339096016/s332/img"
-      },
-      {
-        "id": "tt8332922",
-        "title": "A Quiet Place Part II",
-        "thumbnail": "https://images.justwatch.com/poster/250619161/s332/img"
-      },
-      {
-        "id": "tt44322266",
-        "title": "Turning Point: Generation 9/11",
-        "thumbnail": "https://images.justwatch.com/poster/349865482/s332/img"
-      },
-      {
-        "id": "tt29567915",
-        "title": "Nuremberg",
-        "thumbnail": "https://images.justwatch.com/poster/338678435/s332/img"
-      },
-      {
-        "id": "tt2475154",
-        "title": "Elena",
-        "thumbnail": "https://images.justwatch.com/poster/302975861/s332/img"
-      },
-      {
-        "id": "tt2872718",
-        "title": "Nightcrawler",
-        "thumbnail": "https://images.justwatch.com/poster/51204426/s332/img"
-      },
-      {
-        "id": "tt9097270",
-        "title": "Wrinkles the Clown",
-        "thumbnail": "https://images.justwatch.com/poster/152596126/s332/img"
-      },
-      {
-        "id": "tt30274401",
-        "title": "Five Nights at Freddy's 2",
-        "thumbnail": "https://images.justwatch.com/poster/339615113/s332/img"
-      },
-      {
-        "id": "tt0196216",
-        "title": "Small Time Crooks",
-        "thumbnail": "https://images.justwatch.com/poster/176588489/s332/img"
+        "id": "tt41300402",
+        "title": "The 51st AFI Life Achievement Award: A Tribute to Eddie Murphy",
+        "thumbnail": "https://images.justwatch.com/poster/345695027/s332/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt28363783",
         "title": "Alpha",
-        "thumbnail": "https://images.justwatch.com/poster/346814027/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/346814027/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt17009710",
-        "title": "Anatomy of a Fall",
-        "thumbnail": "https://images.justwatch.com/poster/309145805/s332/img"
+        "id": "tt32362890",
+        "title": "Thrash",
+        "thumbnail": "https://images.justwatch.com/poster/343791320/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt10375624",
-        "title": "Voicemails for Isabelle",
-        "thumbnail": "https://images.justwatch.com/poster/345669071/s332/img"
+        "id": "tt38674977",
+        "title": "Made in Korea",
+        "thumbnail": "https://images.justwatch.com/poster/342169695/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0314630",
-        "title": "The Secret Lives of Dentists",
-        "thumbnail": "https://images.justwatch.com/poster/319666045/s332/img"
+        "id": "tt32155665",
+        "title": "53 Sundays",
+        "thumbnail": "https://images.justwatch.com/poster/343112605/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt5776858",
-        "title": "Phantom Thread",
-        "thumbnail": "https://images.justwatch.com/poster/53830720/s332/img"
+        "id": "tt32268156",
+        "title": "The Last House",
+        "thumbnail": "https://images.justwatch.com/poster/347571635/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33474803",
+        "title": "The Marked Woman",
+        "thumbnail": "https://images.justwatch.com/poster/344584556/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt27548557",
+        "title": "Dhamaal 4",
+        "thumbnail": "https://images.justwatch.com/poster/341457433/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39792948",
+        "title": "Louis Theroux: Inside the Manosphere",
+        "thumbnail": "https://images.justwatch.com/poster/342803125/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt42456008",
+        "title": "Poldi",
+        "thumbnail": "https://images.justwatch.com/poster/346037343/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36454145",
+        "title": "To The Max",
+        "thumbnail": "https://images.justwatch.com/poster/348293486/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39398878",
+        "title": "Miguel Ángel Blanco: The 48 Hours That Changed Spain",
+        "thumbnail": "https://images.justwatch.com/poster/347132282/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39320452",
+        "title": "Miracle: The Boys of '80",
+        "thumbnail": "https://images.justwatch.com/poster/341368236/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt27613895",
+        "title": "GOAT",
+        "thumbnail": "https://images.justwatch.com/poster/341414471/s332/img",
+        "released": "2026-01-01"
       },
       {
         "id": "tt32642706",
         "title": "The Rip",
-        "thumbnail": "https://images.justwatch.com/poster/340927094/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/340927094/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0361309",
-        "title": "We Don't Live Here Anymore",
-        "thumbnail": "https://images.justwatch.com/poster/210634959/s332/img"
+        "id": "tt39196792",
+        "title": "This Is I",
+        "thumbnail": "https://images.justwatch.com/poster/348311854/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0381707",
-        "title": "White Chicks",
-        "thumbnail": "https://images.justwatch.com/poster/256835226/s332/img"
+        "id": "tt39901552",
+        "title": "Jeff Ross: Take a Banana for the Ride",
+        "thumbnail": "https://images.justwatch.com/poster/343273323/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt10310074",
-        "title": "True Things",
-        "thumbnail": "https://images.justwatch.com/poster/289147679/s332/img"
+        "id": "tt39307872",
+        "title": "One Last Adventure: The Making of Stranger Things 5",
+        "thumbnail": "https://images.justwatch.com/poster/340662431/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt2906216",
-        "title": "Dungeons & Dragons: Honor Among Thieves",
-        "thumbnail": "https://images.justwatch.com/poster/305194475/s332/img"
+        "id": "tt14338246",
+        "title": "Ustaad Bhagat Singh",
+        "thumbnail": "https://images.justwatch.com/poster/346126410/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt3915174",
-        "title": "Puss in Boots: The Last Wish",
-        "thumbnail": "https://images.justwatch.com/poster/302419965/s332/img"
+        "id": "tt41559856",
+        "title": "Yiya Murano: Death at Tea Time",
+        "thumbnail": "https://images.justwatch.com/poster/344585470/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt6053438",
-        "title": "First Reformed",
-        "thumbnail": "https://images.justwatch.com/poster/62453468/s332/img"
+        "id": "tt39444813",
+        "title": "Lainey Wilson: Keepin' Country Cool",
+        "thumbnail": "https://images.justwatch.com/poster/343804457/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt2194499",
-        "title": "About Time",
-        "thumbnail": "https://images.justwatch.com/poster/9568757/s332/img"
+        "id": "tt43088166",
+        "title": "Kylie - Tension Tour Live",
+        "thumbnail": "https://images.justwatch.com/poster/345843360/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt31036941",
-        "title": "Jurassic World: Rebirth",
-        "thumbnail": "https://images.justwatch.com/poster/332277457/s332/img"
+        "id": "tt33603921",
+        "title": "Joe's College Road Trip",
+        "thumbnail": "https://images.justwatch.com/poster/341753483/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt11152168",
-        "title": "If",
-        "thumbnail": "https://images.justwatch.com/poster/315756972/s332/img"
+        "id": "tt40001699",
+        "title": "Here the Whole Time",
+        "thumbnail": "https://images.justwatch.com/poster/354197804/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt15181326",
-        "title": "Dead Man's Wire",
-        "thumbnail": "https://images.justwatch.com/poster/337955093/s332/img"
+        "id": "tt41559858",
+        "title": "Fito Páez: The World Within a Song",
+        "thumbnail": "https://images.justwatch.com/poster/350278828/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt1197624",
-        "title": "Law Abiding Citizen",
-        "thumbnail": "https://images.justwatch.com/poster/179938210/s332/img"
+        "id": "tt38589464",
+        "title": "Feel My Voice",
+        "thumbnail": "https://images.justwatch.com/poster/343172028/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt10579992",
-        "title": "Mister America",
-        "thumbnail": "https://images.justwatch.com/poster/151165134/s332/img"
+        "id": "tt43675910",
+        "title": "Tribeca 25",
+        "thumbnail": "https://images.justwatch.com/poster/348673776/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0432021",
-        "title": "Resident Evil: Extinction",
-        "thumbnail": "https://images.justwatch.com/poster/8690053/s332/img"
+        "id": "tt41617470",
+        "title": "Desire",
+        "thumbnail": "https://images.justwatch.com/poster/346576114/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt30343021",
-        "title": "Song Sung Blue",
-        "thumbnail": "https://images.justwatch.com/poster/340845448/s332/img"
+        "id": "tt33538438",
+        "title": "Maa Behen",
+        "thumbnail": "https://images.justwatch.com/poster/345783346/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt26743210",
-        "title": "How to Train Your Dragon",
-        "thumbnail": "https://images.justwatch.com/poster/331854260/s332/img"
+        "id": "tt39150120",
+        "title": "The AI Doc: Or How I Became an Apocaloptimist",
+        "thumbnail": "https://images.justwatch.com/poster/343724095/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt1186830",
-        "title": "Agora",
-        "thumbnail": "https://images.justwatch.com/poster/179542854/s332/img"
+        "id": "tt38109660",
+        "title": "Golden Kamuy -The Abashiri Prison Raid-",
+        "thumbnail": "https://images.justwatch.com/poster/347281918/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt2267998",
-        "title": "Gone Girl",
-        "thumbnail": "https://images.justwatch.com/poster/311203054/s332/img"
+        "id": "tt39533190",
+        "title": "Sing Geetham",
+        "thumbnail": "https://images.justwatch.com/poster/347368293/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0119116",
-        "title": "The Fifth Element",
-        "thumbnail": "https://images.justwatch.com/poster/9592707/s332/img"
+        "id": "tt35064672",
+        "title": "Cocktail 2",
+        "thumbnail": "https://images.justwatch.com/poster/346211500/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt3224458",
-        "title": "A Beautiful Day in the Neighborhood",
-        "thumbnail": "https://images.justwatch.com/poster/167976988/s332/img"
+        "id": "tt36472392",
+        "title": "Chatha Pacha",
+        "thumbnail": "https://images.justwatch.com/poster/340096954/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt9663896",
-        "title": "Asphalt City",
-        "thumbnail": "https://images.justwatch.com/poster/316804567/s332/img"
+        "id": "tt34442799",
+        "title": "Oru Durooha Saahacharyathil",
+        "thumbnail": "https://images.justwatch.com/poster/344443459/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0108160",
-        "title": "Sleepless in Seattle",
-        "thumbnail": "https://images.justwatch.com/poster/181836574/s332/img"
+        "id": "tt38641690",
+        "title": "Jared Freid: The Family Plan",
+        "thumbnail": "https://images.justwatch.com/poster/348311852/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt0112697",
-        "title": "Clueless",
-        "thumbnail": "https://images.justwatch.com/poster/132259154/s332/img"
+        "id": "tt43604367",
+        "title": "RADWIMPS 20th Anniversary Live Tour",
+        "thumbnail": "https://images.justwatch.com/poster/346560706/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt6966692",
-        "title": "Green Book",
-        "thumbnail": "https://images.justwatch.com/poster/95893812/s332/img"
+        "id": "tt32278481",
+        "title": "Enola Holmes 3",
+        "thumbnail": "https://images.justwatch.com/poster/345811005/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt7374950",
-        "title": "Midwinter Break",
-        "thumbnail": "https://images.justwatch.com/poster/342077683/s332/img"
+        "id": "tt32915652",
+        "title": "Kidô Senshi Gandamu Senkô no Hasauei Kirukê no Majo",
+        "thumbnail": "https://images.justwatch.com/poster/354525256/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt3164198",
-        "title": "Ballet 422",
-        "thumbnail": "https://images.justwatch.com/poster/209015958/s332/img"
+        "id": "tt16431404",
+        "title": "Apex",
+        "thumbnail": "https://images.justwatch.com/poster/343727604/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt1478839",
-        "title": "The Art of Racing in the Rain",
-        "thumbnail": "https://images.justwatch.com/poster/142848175/s332/img"
+        "id": "tt37961742",
+        "title": "Mexico 86",
+        "thumbnail": "https://images.justwatch.com/poster/344682112/s332/img",
+        "released": "2026-01-01"
       },
       {
-        "id": "tt5362988",
-        "title": "Wind River",
-        "thumbnail": "https://images.justwatch.com/poster/30289380/s332/img"
+        "id": "tt37042085",
+        "title": "Elize: Shadows of a Woman",
+        "thumbnail": "https://images.justwatch.com/poster/349937981/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt41801288",
+        "title": "Untold UK: Vinnie Jones",
+        "thumbnail": "https://images.justwatch.com/poster/344673405/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33100314",
+        "title": "Remarkably Bright Creatures",
+        "thumbnail": "https://images.justwatch.com/poster/349669532/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt22740896",
+        "title": "People We Meet on Vacation",
+        "thumbnail": "https://images.justwatch.com/poster/335800041/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39750720",
+        "title": "Chompoo: Lost​ &​ Forgotten​",
+        "thumbnail": "https://images.justwatch.com/poster/347830358/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt32150360",
+        "title": "Color Book",
+        "thumbnail": "https://images.justwatch.com/poster/326396170/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt40618609",
+        "title": "USA 94: Brazil's Return to Glory",
+        "thumbnail": "https://images.justwatch.com/poster/344672525/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt31226272",
+        "title": "Do Deewane Seher Mein",
+        "thumbnail": "https://images.justwatch.com/poster/342023579/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt29552248",
+        "title": "Swapped",
+        "thumbnail": "https://images.justwatch.com/poster/342887904/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36580119",
+        "title": "The President's Cake",
+        "thumbnail": "https://images.justwatch.com/poster/344003940/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt43616650",
+        "title": "Jeff Arcuri: Nice to Meet You",
+        "thumbnail": "https://images.justwatch.com/poster/346695449/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt40898187",
+        "title": "The Roast of Kevin Hart",
+        "thumbnail": "https://images.justwatch.com/poster/344504187/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39370887",
+        "title": "Me Before Me",
+        "thumbnail": "https://images.justwatch.com/poster/346814801/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt38681832",
+        "title": "Colors of Evil: Black",
+        "thumbnail": "https://images.justwatch.com/poster/345682721/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36619926",
+        "title": "Heartstopper Forever",
+        "thumbnail": "https://images.justwatch.com/poster/346450959/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39538786",
+        "title": "Sniper: No Nation",
+        "thumbnail": "https://images.justwatch.com/poster/342947228/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt27411060",
+        "title": "Suzzanna: Santet Dosa di Atas Dosa",
+        "thumbnail": "https://images.justwatch.com/poster/341214838/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt37931873",
+        "title": "Gintama the Movie 2026: Yoshiwara in Flames",
+        "thumbnail": "https://images.justwatch.com/poster/347585690/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt43640198",
+        "title": "Nando Between Two Worlds - A Sintonia Film",
+        "thumbnail": "https://images.justwatch.com/poster/347466915/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36876775",
+        "title": "Husbands in Action",
+        "thumbnail": "https://images.justwatch.com/poster/345714787/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt27673536",
+        "title": "Mardaani 3",
+        "thumbnail": "https://images.justwatch.com/poster/340922362/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt29540862",
+        "title": "Bhooth Bangla",
+        "thumbnail": "https://images.justwatch.com/poster/322818220/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33508491",
+        "title": "The Singers",
+        "thumbnail": "https://images.justwatch.com/poster/342850946/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt32245870",
+        "title": "Happy Patel: Khatarnak Jasoos",
+        "thumbnail": "https://images.justwatch.com/poster/340476122/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt37172278",
+        "title": "Noah Kahan: Out of Body",
+        "thumbnail": "https://images.justwatch.com/poster/343150435/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt42654471",
+        "title": "Stamptown",
+        "thumbnail": "https://images.justwatch.com/poster/347759996/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt5072334",
+        "title": "Inside the Trustor Scandal",
+        "thumbnail": "https://images.justwatch.com/poster/347633789/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt33083471",
+        "title": "Funky",
+        "thumbnail": "https://images.justwatch.com/poster/338544731/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt37458495",
+        "title": "Gatta Kusthi 2",
+        "thumbnail": "https://images.justwatch.com/poster/346643030/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt36451817",
+        "title": "Raakaasa",
+        "thumbnail": "https://images.justwatch.com/poster/350995067/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt42063852",
+        "title": "Beyond the Game: Samurai 2026 WORLD BASEBALL CLASSIC",
+        "thumbnail": "https://images.justwatch.com/poster/344627041/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt37539162",
+        "title": "Call Me Mother",
+        "thumbnail": "https://images.justwatch.com/poster/336693715/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt41592024",
+        "title": "Trevor Noah: Joy in the Trenches",
+        "thumbnail": "https://images.justwatch.com/poster/344370823/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt39345599",
+        "title": "The Plastic Detox",
+        "thumbnail": "https://images.justwatch.com/poster/343809490/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt41973417",
+        "title": "KillTonyMania",
+        "thumbnail": "https://images.justwatch.com/poster/344652242/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt43619305",
+        "title": "A Toxic Love Story",
+        "thumbnail": "https://images.justwatch.com/poster/346813344/s332/img",
+        "released": "2026-01-01"
+      },
+      {
+        "id": "tt37333137",
+        "title": "Main Vaapas Aaunga",
+        "thumbnail": "https://images.justwatch.com/poster/346670343/s332/img",
+        "released": "2026-01-01"
       }
     ]
   }

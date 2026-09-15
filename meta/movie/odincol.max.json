@@ -3,62 +3,73 @@
     "id": "odincol.max",
     "type": "movie",
     "name": "Max / HBO",
-    "description": "Max / HBO movies available in US. Automatically refreshed from JustWatch.",
+    "description": "Max / HBO latest movie releases available in US. Automatically refreshed from JustWatch.",
     "videos": [
-      {
-        "id": "tt1655441",
-        "title": "The Age of Adaline",
-        "thumbnail": "https://images.justwatch.com/poster/307599202/s332/img"
-      },
-      {
-        "id": "tt9362930",
-        "title": "Blue Beetle",
-        "thumbnail": "https://images.justwatch.com/poster/307630150/s332/img"
-      },
-      {
-        "id": "tt7434324",
-        "title": "Low Tide",
-        "thumbnail": "https://images.justwatch.com/poster/141862883/s332/img"
-      },
-      {
-        "id": "tt2209418",
-        "title": "Before Midnight",
-        "thumbnail": "https://images.justwatch.com/poster/92046319/s332/img"
-      },
-      {
-        "id": "tt2125608",
-        "title": "Searching for Sugar Man",
-        "thumbnail": "https://images.justwatch.com/poster/296356765/s332/img"
-      },
-      {
-        "id": "tt1322269",
-        "title": "August: Osage County",
-        "thumbnail": "https://images.justwatch.com/poster/179541139/s332/img"
-      },
       {
         "id": "tt22048412",
         "title": "MaXXXine",
-        "thumbnail": "https://images.justwatch.com/poster/353463621/s332/img"
-      },
-      {
-        "id": "tt3385524",
-        "title": "Stan & Ollie",
-        "thumbnail": "https://images.justwatch.com/poster/88762661/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/353463621/s332/img",
+        "released": "2024-01-01"
       },
       {
         "id": "tt0439572",
         "title": "The Flash",
-        "thumbnail": "https://images.justwatch.com/poster/304477580/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/304477580/s332/img",
+        "released": "2023-01-01"
+      },
+      {
+        "id": "tt9362930",
+        "title": "Blue Beetle",
+        "thumbnail": "https://images.justwatch.com/poster/307630150/s332/img",
+        "released": "2023-01-01"
+      },
+      {
+        "id": "tt7434324",
+        "title": "Low Tide",
+        "thumbnail": "https://images.justwatch.com/poster/141862883/s332/img",
+        "released": "2019-01-01"
+      },
+      {
+        "id": "tt3385524",
+        "title": "Stan & Ollie",
+        "thumbnail": "https://images.justwatch.com/poster/88762661/s332/img",
+        "released": "2018-01-01"
+      },
+      {
+        "id": "tt1655441",
+        "title": "The Age of Adaline",
+        "thumbnail": "https://images.justwatch.com/poster/307599202/s332/img",
+        "released": "2015-01-01"
+      },
+      {
+        "id": "tt1322269",
+        "title": "August: Osage County",
+        "thumbnail": "https://images.justwatch.com/poster/179541139/s332/img",
+        "released": "2013-01-01"
       },
       {
         "id": "tt3328418",
         "title": "Scooby-Doo! and the Spooky Scarecrow",
-        "thumbnail": "https://images.justwatch.com/poster/283345227/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/283345227/s332/img",
+        "released": "2013-01-01"
+      },
+      {
+        "id": "tt2209418",
+        "title": "Before Midnight",
+        "thumbnail": "https://images.justwatch.com/poster/92046319/s332/img",
+        "released": "2013-01-01"
+      },
+      {
+        "id": "tt2125608",
+        "title": "Searching for Sugar Man",
+        "thumbnail": "https://images.justwatch.com/poster/296356765/s332/img",
+        "released": "2012-01-01"
       },
       {
         "id": "tt1498569",
         "title": "Restless",
-        "thumbnail": "https://images.justwatch.com/poster/241770286/s332/img"
+        "thumbnail": "https://images.justwatch.com/poster/241770286/s332/img",
+        "released": "2011-01-01"
       }
     ]
   }
