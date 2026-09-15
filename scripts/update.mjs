@@ -20,7 +20,7 @@ const query = `query GetPopularTitles(
   $country: Country!
   $popularTitlesFilter: TitleFilter
   $popularAfterCursor: String
-  $popularTitlesSortBy: PopularTitlesSorting! = POPULAR
+  $popularTitlesSortBy: PopularTitlesSorting! = RELEASE_YEAR
   $first: Int!
   $language: Language!
   $offset: Int = 0
@@ -42,6 +42,7 @@ const query = `query GetPopularTitles(
         content(country: $country, language: $language) {
           externalIds { imdbId }
           title
+          originalReleaseYear
           posterUrl(profile: $profile, format: $format)
         }
       }
@@ -53,7 +54,7 @@ async function fetchProvider(provider) {
   const body = {
     operationName: 'GetPopularTitles',
     variables: {
-      popularTitlesSortBy: 'TRENDING',
+      popularTitlesSortBy: 'RELEASE_YEAR',
       first: LIMIT,
       sortRandomSeed: 0,
       popularAfterCursor: '',
@@ -110,6 +111,7 @@ async function fetchProvider(provider) {
       id: imdb,
       title: content?.title || imdb,
       thumbnail,
+      released: content?.originalReleaseYear ? `${content.originalReleaseYear}-01-01` : undefined,
     });
   }
 
@@ -130,7 +132,7 @@ for (const provider of providers) {
         id: `odincol.${provider.key}`,
         type: 'movie',
         name: provider.name,
-        description: `${provider.name} movies available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
+        description: `${provider.name} latest movie releases available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
         videos,
       },
     };
