@@ -1,0 +1,20 @@
+{
+  "id": "com.rinongit.odin.streamingcollections.v2",
+  "version": "2.0.0",
+  "name": "Odin Streaming Collections v2",
+  "description": "Streaming-provider movie collections with landscape artwork for AIOStreams Jellyfin and Odin.",
+  "resources": ["catalog", "meta"],
+  "types": ["movie"],
+  "idPrefixes": ["odincol2."],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "streaming-collections-v2",
+      "name": "Streaming Collections"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}
