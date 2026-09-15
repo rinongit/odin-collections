@@ -1,0 +1,20 @@
+{
+  "id": "com.rinongit.odin.streamingcollections.v5",
+  "version": "5.0.0",
+  "name": "Odin Streaming Collections v5",
+  "description": "Streaming-provider movie collections with TMDB metadata using the earliest known release/premiere date.",
+  "resources": ["catalog", "meta"],
+  "types": ["movie"],
+  "idPrefixes": ["odincol5."],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "streaming-collections-v5",
+      "name": "Streaming Collections"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}
