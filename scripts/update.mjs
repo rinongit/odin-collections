@@ -55,7 +55,6 @@ async function fetchProvider(provider) {
     variables: {
       popularTitlesSortBy: 'TRENDING',
       first: LIMIT,
-      platform: 'WEB',
       sortRandomSeed: 0,
       popularAfterCursor: '',
       offset: null,
@@ -73,8 +72,8 @@ async function fetchProvider(provider) {
       },
       language: LANGUAGE,
       country: COUNTRY,
-      profile: 'S332',
-      format: 'JPG',
+      profile: null,
+      format: null,
     },
     query,
   };
@@ -120,6 +119,7 @@ async function fetchProvider(provider) {
 await fs.mkdir(path.join('meta', 'movie'), { recursive: true });
 
 const summary = [];
+let successfulProviders = 0;
 for (const provider of providers) {
   try {
     const videos = await fetchProvider(provider);
@@ -139,12 +139,15 @@ for (const provider of providers) {
       path.join('meta', 'movie', `odincol.${provider.key}.json`),
       `${JSON.stringify(payload, null, 2)}\n`,
     );
+    successfulProviders += 1;
     summary.push(`${provider.name}: ${videos.length}`);
   } catch (error) {
     console.error(`Failed ${provider.name}:`, error.message);
-    // Keep the previous generated file if this provider has a temporary upstream failure.
     summary.push(`${provider.name}: kept previous data`);
   }
 }
 
 console.log(summary.join('\n'));
+if (successfulProviders === 0) {
+  throw new Error('All provider refreshes failed; refusing to publish an empty update.');
+}
