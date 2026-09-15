@@ -76,7 +76,7 @@ async function fetchPackages() {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.3',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.4',
     },
     body: JSON.stringify({
       operationName: 'GetPackages',
@@ -162,7 +162,7 @@ async function fetchPage(provider, sortBy, after) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      'user-agent': 'Mozilla/5.0 OdinCollections/3.3',
+      'user-agent': 'Mozilla/5.0 OdinCollections/3.4',
     },
     body: JSON.stringify(body),
   });
@@ -218,8 +218,15 @@ async function fetchProvider(provider) {
   return videos.slice(0, TARGET);
 }
 
-await fs.mkdir(path.join('meta', 'movie'), { recursive: true });
-await fs.mkdir(path.join('v2', 'meta', 'movie'), { recursive: true });
+const versions = [
+  { prefix: 'odincol', base: path.join('meta', 'movie') },
+  { prefix: 'odincol2', base: path.join('v2', 'meta', 'movie') },
+  { prefix: 'odincol3', base: path.join('v3', 'meta', 'movie') },
+];
+
+for (const version of versions) {
+  await fs.mkdir(version.base, { recursive: true });
+}
 
 try {
   const packages = await fetchPackages();
@@ -235,13 +242,11 @@ for (const provider of providers) {
     const videos = await fetchProvider(provider);
     if (!videos.length) throw new Error('No IMDb movie IDs returned');
 
-    for (const version of [1, 2]) {
-      const prefix = version === 1 ? 'odincol' : 'odincol2';
-      const base = version === 1 ? path.join('meta', 'movie') : path.join('v2', 'meta', 'movie');
-      const itemKey = version === 2 && provider.key === 'max' ? 'hbomax' : provider.key;
+    for (const version of versions) {
+      const itemKey = version.prefix === 'odincol2' && provider.key === 'max' ? 'hbomax' : provider.key;
       const payload = {
         meta: {
-          id: `${prefix}.${itemKey}`,
+          id: `${version.prefix}.${itemKey}`,
           type: 'movie',
           name: provider.name,
           description: `${provider.name} recent and popular movies available in ${COUNTRY}. Automatically refreshed from JustWatch.`,
@@ -251,7 +256,7 @@ for (const provider of providers) {
           videos,
         },
       };
-      await fs.writeFile(path.join(base, `${prefix}.${itemKey}.json`), `${JSON.stringify(payload, null, 2)}\n`);
+      await fs.writeFile(path.join(version.base, `${version.prefix}.${itemKey}.json`), `${JSON.stringify(payload, null, 2)}\n`);
     }
 
     successfulProviders += 1;
