@@ -1,10 +1,10 @@
 {
   "name": "odin-trakt-bridge",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server-path.mjs"
+    "start": "node compat.mjs"
   },
   "engines": {
     "node": ">=22"
