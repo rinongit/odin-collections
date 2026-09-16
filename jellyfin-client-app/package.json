@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node assemble.mjs && node patch-ui.mjs && node patch-behavior.mjs && node patch-dropped-pull.mjs && node patch-watch-state.mjs && node patch-diagnostic.mjs && node bootstrap.mjs"
+    "start": "node assemble.mjs && node patch-ui.mjs && node patch-behavior.mjs && node patch-dropped-pull.mjs && node patch-watch-state.mjs && node patch-diagnostic.mjs && node patch-diagnostic-get.mjs && node bootstrap.mjs"
   },
   "engines": {
     "node": ">=22"
