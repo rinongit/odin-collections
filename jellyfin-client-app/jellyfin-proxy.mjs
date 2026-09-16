@@ -41,9 +41,16 @@ function sendJson(res, status, value) {
 }
 
 function parseProxyTarget(pathname) {
-  const m = pathname.match(/^\/jellyfin\/([a-f0-9]{12})\/([^/]+)(\/.*)?$/);
-  if (!m) return null;
-  return { id: m[1], key: decodeURIComponent(m[2]), rest: m[3] || '/' };
+  let m = pathname.match(/^\/jellyfin\/([a-f0-9]{12})\/([^/]+)(\/.*)?$/);
+  if (m) return { id: m[1], key: decodeURIComponent(m[2]), rest: m[3] || '/' };
+
+  m = pathname.match(/^\/jellyfin-client\/u\/([a-f0-9]{12})\/([^/]+)(\/.*)?$/);
+  if (m) return { id: m[1], key: decodeURIComponent(m[2]), rest: m[3] || '/' };
+
+  m = pathname.match(/^\/jellyfin-client\/([a-f0-9]{12})\/([^/]+)(\/.*)?$/);
+  if (m) return { id: m[1], key: decodeURIComponent(m[2]), rest: m[3] || '/' };
+
+  return null;
 }
 
 function isResumePath(path) {
@@ -195,7 +202,8 @@ async function proxyToConnectedServer(req, res, parsed) {
     return;
   }
 
-  const upstreamUrl = appendPath(resolved.cfg.baseUrl, parsed.rest, new URL(req.url, 'http://local').search);
+  const incoming = new URL(req.url, 'http://local');
+  const upstreamUrl = appendPath(resolved.cfg.baseUrl, parsed.rest, incoming.search);
   const headers = { ...req.headers, host: upstreamUrl.host };
   delete headers.connection;
   delete headers['proxy-connection'];
