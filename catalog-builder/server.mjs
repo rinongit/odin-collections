@@ -3,6 +3,8 @@ import { deflateRawSync, inflateRawSync } from 'node:zlib';
 import dns from 'node:dns/promises';
 import net from 'node:net';
 import crypto from 'node:crypto';
+import { AsyncLocalStorage } from 'node:async_hooks';
+import { createClient } from 'redis';
 
 const PORT = Number(process.env.PORT || 7000);
 const MAX_BODY = 512 * 1024;
@@ -12,6 +14,55 @@ const TMDB_BEARER_TOKEN = process.env.TMDB_BEARER_TOKEN || process.env.TMDB_READ
 const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
 const TRAKT_CLIENT_ID = process.env.TRAKT_CLIENT_ID || '';
 const MDBLIST_API_KEY = process.env.MDBLIST_API_KEY || '';
+const REDIS_URL = process.env.REDIS_URL || '';
+const credentialContext = new AsyncLocalStorage();
+const envCredentials = {
+  tmdbBearerToken: TMDB_BEARER_TOKEN,
+  tmdbApiKey: TMDB_API_KEY,
+  traktClientId: TRAKT_CLIENT_ID,
+  mdblistApiKey: MDBLIST_API_KEY,
+};
+let redis = null;
+if (REDIS_URL) {
+  redis = createClient({ url: REDIS_URL });
+  redis.on('error', (e) => console.error('Credential store Redis:', e.message));
+  await redis.connect();
+}
+const credKey = (id) => `cb:cred:${id}`;
+const hashToken = (value) => crypto.createHash('sha256').update(String(value || '')).digest('hex');
+const currentCredentials = () => credentialContext.getStore() || envCredentials;
+async function loadCredentialProfile(id) {
+  if (!redis || !/^[a-f0-9]{32}$/.test(String(id || ''))) return null;
+  const raw = await redis.get(credKey(id));
+  try { return raw ? JSON.parse(raw) : null; } catch { return null; }
+}
+async function effectiveCredentials(profileId) {
+  const profile = await loadCredentialProfile(profileId);
+  return { ...envCredentials, ...(profile?.credentials || {}) };
+}
+async function saveCredentialProfile(payload) {
+  if (!redis) throw new Error('Credential storage is not configured on this server');
+  let profileId = String(payload?.profileId || '');
+  let editToken = String(payload?.editToken || '');
+  let existing = null;
+  if (profileId) {
+    existing = await loadCredentialProfile(profileId);
+    if (!existing) throw new Error('Credential profile was not found');
+    if (!editToken || hashToken(editToken) !== existing.editHash) throw new Error('Credential profile edit token is invalid');
+  } else {
+    profileId = crypto.randomBytes(16).toString('hex');
+    editToken = crypto.randomBytes(24).toString('base64url');
+  }
+  const next = { ...(existing?.credentials || {}) };
+  for (const key of ['tmdbBearerToken','tmdbApiKey','traktClientId','mdblistApiKey']) {
+    const value = String(payload?.[key] || '').trim();
+    if (value) next[key] = value;
+  }
+  if (!Object.values(next).some(Boolean)) throw new Error('Enter at least one API credential');
+  await redis.set(credKey(profileId), JSON.stringify({ editHash: hashToken(editToken), credentials: next }));
+  return { profileId, editToken };
+}
+
 
 const jsonHeaders = {
   'content-type': 'application/json; charset=utf-8',
@@ -199,9 +250,10 @@ function detectListSource(input) {
 }
 
 function sourceCredentials(kind) {
-  if (kind === 'tmdb') return Boolean(TMDB_BEARER_TOKEN || TMDB_API_KEY);
-  if (kind === 'trakt') return Boolean(TRAKT_CLIENT_ID);
-  if (kind === 'mdblist') return Boolean(MDBLIST_API_KEY);
+  const c = currentCredentials();
+  if (kind === 'tmdb') return Boolean(c.tmdbBearerToken || c.tmdbApiKey);
+  if (kind === 'trakt') return Boolean(c.traktClientId);
+  if (kind === 'mdblist') return Boolean(c.mdblistApiKey);
   return true;
 }
 
@@ -225,10 +277,11 @@ function withQuery(base, params = {}) {
 
 async function tmdbFetch(path, params = {}) {
   requireSourceCredentials('tmdb');
+  const c = currentCredentials();
   const headers = {};
-  if (TMDB_BEARER_TOKEN) headers.authorization = `Bearer ${TMDB_BEARER_TOKEN}`;
+  if (c.tmdbBearerToken) headers.authorization = `Bearer ${c.tmdbBearerToken}`;
   const query = { ...params };
-  if (!TMDB_BEARER_TOKEN && TMDB_API_KEY) query.api_key = TMDB_API_KEY;
+  if (!c.tmdbBearerToken && c.tmdbApiKey) query.api_key = c.tmdbApiKey;
   return safeFetchJson(withQuery(`https://api.themoviedb.org${path}`, query), { headers });
 }
 
@@ -236,7 +289,7 @@ async function traktFetch(path, params = {}) {
   requireSourceCredentials('trakt');
   return safeFetchJson(withQuery(`https://api.trakt.tv${path}`, params), {
     headers: {
-      'trakt-api-key': TRAKT_CLIENT_ID,
+      'trakt-api-key': currentCredentials().traktClientId,
       'trakt-api-version': '2',
     },
   });
@@ -244,7 +297,7 @@ async function traktFetch(path, params = {}) {
 
 async function mdblistFetch(path, params = {}) {
   requireSourceCredentials('mdblist');
-  return safeFetchJson(withQuery(`https://api.mdblist.com${path}`, { ...params, apikey: MDBLIST_API_KEY }));
+  return safeFetchJson(withQuery(`https://api.mdblist.com${path}`, { ...params, apikey: currentCredentials().mdblistApiKey }));
 }
 
 function tmdbImage(path, size = 'w500') {
@@ -445,6 +498,7 @@ function cleanConfig(raw) {
     name: String(cfg.name || 'Odin Folders').slice(0, 80),
     description: String(cfg.description || 'Custom folder and catalog addon for AIOStreams and Odin.').slice(0, 300),
     exposeChildCatalogs: cfg.exposeChildCatalogs !== false,
+    credentialProfileId: /^[a-f0-9]{32}$/.test(String(cfg.credentialProfileId || '')) ? String(cfg.credentialProfileId) : '',
     folders: [],
   };
 
@@ -658,17 +712,26 @@ const server = http.createServer(async (req, res) => {
       return;
     }
     if (req.method === 'GET' && url.pathname === '/api/source-status') {
-      sendJson(res, 200, {
+      const credentials = await effectiveCredentials(url.searchParams.get('profile') || '');
+      const status = credentialContext.run(credentials, () => ({
         tmdb: sourceCredentials('tmdb'),
         trakt: sourceCredentials('trakt'),
         mdblist: sourceCredentials('mdblist'),
-      });
+        credentialStorage: Boolean(redis),
+      }));
+      sendJson(res, 200, status);
+      return;
+    }
+    if (req.method === 'POST' && url.pathname === '/api/credentials') {
+      const body = await readBody(req);
+      sendJson(res, 200, await saveCredentialProfile(JSON.parse(body || '{}')));
       return;
     }
     if (req.method === 'GET' && url.pathname === '/api/inspect-list') {
       const input = url.searchParams.get('url');
       if (!input) return sendJson(res, 400, { error: 'List URL is required' });
-      const result = await inspectList(input);
+      const credentials = await effectiveCredentials(url.searchParams.get('profile') || '');
+      const result = await credentialContext.run(credentials, () => inspectList(input));
       sendJson(res, 200, result);
       return;
     }
@@ -703,7 +766,8 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && mm) {
       const folder = cfg.folders.find((f) => f.id === decodeURIComponent(mm[1]));
       if (!folder) return sendJson(res, 404, { error: 'Folder not found' });
-      const videos = await folderVideos(folder);
+      const credentials = await effectiveCredentials(cfg.credentialProfileId);
+      const videos = await credentialContext.run(credentials, () => folderVideos(folder));
       sendJson(res, 200, {
         meta: {
           ...folderCard(folder),
@@ -720,7 +784,8 @@ const server = http.createServer(async (req, res) => {
       const found = findChildCatalog(cfg, id, type);
       if (!found) return sendJson(res, 404, { error: 'Catalog not found' });
       try {
-        const metas = await fetchSourceCatalog(found.cat);
+        const credentials = await effectiveCredentials(cfg.credentialProfileId);
+        const metas = await credentialContext.run(credentials, () => fetchSourceCatalog(found.cat));
         sendJson(res, 200, { metas }, { 'cache-control': 'public, max-age=180' });
       } catch (e) {
         sendJson(res, 502, { error: `Source catalog failed: ${e.message}` });
