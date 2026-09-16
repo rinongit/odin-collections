@@ -105,8 +105,8 @@ function isDroppedShowItem(item, dropped) {
 `;
   replaceOnce('function transformShelf(path, json) {', `${filterHelpers}\nfunction transformShelf(path, json, dropped = new Set()) {`, 'shelf filter anchor');
   replaceOnce(
-    '  let items = json.Items;\n  const now = Date.now();',
-    '  let items = json.Items.filter((item) => !isDroppedShowItem(item, dropped));\n  const now = Date.now();',
+    '  const now = Date.now();\n  let items = json.Items;',
+    '  const now = Date.now();\n  let items = json.Items.filter((item) => !isDroppedShowItem(item, dropped));',
     'shelf items anchor'
   );
   replaceOnce(
