@@ -2,6 +2,7 @@ import http from 'node:http';
 import { spawn } from 'node:child_process';
 import { createDirectSync } from './direct-sync.mjs';
 import { createMultiUserBridge } from './multiuser.mjs';
+import { createPublicProfilePortal } from './public-portal.mjs';
 
 const PORT = Number(process.env.PORT || 10000);
 const CHILD_PORT = PORT + 1;
@@ -26,6 +27,7 @@ child.on('exit', (code, signal) => {
 
 const directSync = await createDirectSync();
 const multiUser = await createMultiUserBridge();
+const publicPortal = await createPublicProfilePortal();
 
 function rewrite(req) {
   const publicUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
@@ -93,7 +95,7 @@ function proxy(req, res) {
       upstreamRes.on('data', (chunk) => chunks.push(chunk));
       upstreamRes.on('end', () => {
         let body = Buffer.concat(chunks).toString('utf8');
-        const card = `<div class="box"><h3>Trakt → Odin Direct Sync</h3><p>Use this when the AIOStreams server has addon watch-state reading disabled. It writes Trakt progress and watched state directly through the Jellyfin API.</p><a href="/direct-sync?key=${encodeURIComponent(ADMIN_KEY)}">Configure direct sync</a></div><div class="box"><h3>Extra users</h3><p>Create isolated Trakt + Jellyfin profiles for friends without affecting your account.</p><a href="/profiles?key=${encodeURIComponent(ADMIN_KEY)}">Manage bridge users</a></div>`;
+        const card = `<div class="box"><h3>Trakt → Odin Direct Sync</h3><p>Use this when the AIOStreams server has addon watch-state reading disabled. It writes Trakt progress and watched state directly through the Jellyfin API.</p><a href="/direct-sync?key=${encodeURIComponent(ADMIN_KEY)}">Configure direct sync</a></div><div class="box"><h3>Extra users</h3><p>Create isolated Trakt + Jellyfin profiles for friends without affecting your account.</p><a href="/profiles?key=${encodeURIComponent(ADMIN_KEY)}">Manage bridge users</a></div><div class="box"><h3>Public signup</h3><p>The public landing page lets anyone create their own isolated profile using their own Trakt app and Jellyfin credentials.</p><a href="/public">Open public portal</a></div>`;
         body = body.includes('</body>') ? body.replace('</body>', `${card}</body>`) : `${body}${card}`;
         const outHeaders = { ...upstreamRes.headers };
         delete outHeaders['content-length'];
@@ -118,6 +120,7 @@ function proxy(req, res) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    if (await publicPortal.handle(req, res)) return;
     if (await multiUser.handle(req, res)) return;
     if (await directSync.handle(req, res)) return;
     proxy(req, res);
@@ -131,5 +134,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Odin Trakt compatibility proxy + direct sync + multi-user listening on ${PORT}`);
+  console.log(`Odin Trakt bridge + private owner sync + public multi-user portal listening on ${PORT}`);
 });
