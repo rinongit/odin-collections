@@ -18,14 +18,24 @@ if (process.env.DIAG_AUTO === '1') {
       if (!username || !password || !publicDomain) throw new Error('diagnostic environment incomplete');
       const ids = (await redis.sMembers('jc:profiles')).filter(safeId);
       let match = null;
+      let directAuth = null;
+      let attempts = 0;
+      const triedBaseUrls = new Set();
       for (const id of ids) {
         const cfg = await getJf(id);
-        if (cfg?.username === username) {
-          const profile = await getProfile(id);
-          if (profile?.bridgeKey && cfg?.baseUrl) { match = { id, cfg, profile }; break; }
-        }
+        const profile = await getProfile(id);
+        if (!profile?.bridgeKey || !cfg?.baseUrl || triedBaseUrls.has(cfg.baseUrl)) continue;
+        triedBaseUrls.add(cfg.baseUrl);
+        attempts++;
+        try {
+          const auth = await loginJellyfin(cfg.baseUrl, username, password);
+          match = { id, cfg, profile };
+          directAuth = auth;
+          break;
+        } catch {}
       }
-      if (!match) throw new Error('matching configured profile not found');
+      result.attemptedServers = attempts;
+      if (!match || !directAuth) throw new Error('no configured Jellyfin server accepted supplied credentials');
 
       result.profile = \`\${match.id.slice(0, 4)}…\${match.id.slice(-4)}\`;
       try { result.upstreamHost = new URL(match.cfg.baseUrl).host; } catch { result.upstreamHost = ''; }
@@ -33,7 +43,7 @@ if (process.env.DIAG_AUTO === '1') {
       const manifestUrl = \`https://\${publicDomain}/u/\${match.id}/\${encodeURIComponent(match.profile.bridgeKey)}/manifest.json\`;
 
       try {
-        const auth = await loginJellyfin(match.cfg.baseUrl, username, password);
+        const auth = directAuth;
         result.direct.authStatus = 200;
         result.direct.views = await diagViews(match.cfg.baseUrl, auth.userId, auth.token);
         const sys = await diagJson(match.cfg.baseUrl, '/System/Info/Public', auth.token);
