@@ -189,16 +189,16 @@
         "released": "2024-09-01"
       },
       {
-        "id": "tt15939198",
-        "title": "Blitz",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/e9tyjbF2rugENtBolTtEhHOXgzD.jpg",
-        "released": "2024-10-09"
-      },
-      {
         "id": "tt30852384",
         "title": "All of You",
         "thumbnail": "https://image.tmdb.org/t/p/w500/U2KFjtXN9NL9eCENB28w42Jakp.jpg",
         "released": "2024-09-07"
+      },
+      {
+        "id": "tt15939198",
+        "title": "Blitz",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/e9tyjbF2rugENtBolTtEhHOXgzD.jpg",
+        "released": "2024-10-09"
       },
       {
         "id": "tt17007120",
@@ -207,28 +207,16 @@
         "released": "2023-07-21"
       },
       {
-        "id": "tt15210256",
-        "title": "Stephen Curry: Underrated",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/mFpnGiDrY9Brz4FQLKBKX1uCbl.jpg",
-        "released": "2023-01-23"
-      },
-      {
         "id": "tt13968674",
         "title": "Fingernails",
         "thumbnail": "https://image.tmdb.org/t/p/w500/q04g3un61aeBoheQEso7enM28AF.jpg",
         "released": "2023-08-31"
       },
       {
-        "id": "tt25471950",
-        "title": "Flora and Son",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pq2p8ovf8PZps2HafvJaLrZK8gS.jpg",
-        "released": "2023-01-22"
-      },
-      {
-        "id": "tt12573454",
-        "title": "Sharper",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tq8x5F17q95T1j0up5rpzXFAylN.jpg",
-        "released": "2023-02-07"
+        "id": "tt15210256",
+        "title": "Stephen Curry: Underrated",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/mFpnGiDrY9Brz4FQLKBKX1uCbl.jpg",
+        "released": "2023-01-23"
       },
       {
         "id": "tt13287846",
@@ -237,10 +225,22 @@
         "released": "2023-11-14"
       },
       {
+        "id": "tt25471950",
+        "title": "Flora and Son",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pq2p8ovf8PZps2HafvJaLrZK8gS.jpg",
+        "released": "2023-01-22"
+      },
+      {
         "id": "tt12758060",
         "title": "Tetris",
         "thumbnail": "https://image.tmdb.org/t/p/w500/4F2QwCOYHJJjecSvdOjStuVLkpu.jpg",
         "released": "2023-03-15"
+      },
+      {
+        "id": "tt12573454",
+        "title": "Sharper",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tq8x5F17q95T1j0up5rpzXFAylN.jpg",
+        "released": "2023-02-07"
       },
       {
         "id": "tt28486633",
@@ -303,16 +303,16 @@
         "released": "2022-07-30"
       },
       {
-        "id": "tt19866966",
-        "title": "Snoopy Presents: To Mom (and Dad), with Love",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/25MkSPKzlqbFwXhGU3KFm92WbL1.jpg",
-        "released": "2022-05-05"
-      },
-      {
         "id": "tt22667880",
         "title": "The Boy, the Mole, the Fox and the Horse",
         "thumbnail": "https://image.tmdb.org/t/p/w500/wAKBWRhMmBtrCCuqmFwPm2RGTph.jpg",
         "released": "2022-12-02"
+      },
+      {
+        "id": "tt19866966",
+        "title": "Snoopy Presents: To Mom (and Dad), with Love",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/25MkSPKzlqbFwXhGU3KFm92WbL1.jpg",
+        "released": "2022-05-05"
       },
       {
         "id": "tt21819250",
@@ -321,16 +321,16 @@
         "released": "2022-11-02"
       },
       {
-        "id": "tt10999120",
-        "title": "Spirited",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/h3zAzTMs5EP3cKusOxFNGSFE1WI.jpg",
-        "released": "2022-11-10"
-      },
-      {
         "id": "tt12530246",
         "title": "Emancipation",
         "thumbnail": "https://image.tmdb.org/t/p/w500/AkdNXEquLf4GIkwh1dcSB7j0FTY.jpg",
         "released": "2022-11-30"
+      },
+      {
+        "id": "tt10999120",
+        "title": "Spirited",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/h3zAzTMs5EP3cKusOxFNGSFE1WI.jpg",
+        "released": "2022-11-10"
       },
       {
         "id": "tt10268488",
@@ -411,22 +411,16 @@
         "released": "2021-11-24"
       },
       {
-        "id": "tt9130508",
-        "title": "Cherry",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg",
-        "released": "2021-02-26"
-      },
-      {
         "id": "tt14460998",
         "title": "Blush",
         "thumbnail": "https://image.tmdb.org/t/p/w500/vbQ5CVld2AjH8DEo0L8Wz8ag3Xy.jpg",
         "released": "2021-06-13"
       },
       {
-        "id": "tt3420504",
-        "title": "Finch",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/eEJtzD1F05xDipFEDY98CTH5yZn.jpg",
-        "released": "2021-11-04"
+        "id": "tt9130508",
+        "title": "Cherry",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/pwDvkDyaHEU9V7cApQhbcSJMG1w.jpg",
+        "released": "2021-02-26"
       },
       {
         "id": "tt10095582",
@@ -435,16 +429,10 @@
         "released": "2021-09-24"
       },
       {
-        "id": "tt10366460",
-        "title": "CODA",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
-        "released": "2021-01-29"
-      },
-      {
-        "id": "tt13622130",
-        "title": "Fathom",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zTw0FBGxhWTY9X4RrgV2AfbYU9Z.jpg",
-        "released": "2021-06-16"
+        "id": "tt3420504",
+        "title": "Finch",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/eEJtzD1F05xDipFEDY98CTH5yZn.jpg",
+        "released": "2021-11-04"
       },
       {
         "id": "tt14372240",
@@ -459,6 +447,24 @@
         "released": "2021-01-28"
       },
       {
+        "id": "tt10366460",
+        "title": "CODA",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
+        "released": "2021-01-29"
+      },
+      {
+        "id": "tt13622130",
+        "title": "Fathom",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zTw0FBGxhWTY9X4RrgV2AfbYU9Z.jpg",
+        "released": "2021-06-16"
+      },
+      {
+        "id": "tt13207508",
+        "title": "Swan Song",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/zzCdikGD9Qa5NT8lZtUv9dXNgsm.jpg",
+        "released": "2021-11-12"
+      },
+      {
         "id": "tt7230750",
         "title": "The Velvet Underground",
         "thumbnail": "https://image.tmdb.org/t/p/w500/9uRF6vERWfhlSZKc1sAJTTdG2Ix.jpg",
@@ -469,12 +475,6 @@
         "title": "Who Are You, Charlie Brown?",
         "thumbnail": "https://image.tmdb.org/t/p/w500/kqQfs98qAEwirmuZM48JH6ydQjb.jpg",
         "released": "2021-06-24"
-      },
-      {
-        "id": "tt13207508",
-        "title": "Swan Song",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/zzCdikGD9Qa5NT8lZtUv9dXNgsm.jpg",
-        "released": "2021-11-12"
       },
       {
         "id": "tt15553258",
@@ -495,16 +495,16 @@
         "released": "2020-09-12"
       },
       {
-        "id": "tt11692010",
-        "title": "Here We Are: Notes for Living on Planet Earth",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/tZWgclntziFRPQg0u0nI2FU4nYg.jpg",
-        "released": "2020-04-16"
-      },
-      {
         "id": "tt6285944",
         "title": "The Banker",
         "thumbnail": "https://image.tmdb.org/t/p/w500/biXzsw22U6vSd0XktmZwAOc4uik.jpg",
         "released": "2020-03-06"
+      },
+      {
+        "id": "tt11692010",
+        "title": "Here We Are: Notes for Living on Planet Earth",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/tZWgclntziFRPQg0u0nI2FU4nYg.jpg",
+        "released": "2020-04-16"
       },
       {
         "id": "tt6048922",
@@ -609,16 +609,16 @@
         "released": "2008-04-17"
       },
       {
-        "id": "tt0795421",
-        "title": "Mamma Mia!",
-        "thumbnail": "https://image.tmdb.org/t/p/w500/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg",
-        "released": "2008-06-30"
-      },
-      {
         "id": "tt0832266",
         "title": "Definitely, Maybe",
         "thumbnail": "https://image.tmdb.org/t/p/w500/7eS5RurcMyi8eVUDenaCjPGAzJ2.jpg",
         "released": "2008-01-24"
+      },
+      {
+        "id": "tt0795421",
+        "title": "Mamma Mia!",
+        "thumbnail": "https://image.tmdb.org/t/p/w500/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg",
+        "released": "2008-06-30"
       },
       {
         "id": "tt0829482",
