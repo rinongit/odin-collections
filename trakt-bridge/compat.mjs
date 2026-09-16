@@ -4,6 +4,7 @@ import { createDirectSync } from './direct-sync.mjs';
 import { createMultiUserBridge } from './multiuser.mjs';
 import { createPublicProfilePortal } from './public-portal.mjs';
 import { createMDBListPortal } from './mdblist-portal.mjs';
+import { createJellyfinShelfProxy } from './jellyfin-shelf-proxy.mjs';
 
 const PORT = Number(process.env.PORT || 10000);
 const CHILD_PORT = PORT + 1;
@@ -30,6 +31,7 @@ const directSync = await createDirectSync();
 const multiUser = await createMultiUserBridge();
 const publicPortal = await createPublicProfilePortal();
 const mdbListPortal = await createMDBListPortal();
+const shelfProxy = await createJellyfinShelfProxy();
 
 function neutralizeWebsiteText(body) {
   return String(body)
@@ -42,7 +44,38 @@ function neutralizeWebsiteText(body) {
     .replaceAll('Odin', 'Jellyfin Client');
 }
 
-function websiteResponse(res) {
+function requestOrigin(req) {
+  const proto = String(req.headers['x-forwarded-proto'] || 'https').split(',')[0].trim();
+  const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(',')[0].trim();
+  return `${proto}://${host}`;
+}
+
+function filteredJellyfinUrl(req, html) {
+  if (req.method !== 'GET') return '';
+  const u = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const origin = requestOrigin(req);
+
+  if (
+    (u.pathname === '/setup' || u.pathname === '/direct-sync') &&
+    u.searchParams.get('key') === ADMIN_KEY
+  ) {
+    return `${origin}/jellyfin-client/owner/${encodeURIComponent(BRIDGE_KEY)}`;
+  }
+
+  const m = u.pathname.match(/^\/u\/([a-f0-9]{12})\/setup$/);
+  if (!m) return '';
+  const manifest = String(html).match(
+    new RegExp(`/u/${m[1]}/([a-f0-9]{48})/manifest\\.json`)
+  );
+  if (!manifest) return '';
+  return `${origin}/jellyfin-client/u/${m[1]}/${manifest[1]}`;
+}
+
+function filteredCard(url) {
+  return `<div class="box"><h3>Filtered Jellyfin Client URL</h3><p>Use this as the server URL in your Jellyfin client. It hides episodes from Continue Watching until their exact premiere time has passed and keeps one episode per show in Next Up/Upcoming.</p><code style="word-break:break-all">${url}</code></div>`;
+}
+
+function websiteResponse(req, res) {
   let isHtml = false;
   return new Proxy(res, {
     get(target, prop) {
@@ -63,7 +96,13 @@ function websiteResponse(res) {
         return (chunk, encoding, callback) => {
           if (isHtml && chunk != null) {
             const wasBuffer = Buffer.isBuffer(chunk);
-            const text = neutralizeWebsiteText(wasBuffer ? chunk.toString('utf8') : chunk);
+            let text = wasBuffer ? chunk.toString('utf8') : String(chunk);
+            const filtered = filteredJellyfinUrl(req, text);
+            if (filtered) {
+              const card = filteredCard(filtered);
+              text = text.includes('</body>') ? text.replace('</body>', `${card}</body>`) : `${text}${card}`;
+            }
+            text = neutralizeWebsiteText(text);
             if (!target.headersSent) target.removeHeader('content-length');
             chunk = wasBuffer ? Buffer.from(text, 'utf8') : text;
           }
@@ -144,7 +183,6 @@ function proxy(req, res) {
         let body = Buffer.concat(chunks).toString('utf8');
         const card = `<div class="box"><h3>Trakt → Jellyfin Client Sync</h3><p>Use this when the Jellyfin server has watch-state reading disabled. It writes Trakt progress and watched state directly through the Jellyfin API.</p><a href="/direct-sync?key=${encodeURIComponent(ADMIN_KEY)}">Configure direct sync</a></div><div class="box"><h3>Extra users</h3><p>Create isolated Trakt + Jellyfin profiles for friends without affecting your account.</p><a href="/profiles?key=${encodeURIComponent(ADMIN_KEY)}">Manage bridge users</a></div><div class="box"><h3>Public signup</h3><p>The public landing page lets anyone create their own isolated profile using their own Trakt app and Jellyfin credentials.</p><a href="/public">Open public portal</a></div><div class="box"><h3>MDBList catalogs</h3><p>Create a private catalog manifest from your MDBList lists.</p><a href="/mdblist">Open MDBList portal</a></div>`;
         body = body.includes('</body>') ? body.replace('</body>', `${card}</body>`) : `${body}${card}`;
-        body = neutralizeWebsiteText(body);
         const outHeaders = { ...upstreamRes.headers };
         delete outHeaders['content-length'];
         delete outHeaders['content-encoding'];
@@ -168,12 +206,13 @@ function proxy(req, res) {
 
 const server = http.createServer(async (req, res) => {
   try {
-    const branded = websiteResponse(res);
+    if (await shelfProxy.handle(req, res)) return;
+    const branded = websiteResponse(req, res);
     if (await mdbListPortal.handle(req, branded)) return;
     if (await publicPortal.handle(req, branded)) return;
     if (await multiUser.handle(req, branded)) return;
-    if (await directSync.handle(req, res)) return;
-    proxy(req, res);
+    if (await directSync.handle(req, branded)) return;
+    proxy(req, branded);
   } catch (err) {
     console.error('compat:', err?.message || err);
     if (!res.headersSent) {
@@ -184,5 +223,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Trakt bridge + private owner sync + public Jellyfin Client portal + MDBList catalogs listening on ${PORT}`);
+  console.log(`Trakt bridge + private owner sync + public Jellyfin Client portal + MDBList catalogs + filtered shelves listening on ${PORT}`);
 });
