@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.mjs",
-    "check": "node --check server.mjs"
+    "start": "node bootstrap.mjs",
+    "check": "node --check server.mjs && node --check bootstrap.mjs && node --check smoke-test.mjs",
+    "test": "node smoke-test.mjs",
+    "postinstall": "npm test"
   },
   "engines": {
     "node": ">=22"
