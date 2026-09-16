@@ -12,7 +12,6 @@ if (process.env.DIAG_PROXY === '1') {
   setTimeout(async () => {
     const username = String(process.env.DIAG_USER || '').trim();
     const password = String(process.env.DIAG_PASS || '');
-    const upstreamBase = String(process.env.DIAG_BASE || '').replace(/\\/$/, '');
     const publicDomain = String(process.env.RAILWAY_PUBLIC_DOMAIN || '').trim();
     const result = { direct: {}, proxy: {}, manifest: {}, comparison: {} };
     const tempId = secret(6);
@@ -54,7 +53,12 @@ if (process.env.DIAG_PROXY === '1') {
     }
 
     try {
-      if (!username || !password || !upstreamBase) throw new Error('diagnostic environment incomplete');
+      const storedRaw = await redis.get('jellyfin:direct:config:v1');
+      let storedCfg = null;
+      try { storedCfg = storedRaw ? JSON.parse(storedRaw) : null; } catch {}
+      const upstreamBase = String(storedCfg?.baseUrl || '').replace(/\\/$/, '');
+      if (!username || !password || !upstreamBase) throw new Error('diagnostic environment or stored upstream incomplete');
+
       const directAuth = await loginJellyfin(upstreamBase, username, password);
       result.direct.authStatus = 200;
       result.direct.views = await inspectViews(upstreamBase, directAuth);
@@ -119,7 +123,6 @@ if (process.env.DIAG_PROXY === '1') {
         mismatches,
       };
 
-      // Remove internal comparison keys from logged rows.
       for (const row of result.direct.views?.views || []) delete row.key;
       for (const row of result.proxy.views?.views || []) delete row.key;
     } catch (e) {
