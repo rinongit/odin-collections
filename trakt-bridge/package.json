@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node diag-jellyfin-catalogs.mjs && node compat.mjs"
+    "start": "node compat.mjs"
   },
   "engines": {
     "node": ">=22"
