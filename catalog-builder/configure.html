@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Odin Catalog Builder</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1116;--panel:#161b22;--panel2:#1d2430;--line:#303947;--text:#f2f5f7;--muted:#9aa7b5;--accent:#7e8f7a;--danger:#d46d6d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}.wrap{max-width:1180px;margin:auto;padding:24px}.hero{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px}.hero h1{margin:0;font-size:28px}.hero p{margin:4px 0 0;color:var(--muted)}.bar,.folder,.importer,.result{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;background:#0d1218;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:10px}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.btn.primary{background:var(--accent);border-color:var(--accent);color:#0c120d;font-weight:700}.btn.danger{color:#ffdcdc;border-color:#6d3a3a;background:#311d1d}.folderHead{display:flex;align-items:center;justify-content:space-between;gap:12px}.folderTitle{display:flex;gap:10px;align-items:center}.drag{cursor:grab;color:var(--muted);font-size:18px}.catalogs{margin-top:12px;display:grid;gap:10px}.catalog{background:#0f141b;border:1px solid var(--line);border-radius:12px;padding:12px}.catalogHead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}.small{font-size:12px;color:var(--muted)}.preview{width:150px;height:86px;border-radius:10px;border:1px solid var(--line);background:#0b0f14 center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--muted);overflow:hidden}.preview.poster{width:86px;height:128px}.preview.square{width:96px;height:96px}.url{word-break:break-all;background:#0b0f14;border:1px dashed var(--line);padding:10px;border-radius:10px}.hidden{display:none!important}.catalogPick{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:8px;border-top:1px solid var(--line)}.ok{color:#aee4a5}.err{color:#ff9d9d}@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.preview{width:100%;height:120px}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="hero"><div><h1>Odin Catalog Builder</h1><p>Create folder cards, import Stremio/AIOStreams catalogs, choose artwork and poster shape, then generate one addon URL.</p></div><div class="actions"><button class="btn" id="loadDemo">Demo</button><button class="btn" id="exportCfg">Export JSON</button><button class="btn" id="importCfg">Import JSON</button><input id="importFile" type="file" accept="application/json" class="hidden" /></div></div>
+<div class="bar grid">
+  <div class="field"><label>Addon name</label><input id="addonName" value="Odin Folders" /></div>
+  <div class="field"><label>Description</label><input id="addonDescription" value="Custom folder and catalog addon for AIOStreams and Odin." /></div>
+  <label style="display:flex;gap:8px;align-items:center"><input id="exposeChildren" type="checkbox" checked /> Also expose each child catalog directly in AIOS</label>
+  <div class="actions" style="justify-content:flex-end"><button class="btn primary" id="addFolder">+ New Folder</button></div>
+</div>
+<div class="importer">
+  <div class="grid"><div class="field"><label>Import catalogs from manifest URL</label><input id="manifestInput" placeholder="https://example.com/manifest.json" /></div><div class="field"><label>Target folder</label><select id="targetFolder"></select></div></div>
+  <div class="actions" style="margin-top:10px"><button class="btn" id="inspectManifest">Read Addon</button><span id="inspectStatus" class="small"></span></div>
+  <div id="manifestResults" class="hidden" style="margin-top:10px"></div>
+</div>
+<div id="folders"></div>
+<div class="result">
+  <div class="actions"><button class="btn primary" id="generate">Generate Addon URL</button><button class="btn" id="copyUrl" disabled>Copy URL</button><span id="genStatus" class="small"></span></div>
+  <div id="manifestUrl" class="url" style="margin-top:10px">Your configured manifest URL will appear here.</div>
+</div>
+</div>
+<script>
+const $=s=>document.querySelector(s); const foldersEl=$('#folders');
+let state={name:'Odin Folders',description:'Custom folder and catalog addon for AIOStreams and Odin.',exposeChildCatalogs:true,folders:[]};
+const uid=()=>Math.random().toString(36).slice(2,10);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function shapeClass(s){return s==='poster'?'poster':s==='square'?'square':''}
+function newFolder(name='New Folder'){return {id:uid(),name,description:'',image:'',background:'',posterShape:'landscape',enabled:true,catalogs:[]}}
+function newCatalog(){return {id:uid(),name:'New Catalog',type:'movie',catalogId:'',manifestUrl:'',image:'',posterShape:'source',enabled:true}}
+function syncTop(){state.name=$('#addonName').value;state.description=$('#addonDescription').value;state.exposeChildCatalogs=$('#exposeChildren').checked}
+function render(){
+  $('#addonName').value=state.name||'';$('#addonDescription').value=state.description||'';$('#exposeChildren').checked=state.exposeChildCatalogs!==false;
+  foldersEl.innerHTML='';
+  state.folders.forEach((f,fi)=>{
+    const el=document.createElement('div');el.className='folder';el.draggable=true;el.dataset.fi=fi;
+    el.innerHTML=`<div class="folderHead"><div class="folderTitle"><span class="drag">☰</span><strong>${esc(f.name||'Folder')}</strong><span class="small">${f.catalogs.length} catalog(s)</span></div><div class="actions"><button class="btn addCat">+ Manual Catalog</button><button class="btn danger removeFolder">Delete</button></div></div>
+    <div class="grid3" style="margin-top:12px">
+      <div class="field"><label>Folder name</label><input data-k="name" value="${esc(f.name)}"></div>
+      <div class="field"><label>Poster shape</label><select data-k="posterShape"><option value="landscape" ${f.posterShape==='landscape'?'selected':''}>Landscape</option><option value="poster" ${f.posterShape==='poster'?'selected':''}>Portrait</option><option value="square" ${f.posterShape==='square'?'selected':''}>Square</option></select></div>
+      <div class="field"><label>Custom image URL</label><input data-k="image" value="${esc(f.image)}" placeholder="https://..."></div>
+      <div class="field"><label>Background image URL (optional)</label><input data-k="background" value="${esc(f.background)}" placeholder="Defaults to folder image"></div>
+      <div class="field" style="grid-column:span 2"><label>Description</label><input data-k="description" value="${esc(f.description)}"></div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:12px;align-items:center"><div class="preview ${shapeClass(f.posterShape)}" style="background-image:url('${esc(f.image).replace(/'/g,'%27')}')">${f.image?'':'preview'}</div><label><input data-k="enabled" type="checkbox" ${f.enabled!==false?'checked':''}> Enabled</label></div>
+    <div class="catalogs"></div>`;
+    el.querySelectorAll('[data-k]').forEach(inp=>inp.addEventListener('input',()=>{const k=inp.dataset.k;f[k]=inp.type==='checkbox'?inp.checked:inp.value;renderTargets();if(k==='name'||k==='image'||k==='posterShape')render()}));
+    el.querySelector('.addCat').onclick=()=>{f.catalogs.push(newCatalog());render()};
+    el.querySelector('.removeFolder').onclick=()=>{state.folders.splice(fi,1);render()};
+    const list=el.querySelector('.catalogs');
+    f.catalogs.forEach((c,ci)=>{
+      const ce=document.createElement('div');ce.className='catalog';ce.draggable=true;ce.dataset.ci=ci;
+      ce.innerHTML=`<div class="catalogHead"><div><span class="drag">⋮⋮</span> <strong>${esc(c.name||'Catalog')}</strong> <span class="small">${esc(c.type)} / ${esc(c.catalogId||'no id')}</span></div><button class="btn danger delCat">Delete</button></div>
+      <div class="grid3">
+       <div class="field"><label>Display name</label><input data-ck="name" value="${esc(c.name)}"></div>
+       <div class="field"><label>Type</label><input data-ck="type" value="${esc(c.type)}" placeholder="movie or series"></div>
+       <div class="field"><label>Catalog ID</label><input data-ck="catalogId" value="${esc(c.catalogId)}"></div>
+       <div class="field" style="grid-column:span 2"><label>Source manifest URL</label><input data-ck="manifestUrl" value="${esc(c.manifestUrl)}" placeholder="https://.../manifest.json"></div>
+       <div class="field"><label>Force item poster shape</label><select data-ck="posterShape"><option value="source" ${c.posterShape==='source'?'selected':''}>Keep source</option><option value="landscape" ${c.posterShape==='landscape'?'selected':''}>Landscape</option><option value="poster" ${c.posterShape==='poster'?'selected':''}>Portrait</option><option value="square" ${c.posterShape==='square'?'selected':''}>Square</option></select></div>
+       <div class="field" style="grid-column:span 2"><label>Fallback image URL (optional)</label><input data-ck="image" value="${esc(c.image)}"></div>
+       <label style="display:flex;gap:8px;align-items:center"><input data-ck="enabled" type="checkbox" ${c.enabled!==false?'checked':''}> Enabled</label>
+      </div>`;
+      ce.querySelectorAll('[data-ck]').forEach(inp=>inp.addEventListener('input',()=>{const k=inp.dataset.ck;c[k]=inp.type==='checkbox'?inp.checked:inp.value;if(k==='name'||k==='type'||k==='catalogId')render()}));
+      ce.querySelector('.delCat').onclick=()=>{f.catalogs.splice(ci,1);render()};
+      ce.addEventListener('dragstart',e=>{e.stopPropagation();e.dataTransfer.setData('text/catalog',JSON.stringify({fi,ci}))});
+      ce.addEventListener('dragover',e=>e.preventDefault());
+      ce.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();const raw=e.dataTransfer.getData('text/catalog');if(!raw)return;const from=JSON.parse(raw);const moved=state.folders[from.fi].catalogs.splice(from.ci,1)[0];let target=ci;if(from.fi===fi&&from.ci<ci)target--;f.catalogs.splice(Math.max(0,target),0,moved);render()});
+      list.appendChild(ce);
+    });
+    el.addEventListener('dragstart',e=>{if(e.target.closest('.catalog'))return;e.dataTransfer.setData('text/folder',String(fi))});
+    el.addEventListener('dragover',e=>e.preventDefault());
+    el.addEventListener('drop',e=>{const raw=e.dataTransfer.getData('text/folder');if(raw==='')return;e.preventDefault();const from=Number(raw);const moved=state.folders.splice(from,1)[0];let target=fi;if(from<fi)target--;state.folders.splice(Math.max(0,target),0,moved);render()});
+    foldersEl.appendChild(el);
+  });
+  renderTargets();
+}
+function renderTargets(){const sel=$('#targetFolder');const old=sel.value;sel.innerHTML=state.folders.map((f,i)=>`<option value="${i}">${esc(f.name)}</option>`).join('');if([...sel.options].some(o=>o.value===old))sel.value=old}
+$('#addFolder').onclick=()=>{state.folders.push(newFolder());render()};
+$('#addonName').oninput=syncTop;$('#addonDescription').oninput=syncTop;$('#exposeChildren').onchange=syncTop;
+$('#inspectManifest').onclick=async()=>{const url=$('#manifestInput').value.trim();const status=$('#inspectStatus');const box=$('#manifestResults');if(!url)return;status.textContent='Reading…';box.classList.add('hidden');try{const r=await fetch('/api/inspect?url='+encodeURIComponent(url));const j=await r.json();if(!r.ok)throw new Error(j.error||'Failed');status.innerHTML='<span class="ok">Loaded '+esc(j.name||'addon')+'</span>';box.innerHTML='<div class="small">Select catalogs to add:</div>'+j.catalogs.map((c,i)=>`<label class="catalogPick"><input type="checkbox" data-pick="${i}" checked><span><strong>${esc(c.name||c.id)}</strong><br><span class="small">${esc(c.type)} / ${esc(c.id)}</span></span><select data-shape="${i}"><option value="source">Keep source art</option><option value="landscape">Landscape</option><option value="poster">Portrait</option><option value="square">Square</option></select></label>`).join('')+'<div class="actions" style="margin-top:10px"><button class="btn primary" id="addPicked">Add selected</button></div>';box.classList.remove('hidden');$('#addPicked').onclick=()=>{let fi=Number($('#targetFolder').value);if(!state.folders[fi]){state.folders.push(newFolder(j.name||'Imported'));fi=state.folders.length-1}j.catalogs.forEach((c,i)=>{const pick=box.querySelector(`[data-pick="${i}"]`);if(!pick?.checked)return;const sh=box.querySelector(`[data-shape="${i}"]`).value;state.folders[fi].catalogs.push({id:uid(),name:c.name||c.id,type:c.type||'movie',catalogId:c.id,manifestUrl:j.manifestUrl,image:'',posterShape:sh,enabled:true})});render();box.classList.add('hidden')};}catch(e){status.innerHTML='<span class="err">'+esc(e.message)+'</span>'}}
+$('#generate').onclick=async()=>{syncTop();const st=$('#genStatus');st.textContent='Generating…';try{const r=await fetch('/api/encode',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(state)});const j=await r.json();if(!r.ok)throw new Error(j.error||'Failed');const url=location.origin+'/c/'+j.token+'/manifest.json';$('#manifestUrl').textContent=url;$('#copyUrl').disabled=false;$('#copyUrl').dataset.url=url;st.innerHTML='<span class="ok">Ready</span>'}catch(e){st.innerHTML='<span class="err">'+esc(e.message)+'</span>'}}
+$('#copyUrl').onclick=async()=>{await navigator.clipboard.writeText($('#copyUrl').dataset.url);$('#genStatus').textContent='Copied'};
+$('#exportCfg').onclick=()=>{syncTop();const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='odin-folders.json';a.click();URL.revokeObjectURL(a.href)};
+$('#importCfg').onclick=()=>$('#importFile').click();$('#importFile').onchange=async e=>{try{state=JSON.parse(await e.target.files[0].text());render()}catch{alert('Invalid JSON')}};
+$('#loadDemo').onclick=()=>{state={name:'Odin Folders',description:'Custom folder and catalog addon for AIOStreams and Odin.',exposeChildCatalogs:true,folders:[{...newFolder('Netflix'),image:'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/NetflixC.png',posterShape:'landscape'},{...newFolder('Max / HBO'),image:'https://cdn.jsdelivr.net/gh/rinongit/ImgCo@main/StreamCov/HBOTrans.png',posterShape:'landscape'}]};render()};
+state.folders=[newFolder('My Folder')];render();
+</script></body></html>
