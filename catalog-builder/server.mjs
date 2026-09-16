@@ -3,12 +3,15 @@ import { deflateRawSync, inflateRawSync } from 'node:zlib';
 import dns from 'node:dns/promises';
 import net from 'node:net';
 import crypto from 'node:crypto';
-import { readFileSync } from 'node:fs';
 
 const PORT = Number(process.env.PORT || 7000);
 const MAX_BODY = 512 * 1024;
 const FETCH_TIMEOUT_MS = Number(process.env.FETCH_TIMEOUT_MS || 12000);
 const CATALOG_LIMIT = Math.min(200, Math.max(1, Number(process.env.CATALOG_LIMIT || 80)));
+const TMDB_BEARER_TOKEN = process.env.TMDB_BEARER_TOKEN || process.env.TMDB_READ_ACCESS_TOKEN || '';
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
+const TRAKT_CLIENT_ID = process.env.TRAKT_CLIENT_ID || '';
+const MDBLIST_API_KEY = process.env.MDBLIST_API_KEY || '';
 
 const jsonHeaders = {
   'content-type': 'application/json; charset=utf-8',
@@ -134,8 +137,8 @@ async function safeFetch(input, options = {}, redirects = 0) {
   }
 }
 
-async function safeFetchJson(input) {
-  const response = await safeFetch(input);
+async function safeFetchJson(input, options = {}) {
+  const response = await safeFetch(input, options);
   if (!response.ok) throw new Error(`Source returned HTTP ${response.status}`);
   const text = await response.text();
   if (text.length > 8 * 1024 * 1024) throw new Error('Source response is too large');
@@ -156,6 +159,283 @@ function addonBaseFromManifest(manifestUrl) {
   u.search = '';
   u.hash = '';
   return u.toString();
+}
+
+function detectListSource(input) {
+  const sourceUrl = String(input || '').trim();
+  const u = new URL(sourceUrl);
+  const host = u.hostname.toLowerCase().replace(/^www\./, '').replace(/^app\./, '');
+  const parts = u.pathname.split('/').filter(Boolean).map((x) => decodeURIComponent(x));
+
+  if (host === 'themoviedb.org' || host === 'api.themoviedb.org') {
+    let id = null;
+    if (parts[0] === 'list' && /^\d+$/.test(parts[1] || '')) id = parts[1];
+    if (parts[0] === '4' && parts[1] === 'list' && /^\d+$/.test(parts[2] || '')) id = parts[2];
+    if (!id) throw new Error('TMDB list URL must look like themoviedb.org/list/123');
+    return { kind: 'tmdb', sourceUrl, listId: id };
+  }
+
+  if (host === 'trakt.tv' || host === 'api.trakt.tv') {
+    if (parts[0] === 'users' && parts[1] && parts[2] === 'lists' && parts[3]) {
+      return { kind: 'trakt', sourceUrl, mode: 'user', user: parts[1], slug: parts[3] };
+    }
+    if (parts[0] === 'lists' && parts[1] === 'official' && parts[2]) {
+      return { kind: 'trakt', sourceUrl, mode: 'official', slug: parts[2] };
+    }
+    if (parts[0] === 'lists' && parts[1]) {
+      return { kind: 'trakt', sourceUrl, mode: 'global', listId: parts[1] };
+    }
+    throw new Error('Unsupported Trakt list URL');
+  }
+
+  if (host === 'mdblist.com' || host === 'api.mdblist.com') {
+    if (parts[0] === 'lists' && parts[1] && parts[2]) {
+      return { kind: 'mdblist', sourceUrl, user: parts[1], slug: parts[2] };
+    }
+    throw new Error('MDBList URL must look like mdblist.com/lists/user/list-name');
+  }
+
+  throw new Error('Supported list sources are TMDB, Trakt and MDBList');
+}
+
+function sourceCredentials(kind) {
+  if (kind === 'tmdb') return Boolean(TMDB_BEARER_TOKEN || TMDB_API_KEY);
+  if (kind === 'trakt') return Boolean(TRAKT_CLIENT_ID);
+  if (kind === 'mdblist') return Boolean(MDBLIST_API_KEY);
+  return true;
+}
+
+function requireSourceCredentials(kind) {
+  if (sourceCredentials(kind)) return;
+  const names = {
+    tmdb: 'TMDB_BEARER_TOKEN or TMDB_API_KEY',
+    trakt: 'TRAKT_CLIENT_ID',
+    mdblist: 'MDBLIST_API_KEY',
+  };
+  throw new Error(`${kind.toUpperCase()} is not configured on the server (${names[kind]} is missing)`);
+}
+
+function withQuery(base, params = {}) {
+  const u = new URL(base);
+  for (const [key, value] of Object.entries(params)) {
+    if (value !== undefined && value !== null && value !== '') u.searchParams.set(key, String(value));
+  }
+  return u.toString();
+}
+
+async function tmdbFetch(path, params = {}) {
+  requireSourceCredentials('tmdb');
+  const headers = {};
+  if (TMDB_BEARER_TOKEN) headers.authorization = `Bearer ${TMDB_BEARER_TOKEN}`;
+  const query = { ...params };
+  if (!TMDB_BEARER_TOKEN && TMDB_API_KEY) query.api_key = TMDB_API_KEY;
+  return safeFetchJson(withQuery(`https://api.themoviedb.org${path}`, query), { headers });
+}
+
+async function traktFetch(path, params = {}) {
+  requireSourceCredentials('trakt');
+  return safeFetchJson(withQuery(`https://api.trakt.tv${path}`, params), {
+    headers: {
+      'trakt-api-key': TRAKT_CLIENT_ID,
+      'trakt-api-version': '2',
+    },
+  });
+}
+
+async function mdblistFetch(path, params = {}) {
+  requireSourceCredentials('mdblist');
+  return safeFetchJson(withQuery(`https://api.mdblist.com${path}`, { ...params, apikey: MDBLIST_API_KEY }));
+}
+
+function tmdbImage(path, size = 'w500') {
+  if (!path) return undefined;
+  const value = String(path);
+  if (/^https?:\/\//i.test(value)) return value;
+  return `https://image.tmdb.org/t/p/${size}${value.startsWith('/') ? value : `/${value}`}`;
+}
+
+function firstImage(value) {
+  if (!value) return undefined;
+  if (typeof value === 'string') return /^https?:\/\//i.test(value) ? value : undefined;
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = firstImage(item);
+      if (found) return found;
+    }
+    return undefined;
+  }
+  if (typeof value === 'object') {
+    for (const key of ['full', 'medium', 'thumb', 'url', 'original', 'large']) {
+      const found = firstImage(value[key]);
+      if (found) return found;
+    }
+  }
+  return undefined;
+}
+
+function mediaType(value) {
+  const x = String(value || '').toLowerCase();
+  if (x === 'movie' || x === 'movies') return 'movie';
+  if (['show', 'shows', 'tv', 'series', 'episode'].includes(x)) return 'series';
+  return null;
+}
+
+function externalId(ids = {}) {
+  const imdb = ids.imdb || ids.imdbid || ids.imdb_id;
+  if (imdb) return String(imdb);
+  const tmdb = ids.tmdb || ids.tmdbid || ids.tmdb_id || ids.id;
+  if (tmdb != null && String(tmdb).match(/^\d+$/)) return `tmdb:${tmdb}`;
+  return null;
+}
+
+async function fetchTmdbList(info, maxItems = CATALOG_LIMIT * 3) {
+  const items = [];
+  let page = 1;
+  let name = '';
+  let description = '';
+  let totalPages = 1;
+  while (items.length < maxItems && page <= Math.min(totalPages, 15)) {
+    const json = await tmdbFetch(`/4/list/${encodeURIComponent(info.listId)}`, { language: 'en-US', page });
+    if (page === 1) {
+      name = json?.name || `TMDB List ${info.listId}`;
+      description = json?.description || '';
+      totalPages = Math.max(1, Number(json?.total_pages || 1));
+    }
+    const results = Array.isArray(json?.results) ? json.results : [];
+    items.push(...results);
+    if (!results.length) break;
+    page += 1;
+  }
+  const metas = items.slice(0, maxItems).map((item) => {
+    const type = mediaType(item?.media_type || (item?.title ? 'movie' : 'series'));
+    if (!type || !item?.id) return null;
+    return {
+      id: `tmdb:${item.id}`,
+      type,
+      name: String(item.title || item.name || `TMDB ${item.id}`),
+      poster: tmdbImage(item.poster_path, 'w500'),
+      background: tmdbImage(item.backdrop_path, 'w780'),
+      description: item.overview || undefined,
+      releaseInfo: String(item.release_date || item.first_air_date || '').slice(0, 4) || undefined,
+    };
+  }).filter(Boolean);
+  return { name, description, metas };
+}
+
+async function resolveTraktGlobal(info) {
+  if (info.mode === 'global' && /^\d+$/.test(String(info.listId || ''))) return { id: info.listId, name: '' };
+  if (info.mode === 'official') {
+    const results = await traktFetch('/search/list', { query: info.slug, extended: 'full', page: 1, limit: 30 });
+    const rows = Array.isArray(results) ? results : [];
+    const hit = rows.map((x) => x?.list || x).find((list) => {
+      const ids = list?.ids || {};
+      return String(ids.slug || '').toLowerCase() === String(info.slug).toLowerCase() ||
+        slug(list?.name || '') === slug(info.slug);
+    });
+    if (!hit?.ids?.trakt) throw new Error('Could not resolve this Trakt official list');
+    return { id: hit.ids.trakt, name: hit.name || '' };
+  }
+  return null;
+}
+
+async function fetchTraktList(info, maxItems = CATALOG_LIMIT * 3) {
+  const limit = Math.min(1000, Math.max(20, maxItems));
+  let path;
+  let listMeta = null;
+  if (info.mode === 'user') {
+    const base = `/users/${encodeURIComponent(info.user)}/lists/${encodeURIComponent(info.slug)}`;
+    listMeta = await traktFetch(base, { extended: 'full' }).catch(() => null);
+    path = `${base}/items`;
+  } else {
+    const resolved = await resolveTraktGlobal(info);
+    path = `/lists/${encodeURIComponent(resolved?.id || info.listId)}/items`;
+    listMeta = resolved?.id ? await traktFetch(`/lists/${encodeURIComponent(resolved.id)}`, { extended: 'full' }).catch(() => null) : null;
+    if (!listMeta && resolved?.name) listMeta = { name: resolved.name };
+  }
+  const rows = await traktFetch(path, { extended: 'full,images', page: 1, limit });
+  const metas = (Array.isArray(rows) ? rows : []).slice(0, maxItems).map((row) => {
+    const rawType = row?.type || (row?.movie ? 'movie' : row?.show ? 'show' : '');
+    const type = mediaType(rawType);
+    const media = row?.movie || row?.show || row;
+    if (!type || !media) return null;
+    const id = externalId(media.ids || {});
+    if (!id) return null;
+    const images = media.images || row.images || {};
+    return {
+      id,
+      type,
+      name: String(media.title || media.name || id),
+      poster: firstImage(images.poster) || firstImage(images.thumb) || undefined,
+      background: firstImage(images.fanart) || firstImage(images.background) || undefined,
+      description: media.overview || undefined,
+      releaseInfo: String(media.year || media.released || media.first_aired || '').slice(0, 4) || undefined,
+    };
+  }).filter(Boolean);
+  return {
+    name: listMeta?.name || info.slug || `Trakt List ${info.listId || ''}`.trim(),
+    description: listMeta?.description || '',
+    metas,
+  };
+}
+
+async function fetchMdblistList(info, maxItems = CATALOG_LIMIT * 3) {
+  const path = `/lists/${encodeURIComponent(info.user)}/${encodeURIComponent(info.slug)}`;
+  const meta = await mdblistFetch(path).catch(() => null);
+  const json = await mdblistFetch(`${path}/items`, { unified: true, limit: Math.min(1000, maxItems), offset: 0 });
+  let rows = Array.isArray(json) ? json : [];
+  if (!rows.length && json && typeof json === 'object') {
+    rows = [...(Array.isArray(json.movies) ? json.movies : []), ...(Array.isArray(json.shows) ? json.shows : [])];
+  }
+  const metas = rows.slice(0, maxItems).map((item) => {
+    const type = mediaType(item?.mediatype || item?.type || (item?.show ? 'show' : item?.movie ? 'movie' : ''));
+    const media = item?.movie || item?.show || item;
+    if (!type || !media) return null;
+    const id = externalId({
+      imdb: media.imdbid || media.imdb_id || media.imdb,
+      tmdb: media.tmdbid || media.tmdb_id || media.id,
+    });
+    if (!id) return null;
+    return {
+      id,
+      type,
+      name: String(media.title || media.name || id),
+      poster: firstImage(media.poster) || firstImage(media.image) || tmdbImage(media.poster_path, 'w500'),
+      background: firstImage(media.background) || firstImage(media.backdrop) || tmdbImage(media.backdrop_path, 'w780'),
+      description: media.description || media.overview || undefined,
+      releaseInfo: String(media.release_year || media.year || media.released || '').slice(0, 4) || undefined,
+    };
+  }).filter(Boolean);
+  return {
+    name: meta?.name || meta?.title || info.slug,
+    description: meta?.description || '',
+    metas,
+  };
+}
+
+async function fetchListSource(info, maxItems = CATALOG_LIMIT * 3) {
+  if (info.kind === 'tmdb') return fetchTmdbList(info, maxItems);
+  if (info.kind === 'trakt') return fetchTraktList(info, maxItems);
+  if (info.kind === 'mdblist') return fetchMdblistList(info, maxItems);
+  throw new Error('Unsupported list source');
+}
+
+async function inspectList(input) {
+  const info = detectListSource(input);
+  requireSourceCredentials(info.kind);
+  const result = await fetchListSource(info, Math.max(80, CATALOG_LIMIT * 2));
+  const movies = result.metas.filter((m) => m.type === 'movie').length;
+  const series = result.metas.filter((m) => m.type === 'series').length;
+  const catalogs = [];
+  if (movies) catalogs.push({ type: 'movie', id: `${info.kind}-movies`, name: `${result.name} • Movies`, count: movies });
+  if (series) catalogs.push({ type: 'series', id: `${info.kind}-series`, name: `${result.name} • Series`, count: series });
+  if (!catalogs.length) throw new Error('No movie or series items were found in this list');
+  return {
+    sourceKind: info.kind,
+    sourceUrl: info.sourceUrl,
+    name: result.name,
+    description: result.description,
+    catalogs,
+  };
 }
 
 function cleanConfig(raw) {
@@ -187,17 +467,34 @@ function cleanConfig(raw) {
     for (const c of catalogs.slice(0, 100)) {
       if (!c || c.enabled === false) continue;
       try {
-        const manifestUrl = normalizeManifestUrl(c.manifestUrl);
-        folder.catalogs.push({
+        const requestedKind = String(c.sourceKind || 'addon').toLowerCase();
+        const base = {
           id: slug(c.id || c.catalogId || c.name),
           name: String(c.name || c.catalogName || c.catalogId || 'Catalog').slice(0, 120),
           type: ['movie', 'series', 'anime'].includes(c.type) ? c.type : String(c.type || 'movie').slice(0, 40),
           catalogId: String(c.catalogId || c.id || '').slice(0, 160),
-          manifestUrl,
           image: String(c.image || '').slice(0, 2000),
           posterShape: ['source', 'poster', 'landscape', 'square'].includes(c.posterShape) ? c.posterShape : 'source',
-        });
+        };
+        if (requestedKind === 'addon') {
+          folder.catalogs.push({
+            ...base,
+            sourceKind: 'addon',
+            manifestUrl: normalizeManifestUrl(c.manifestUrl),
+            sourceUrl: '',
+          });
+        } else {
+          const info = detectListSource(c.sourceUrl || c.listUrl || c.manifestUrl);
+          if (info.kind !== requestedKind) throw new Error('List source type does not match URL');
+          folder.catalogs.push({
+            ...base,
+            sourceKind: info.kind,
+            manifestUrl: '',
+            sourceUrl: info.sourceUrl,
+          });
+        }
       } catch {
+        // Ignore invalid catalog sources in generated configs.
       }
     }
     out.folders.push(folder);
@@ -214,11 +511,17 @@ function childCatalogId(folder, cat) {
 }
 
 function buildManifest(cfg) {
-  const catalogs = [{ type: 'movie', id: 'odin-folders', name: 'Folders' }];
+  const catalogs = [
+    { type: 'movie', id: 'odin-folders', name: 'Folders' },
+  ];
   if (cfg.exposeChildCatalogs) {
     for (const folder of cfg.folders) {
       for (const cat of folder.catalogs) {
-        catalogs.push({ type: cat.type, id: childCatalogId(folder, cat), name: `${folder.name} • ${cat.name}` });
+        catalogs.push({
+          type: cat.type,
+          id: childCatalogId(folder, cat),
+          name: `${folder.name} • ${cat.name}`,
+        });
       }
     }
   }
@@ -262,10 +565,16 @@ function transformCatalogMetas(metas, cat) {
 }
 
 async function fetchSourceCatalog(cat) {
-  const base = addonBaseFromManifest(cat.manifestUrl);
-  const url = `${base}/catalog/${encodeURIComponent(cat.type)}/${encodeURIComponent(cat.catalogId)}.json`;
-  const json = await safeFetchJson(url);
-  return transformCatalogMetas(json?.metas, cat);
+  if ((cat.sourceKind || 'addon') === 'addon') {
+    const base = addonBaseFromManifest(cat.manifestUrl);
+    const url = `${base}/catalog/${encodeURIComponent(cat.type)}/${encodeURIComponent(cat.catalogId)}.json`;
+    const json = await safeFetchJson(url);
+    return transformCatalogMetas(json?.metas, cat);
+  }
+  const info = detectListSource(cat.sourceUrl);
+  const json = await fetchListSource(info, CATALOG_LIMIT * 3);
+  const metas = json.metas.filter((m) => m.type === cat.type).slice(0, CATALOG_LIMIT);
+  return transformCatalogMetas(metas, cat);
 }
 
 async function folderVideos(folder) {
@@ -306,8 +615,9 @@ function findChildCatalog(cfg, id, type) {
   return null;
 }
 
-const CONFIGURE_HTML = readFileSync(new URL('./configure.html', import.meta.url), 'utf8');
 
+import { readFileSync } from 'node:fs';
+const CONFIGURE_HTML = readFileSync(new URL('./configure.html', import.meta.url), 'utf8');
 const server = http.createServer(async (req, res) => {
   try {
     if (req.method === 'OPTIONS') {
@@ -347,6 +657,21 @@ const server = http.createServer(async (req, res) => {
       });
       return;
     }
+    if (req.method === 'GET' && url.pathname === '/api/source-status') {
+      sendJson(res, 200, {
+        tmdb: sourceCredentials('tmdb'),
+        trakt: sourceCredentials('trakt'),
+        mdblist: sourceCredentials('mdblist'),
+      });
+      return;
+    }
+    if (req.method === 'GET' && url.pathname === '/api/inspect-list') {
+      const input = url.searchParams.get('url');
+      if (!input) return sendJson(res, 400, { error: 'List URL is required' });
+      const result = await inspectList(input);
+      sendJson(res, 200, result);
+      return;
+    }
     if (req.method === 'POST' && url.pathname === '/api/encode') {
       const body = await readBody(req);
       const cfg = cleanConfig(JSON.parse(body || '{}'));
@@ -379,7 +704,12 @@ const server = http.createServer(async (req, res) => {
       const folder = cfg.folders.find((f) => f.id === decodeURIComponent(mm[1]));
       if (!folder) return sendJson(res, 404, { error: 'Folder not found' });
       const videos = await folderVideos(folder);
-      sendJson(res, 200, { meta: { ...folderCard(folder), videos } }, { 'cache-control': 'public, max-age=180' });
+      sendJson(res, 200, {
+        meta: {
+          ...folderCard(folder),
+          videos,
+        },
+      }, { 'cache-control': 'public, max-age=180' });
       return;
     }
 
