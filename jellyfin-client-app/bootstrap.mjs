@@ -1,7 +1,11 @@
 import { createClient } from 'redis';
+import { startPublicProxy } from './jellyfin-proxy.mjs';
 
 const REDIS_URL = process.env.REDIS_URL;
 if (!REDIS_URL) throw new Error('REDIS_URL is required');
+
+const publicPort = Number(process.env.PORT || 8080);
+const childPort = publicPort + 1;
 
 const redis = createClient({ url: REDIS_URL });
 redis.on('error', (e) => console.error('Bootstrap Redis:', e.message));
@@ -20,4 +24,6 @@ try {
   await redis.quit();
 }
 
+process.env.PORT = String(childPort);
 await import('./server.mjs');
+startPublicProxy({ port: publicPort, childPort });
